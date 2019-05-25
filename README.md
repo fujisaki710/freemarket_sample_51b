@@ -22,8 +22,8 @@
 
 
 ### Association
-- has_many :likes
-- has_many :items
+- has_many :likes, dependent: :destroy
+- has_many :items, dependent: :destroy
 
 ## itemsテーブル
 
@@ -42,8 +42,8 @@
 
 ### Association
 - has_one :like
-- has_many :images
-- has_many :comments
+- has_many :images, dependent: :destroy
+- has_many :comments, dependent: :destroy
 - has_many :items_categories
 - has_many : categories, through: :items_categories
 - belongs_to :brand
