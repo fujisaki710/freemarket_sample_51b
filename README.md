@@ -95,3 +95,25 @@
 
 ### Association
 - belongs_to :item
+
+## brandsテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|name|string||	
+|ancestry|string|index: true|
+
+### Association
+- has_many :items
+
+
+
+## imagesテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|image|text||	
+|item_id|integer|null: false,foreign_key: true|
+
+### Association
+- belongs_to :item
