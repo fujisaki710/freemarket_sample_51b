@@ -50,3 +50,25 @@
 - belongs_to :user
 
 
+## items_categoriesテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|item_id|references|null: false, foreign_key: true|
+|category_id|references|null: false, foreign_key: true|
+
+### Association
+- belongs_to :item
+- belongs_to :category
+
+
+## categoriesテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null: false|
+|ancestry|string|index: true|
+
+### Association
+- has_many :items_categories
+- has_many :items, through: :items_categories
