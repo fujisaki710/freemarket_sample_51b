@@ -72,3 +72,26 @@
 ### Association
 - has_many :items_categories
 - has_many :items, through: :items_categories
+
+
+## likesテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|status|string|null: false|
+|item_id|integer|null: false,foreign_key: true|
+|user_id|integer|null: false,foreign_key: true|
+
+### Association
+- belongs_to :user
+- belongs_to :item
+
+## commentsテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|text|text|null: false|
+|item_id|integer|null: false,foreign_key: true|
+
+### Association
+- belongs_to :item
