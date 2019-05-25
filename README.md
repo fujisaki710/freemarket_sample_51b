@@ -24,3 +24,29 @@
 ### Association
 - has_many :likes
 - has_many :items
+
+## itemsテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|brand|string||
+|item_condition|string|null: false|
+|delivery_fee|string|null: false|
+|shipping_area|string|null: false|
+|shipping_date|string|null: false|
+|price|integer|null: false|
+|name|string|null: false|
+|discription|text|null: false|
+|shipping_rule|string|null: false|
+|user_id|references|null: false|
+
+### Association
+- has_one :like
+- has_many :images
+- has_many :comments
+- has_many :items_categories
+- has_many : categories, through: :items_categories
+- belongs_to :brand
+- belongs_to :user
+
+
