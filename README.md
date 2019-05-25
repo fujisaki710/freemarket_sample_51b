@@ -18,7 +18,7 @@
 |city|string||
 |adress|string||
 |building|string||
-|profile_comment||text||
+|profile_comment|text||
 
 
 ### Association
