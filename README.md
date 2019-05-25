@@ -11,7 +11,7 @@
 |family_name_kana|string|null: false|
 |first_name_kana|string|null: false|
 |birthday|date|null: false|
-|phone_number|integer|null: false|
+|phone_number|integer|null: false, unique: true|
 |user_image|text||
 |postcord|integer||
 |prefecture|string||
@@ -29,16 +29,16 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|brand|string||
+|name|string|null: false|
+|price|integer|null: false|
 |item_condition|string|null: false|
 |delivery_fee|string|null: false|
 |shipping_area|string|null: false|
 |shipping_date|string|null: false|
-|price|integer|null: false|
-|name|string|null: false|
 |discription|text|null: false|
 |shipping_rule|string|null: false|
-|user_id|references|null: false|
+|user_id|references|null: false, foreign_key: true|
+|brand|string||
 
 ### Association
 - has_one :like
