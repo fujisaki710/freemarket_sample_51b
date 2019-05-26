@@ -20,7 +20,7 @@
 - has_one :profile
 
 
-## profileテーブル
+## profilesテーブル
 
 |Column|Type|Options|
 |------|----|-------|
@@ -31,7 +31,7 @@
 |adress|string||
 |building|string||
 |comment|text||
-|user|references|null: false, foreign_key: true|
+|user_id|references|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :user
@@ -49,7 +49,7 @@
 |shipping_date|string|null: false|
 |discription|text|null: false|
 |shipping_rule|string|null: false|
-|user|references|null: false, foreign_key: true|
+|user_id|references|null: false, foreign_key: true|
 |brand|string||
 
 ### Association
@@ -67,7 +67,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |item_id|references|null: false, foreign_key: true|
-|category|references|null: false, foreign_key: true|
+|category_id|references|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :item
@@ -91,8 +91,8 @@
 |Column|Type|Options|
 |------|----|-------|
 |status|string|null: false|
-|item|references|null: false,foreign_key: true|
-|user|references|null: false,foreign_key: true|
+|item_id|references|null: false,foreign_key: true|
+|user_id|references|null: false,foreign_key: true|
 
 ### Association
 - belongs_to :user
@@ -103,7 +103,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |text|text|null: false|
-|item|references|null: false,foreign_key: true|
+|item_id|references|null: false,foreign_key: true|
 
 ### Association
 - belongs_to :item
@@ -125,7 +125,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |image|text||	
-|item|references|null: false,foreign_key: true|
+|item_id|references|null: false,foreign_key: true|
 
 ### Association
 - belongs_to :item
