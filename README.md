@@ -12,18 +12,30 @@
 |first_name_kana|string|null: false|
 |birthday|date|null: false|
 |phone_number|integer|null: false, unique: true|
-|user_image|text||
-|postcord|integer||
-|prefecture|string||
-|city|string||
-|adress|string||
-|building|string||
-|profile_comment|text||
 
 
 ### Association
 - has_many :likes, dependent: :destroy
 - has_many :items, dependent: :destroy
+- has_one :profile
+
+
+## profileテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|photo|text||
+|postcord|integer||
+|prefecture|string||
+|city|string||
+|adress|string||
+|building|string||
+|comment|text||
+|user|references|null: false, foreign_key: true|
+
+### Association
+- belongs_to :user
+
 
 ## itemsテーブル
 
@@ -37,7 +49,7 @@
 |shipping_date|string|null: false|
 |discription|text|null: false|
 |shipping_rule|string|null: false|
-|user_id|references|null: false, foreign_key: true|
+|user|references|null: false, foreign_key: true|
 |brand|string||
 
 ### Association
@@ -55,7 +67,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |item_id|references|null: false, foreign_key: true|
-|category_id|references|null: false, foreign_key: true|
+|category|references|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :item
@@ -79,8 +91,8 @@
 |Column|Type|Options|
 |------|----|-------|
 |status|string|null: false|
-|item_id|integer|null: false,foreign_key: true|
-|user_id|integer|null: false,foreign_key: true|
+|item|references|null: false,foreign_key: true|
+|user|references|null: false,foreign_key: true|
 
 ### Association
 - belongs_to :user
@@ -91,7 +103,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |text|text|null: false|
-|item_id|integer|null: false,foreign_key: true|
+|item|references|null: false,foreign_key: true|
 
 ### Association
 - belongs_to :item
@@ -113,7 +125,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |image|text||	
-|item_id|integer|null: false,foreign_key: true|
+|item|references|null: false,foreign_key: true|
 
 ### Association
 - belongs_to :item
