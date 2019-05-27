@@ -34,7 +34,6 @@ namespace :deploy do
   before :starting, 'deploy:upload'
   after :finishing, 'deploy:cleanup'
 end
-end
 
 
 set :default_env, {
