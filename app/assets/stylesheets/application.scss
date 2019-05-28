@@ -13,3 +13,8 @@
  *= require_tree .
  *= require_self
  */
+
+ @import "config/reset";
+ @import "mixins/mixin";
+ @import "mixins/vendor_prefix";
+ @import "font-awesome";
