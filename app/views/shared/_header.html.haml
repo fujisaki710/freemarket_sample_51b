@@ -1,37 +1,37 @@
 .header-box 
   .header-box__top
-    %img{src:"//www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?1107552019", alt:"merukari", class:"header-box__top__title"}
+    %img{src:"//www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?1107552019", alt:"merukari", class:"title"}
     -# 一時的にform_tagで記述し、トップページに遷移するように設定
-    %form{action: root_path, class:"header-box__top__search-bar"}
-      %input{type:"search",name:"keyword",placeholder:"何かお探しですか？",class:"header-box__top__search-bar__box"}
-      = button_tag type:"submit", class:"header-box__top__search-bar__icon" do
+    %form{action: root_path, class:"search-bar"}
+      %input{type:"search",name:"keyword",placeholder:"何かお探しですか？",class:"search-bar__box"}
+      = button_tag type:"submit", class:"search-bar__icon" do
         =fa_icon 'search lg'
 
   -# 各ボタンは一時的にトップページに遷移するように設定
   .header-box__bottom
-    %ul.header-box__bottom__left
-      %li.header-box__bottom__left__btn
+    %ul.left
+      %li.left-btn
         = link_to root_path do
-          = fa_icon 'list',class: 'header-box__bottom__left__btn__icon'
+          = fa_icon 'list',class: 'left-btn__icon'
           %span カテゴリーから探す
         
-      %li.header-box__bottom__left__btn
+      %li.left-btn
         = link_to root_path do
-          = fa_icon 'tag',class: 'header-box__bottom__left__btn__icon'
+          = fa_icon 'tag',class: 'left-btn__icon'
           %span ブランドから探す
 
-    %ul.header-box__bottom__right
-      %li.header-box__bottom__right__btn
+    %ul.right
+      %li.right-btn
         = link_to root_path do
-          = fa_icon 'bell',class: 'header-box__bottom__right__btn__icon'
+          = fa_icon 'bell',class: 'right-btn__icon'
           %span お知らせ
 
-      %li.header-box__bottom__right__btn
+      %li.right-btn
         = link_to root_path do
-          = fa_icon 'check',class: 'header-box__bottom__right__btn__icon'
-          %span  やることリスト
+          = fa_icon 'check',class: 'right-btn__icon'
+          %span やることリスト
 
-      %li.header-box__bottom__right__btn
+      %li.right-btn
         = link_to root_path do
-          %img{src:"//static.mercdn.net/images/member_photo_noimage_thumb.png", width: 32, class:"header-box__bottom__right__btn__mypage-icon"}
-          %span  マイページ
+          %img{src:"//static.mercdn.net/images/member_photo_noimage_thumb.png", width: 32, class:"right-btn__mypage-icon"}
+          %span マイページ

@@ -12,13 +12,13 @@
     width: 100%;
     padding-left: 5px;
 
-    &__title {
+    .title {
       vertical-align: middle;
       width: 132px;
       height: 36px;
     }
 
-    &__search-bar {
+    .search-bar {
       position: relative;
       width: 100%;
       margin-left: 45px;
@@ -53,11 +53,11 @@
   &__bottom {
     margin: 8px 0 0;
 
-    &__left {
+    .left {
       float: left;
       display: flex;
       
-      &__btn {
+      .left-btn {
         font-weight: bold;
         color: #333;
         font-size: 14px;
@@ -79,12 +79,12 @@
       }
     }
 
-    &__right {
+    .right {
       float: right;
       display: flex;
       justify-content: flex-end;
 
-      &__btn {
+      .right-btn {
         color: #333;
         font-size: 14px;
         position: relative;
