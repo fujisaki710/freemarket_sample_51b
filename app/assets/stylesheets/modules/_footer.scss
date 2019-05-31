@@ -28,23 +28,23 @@
         
         .link__text.first-child {
           margin: 16px 0 0;
+          font-size: 12px;
+          line-height: 1.5em;
           & a {
             opacity: .7;
             color: #fff;
-            font-size: 12px;
-            line-height: 1.5em;
             text-decoration: none;
           }
         }
 
         .link__text {
           margin: 14px 0 0;
+          display: block;
+          font-size: 12px;
+          line-height: 1.5em;
           & a {
-            display: block;
             opacity: .7;
             color: #fff;
-            font-size: 12px;
-            line-height: 1.5em;
             text-decoration: none;
           }
         }
@@ -52,12 +52,11 @@
         .link__icon {
           margin: 14px 0 0;
           display: inline-block;
+          line-height: 1.5em;
+          font-size: 12px;
           & a {
             opacity: 1;
-            display: block;
             color: #fff;
-            line-height: 1.5em;
-            font-size: 12px;
             text-decoration: none;
 
             .fa {
