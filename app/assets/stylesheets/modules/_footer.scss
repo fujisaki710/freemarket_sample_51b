@@ -39,7 +39,7 @@
 
         .link__text {
           margin: 14px 0 0;
-          a {
+          & a {
             display: block;
             opacity: .7;
             color: #fff;
@@ -52,7 +52,7 @@
         .link__icon {
           margin: 14px 0 0;
           display: inline-block;
-          a {
+          & a {
             opacity: 1;
             display: block;
             color: #fff;
@@ -87,10 +87,6 @@
     .cell.right {
       width: auto;
       margin-top: 18px;
-      // margin-top: 18px;
-      // padding: 0 40px 0 0;
-      // width: 42%;
-      // margin: 18px 0 0;
     }
   }
 
