@@ -10,105 +10,105 @@
     height: 100vh;
     width: 1020px;
     margin: 0 auto 0;
-  .main{
-    height: 100vh;
-    width: 700px;
-    float: right;
-    .profile{
-      height: 160px;
-      padding: 20px;
-      background: url(https://www.mercari.com/jp/assets/img/mypage/user-bg.jpg?17794984);
-      background-size: cover;
-      text-align: center;
-      position: relative;
-      a{
-        text-decoration: none;
-        color: #333;
-        position: absolute;
-        top: 20%;
-        left: 0;
-        right: 0;
-      }
-      figure{
-        border-radius: 50%;
-        overflow: hidden;
-        width: 60px;
-        height: 60px;
-        margin: 0 auto;
-      }
-      .bold{
-        margin: 8px 0 0;
-        font-size: 14px;
-        font-weight: bold;
-      }
-      .mypageNumber{
-        margin: 8px 0 0;
-        font-size: 0;
-        div{
-          display: inline-block;
-          font-size: 14px;
-          span{
-            margin: 0 0 0 8px;
-            font-size: 16px;
-          }
-        }
-        div+div{
-          margin: 0 0 0 16px;
-        }
-      }
-    }
-    .info{
-      height: 600px;
+    .main{
+      height: 100vh;
       width: 700px;
-    }
-    .mypageNavList{
-      li{
-        border-bottom: 1px solid #eee;
-      }
-      .mypageListBtn{
-        padding: 16px;
-        background-color: white;
-      }
+      float: right;
+      .profile{
+        height: 160px;
+        padding: 20px;
+        background: url(https://www.mercari.com/jp/assets/img/mypage/user-bg.jpg?17794984);
+        background-size: cover;
+        text-align: center;
+        position: relative;
         a{
           text-decoration: none;
+          color: #333;
+          position: absolute;
+          top: 20%;
+          left: 0;
+          right: 0;
         }
-      .mypageListBtn a{
-        display: block;
-        height: 56px;
-        margin: 0 auto;
-        background: #eee;
-        color: #333;
-        line-height: 56px;
-        text-align: center;
-      }
-      &__item{
-        position: relative;
-        display: block;
-        padding: 16px;
-        background: #fff;
-        font-size: 14px;
-        color: #333;
         figure{
-          float: left;
-          margin: 0;
+          border-radius: 50%;
+          overflow: hidden;
+          width: 60px;
+          height: 60px;
+          margin: 0 auto;
         }
-        .itemBody{
-          margin: 0 40px 0 68px;
-          &__text{
-            line-height: 1.5;
+        .bold{
+          margin: 8px 0 0;
+          font-size: 14px;
+          font-weight: bold;
+        }
+        .mypageNumber{
+          margin: 8px 0 0;
+          font-size: 0;
+          div{
+            display: inline-block;
+            font-size: 14px;
+            span{
+              margin: 0 0 0 8px;
+              font-size: 16px;
+            }
           }
-          time{
-            color: #888888;
+          div+div{
+            margin: 0 0 0 16px;
           }
         }
       }
+      .info{
+        height: 600px;
+        width: 700px;
+      }
+      .mypageNavList{
+        li{
+          border-bottom: 1px solid #eee;
+        }
+        .mypageListBtn{
+          padding: 16px;
+          background-color: white;
+        }
+          a{
+            text-decoration: none;
+          }
+        .mypageListBtn a{
+          display: block;
+          height: 56px;
+          margin: 0 auto;
+          background: #eee;
+          color: #333;
+          line-height: 56px;
+          text-align: center;
+        }
+        &__item{
+          position: relative;
+          display: block;
+          padding: 16px;
+          background: #fff;
+          font-size: 14px;
+          color: #333;
+          figure{
+            float: left;
+            margin: 0;
+          }
+          .itemBody{
+            margin: 0 40px 0 68px;
+            &__text{
+              line-height: 1.5;
+            }
+            time{
+              color: #888888;
+            }
+          }
+        }
+      }
+      .fa-chevron-right{
+        position: absolute;
+        top: 50%;
+        right: 16px;
+      }
     }
-    .fa-chevron-right{
-      position: absolute;
-      top: 50%;
-      right: 16px;
-    }
-  }
     .status{
       background-color: white;
       height: 300px;
