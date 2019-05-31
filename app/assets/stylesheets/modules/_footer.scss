@@ -37,16 +37,19 @@
           }
         }
 
-        .link__text {
+        .link__text a {
           margin: 14px 0 0;
           display: block;
           font-size: 12px;
           line-height: 1.5em;
-          & a {
-            opacity: .7;
-            color: #fff;
-            text-decoration: none;
-          }
+          opacity: .7;
+          color: #fff;
+          text-decoration: none;
+          // & a {
+          //   opacity: .7;
+          //   color: #fff;
+          //   text-decoration: none;
+          // }
         }
 
         .link__icon {
