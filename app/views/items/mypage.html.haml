@@ -1,0 +1,103 @@
+.body
+  = render 'shared/header'
+  = render 'shared/bread-crumbs'
+  .mypage
+    = render 'shared/side_bar'
+    .main
+      %section.profile
+        %a{href:"https://www.mercari.com/jp/u/914267163/"}
+          %figure
+            %img(src="//static.mercdn.net/images/member_photo_noimage_thumb.png" alt="" width="60" height="60")
+          %h2.bold team-b
+          .mypageNumber
+            %div 
+              評価 
+              %span.bold
+                100
+            %div
+              出品数 
+              %span.bold
+                56
+      %section.info
+        %ul.status__tab
+          %li.status__tab_left
+            %h3
+              =link_to('お知らせ','#')
+          %li.status__tab_right
+            %h3
+              =link_to('やることリスト','#')
+        %ul.mypageNavList
+          %li
+            %a.mypageNavList__item.active{href: "/jp/mypage/"}
+              %figure
+                %img.lazyloaded{alt: "", "data-src" => "//static.mercdn.net/images/mercari_profile.png", src: "//static.mercdn.net/images/mercari_profile.png",height: 48, width: 48}/
+              .itemBody
+                .itemBody__text
+                  《明後日まで！》メルペイコード払いでおトクにGET！からあげクンとマチカフェコーヒーが半額で買えるクーポン配信中！
+                %time
+                  %i.far.fa-clock
+                  %span 6 時間前
+              %i.fa.fa-chevron-right
+          %li
+            %a.mypageNavList__item.active{href: "/jp/mypage/"}
+              %figure
+                %img.lazyloaded{alt: "", "data-src" => "//static.mercdn.net/images/mercari_profile.png", src: "//static.mercdn.net/images/mercari_profile.png",height: 48, width: 48}/
+              .itemBody
+                .itemBody__text
+                  おばたさん、他20名が「レディース トートバッグ 大 ...」にいいね！しました
+                %time
+                  %i.far.fa-clock
+                  %span 24 時間前
+              %i.fa.fa-chevron-right
+          %li
+            %a.mypageNavList__item.active{href: "/jp/mypage/"}
+              %figure
+                %img.lazyloaded{alt: "", "data-src" => "//static.mercdn.net/images/mercari_profile.png", src: "//static.mercdn.net/images/mercari_profile.png",height: 48, width: 48}/
+              .itemBody
+                .itemBody__text
+                  事務局から個別メッセージ「【お詫び】「《TikTokコラボ第一弾♪》あなたの作品をTikTokでより多くの方に知ってもらいませんか？」について」
+                %time
+                  %i.far.fa-clock
+                  %span 1 日前
+              %i.fa.fa-chevron-right
+          %li
+            %a.mypageNavList__item.active{href: "/jp/mypage/"}
+              %figure
+                %img.lazyloaded{alt: "", "data-src" => "//static.mercdn.net/images/mercari_profile.png", src: "//static.mercdn.net/images/mercari_profile.png",height: 48, width: 48}/
+              .itemBody
+                .itemBody__text
+                  イワハシさん、他2名が「新品 レディース 財布 短財布...」にいいね！しました
+                %time
+                  %i.far.fa-clock
+                  %span 2 日前
+              %i.fa.fa-chevron-right
+          %li
+            %a.mypageNavList__item.active{href: "/jp/mypage/"}
+              %figure
+                %img.lazyloaded{alt: "", "data-src" => "//static.mercdn.net/images/mercari_profile.png", src: "//static.mercdn.net/images/mercari_profile.png",height: 48, width: 48}/
+              .itemBody
+                .itemBody__text
+                  フジサキさん、他2名が「新品 大容量 メッシュ トート...」にいいね！しました
+                %time
+                  %i.far.fa-clock
+                  %span 3 日前
+              %i.fa.fa-chevron-right
+          %li.mypageListBtn
+            = link_to('一覧を見る','#')
+      %section.status
+        %h2.status__head 購入した商品
+        %ul.status__tab
+          %li.status__tab_left
+            %h3
+              =link_to('取引中','#')
+          %li.status__tab_right
+            %h3
+              =link_to('過去の取引','#')
+        .tabContent
+          %ul.tabContent__right
+            %li.tabContent__right_status
+              取引中の商品がありません
+          %ul.tabContent__left
+            %li.tabContent__left_status
+  = render 'shared/aside'
+  = render 'shared/footer'
