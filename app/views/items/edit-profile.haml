@@ -5,15 +5,15 @@
     = render 'shared/side_bar'
     .main
       %section.editProfile
-        %h2.editProfile-head
+        %h2.editProfile__head
           プロフィール
         %form
           %input(type="hidden")
-          .editProfile-icon
+          .editProfile__icon
             .figure
               %img(src="//static.mercdn.net/images/member_photo_noimage_thumb.png" alt="" width="60" height="60")
             %input(type="text" value="" name="nickname" placeholder="例)AYA☆セール中" class="input-default")
-          .editProfile-comment
+          .editProfile__comment
             %textarea(name="introduction" placeholder="例）こんにちは☆ ご覧いただきありがとうございます！かわいいものやきれいめオフィスカジュアル中心に出品しています。服のサイズは主に9号です。気持ちよくお取引できるよう心がけていますので、商品や発送方法などご質問がありましたらお気軽にどうぞ♪")
             %input(type="hidden" value="https://www.mercari.com/jp/mypage/profile/" name="after_save_callback")
             %button(type="submit" class="btn-default btn-red")変更する
