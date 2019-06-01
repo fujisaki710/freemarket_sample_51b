@@ -1,10 +1,10 @@
 .main{
   background-color: #EEEEEE;
-  overflow-y: auto;
+  overflow: auto;
   height: 100%;
   .item-contents{
     width: 700px;
-    height: 2016px;
+    height: 2348px;
     background-color: white;
     margin: 0 auto;
     display: block;
@@ -56,12 +56,15 @@
       }
       
     &__image{
-      width: 700px;
+      width: 540px;
+      height: 223px;
       padding: 40px;
       border-top: 1px solid #eee;
       
       .image__head{
         margin: 8px;
+        width: 524px;
+        height: 28px;
       }
       .image__box{
         width: 538px;
