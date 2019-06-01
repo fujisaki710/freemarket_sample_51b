@@ -49,7 +49,6 @@
       font-weight: 500;
     }
     &__head{
-      padding: 24px 8px;
       font-size: 22px;
       padding: 32px 16px;
       line-height: 1.5;
@@ -359,6 +358,7 @@
             width: 400px;
             height: 48px;
             padding: 0 0 24px;
+            border-bottom: 1px solid #eee;
             .top__left{
               float: left;
               width: 200px;
@@ -366,6 +366,7 @@
               font-size: 14px;
               font-weight: 600;
               line-height: 48px;
+              
               span{
                 position:relative;
                 top: 15px; 
@@ -386,47 +387,35 @@
           .list__center{
             width: 400px;
             height: 14px;
-            padding: 24px 0;
-            font-size: 14px;
-            .right{
+            padding: 24px 0px;
+            float: right;
+            border-bottom: 1px solid #eee;
+            p{
               float: right;
             }
           }
           .list__bottom{
             width: 400px;
             height: 34px;
-            padding: 24px 0;
-            color: #333333;
+            padding: 24px 0px;
+            float: right;
+            // display: flex;
+
             .left{
+              font-weight: bold;
+              font-size: 16px;
               float: left;
-              font-weight: 600;
             }
-            p{
-              float: right;
-              font-weight: 400;
+            .right{
+              font-weight: bold;
               font-size: 34px;
+              float: right;
+              line-height: 34px;
+
             }
           }
         }
       
-      .list__center{
-        width: 400px;
-        height: 14px;
-        padding: 24px 0px;
-        float: right;
-        border-top: 1px solid #eee;
-        border-bottom: 1px solid #eee;
-        p{
-          float: right;
-          top: 50%;
-        }
-      }
-      .list__bottom{
-        float:right;
-        & h3{
-          float: left;
-        }
-      }
     }
     &__submit{
       width: 620px;
