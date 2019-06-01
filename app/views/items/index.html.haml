@@ -2,13 +2,82 @@
 
   = render 'shared/header'
 
-  = render 'shared/main'
+  .item-box-container
+    .item-name 正規品！COACH【コーチ】★★大きめ ミニシグネチャー ショルダーバッグ
+    .item-main-content.clearfix
+      .photo
+        -# スライダー機能は後で実装します
+        .photo__slider
+          .slider__inner
+            %img{src:"https://static.mercdn.net/item/detail/orig/photos/m70068440240_4.jpg?1539045823", style: "opacity: 1;",width: "300",height: "300"}
+        .photo__soldout-budge
+          .budge-text SOLD  
+          .budge-layout
 
+      %table{border: "5",rules: "all",class: "detail-table"}
+        %tbody
+          %tr
+            %th 出品者
+            %td
+              = link_to "#", class: "buyer-name" do
+                BOON90sリバイバル@フォロー割
+              .user-ratings__good
+                = fa_icon 'laugh',class: 'icon-good'
+                %span 927
+              .user-ratings__normal
+                = fa_icon 'meh',class: 'icon-normal'
+                %span 27
+              .user-ratings__bad
+                = fa_icon 'frown',class: 'icon-bad'
+                %span 4
+          
+          %tr
+            %th カテゴリー
+            %td
+              = link_to "#", class: "category-name" do
+                レディース
+              = link_to "#", class: "category-name__child" do
+                = fa_icon 'chevron-right',class: 'icon-arrow-right'
+                バッグ
+              = link_to "#", class: "category-name__child" do
+                = fa_icon 'chevron-right',class: 'icon-arrow-right'
+                ショルダーバッグ
+
+          %tr
+            %th ブランド
+            %td
+              = link_to "#", class: "brand-name" do
+                コーチ
+
+          %tr
+            %th 商品の状態
+            %td やや傷や汚れあり
+
+          %tr
+            %th 配送料の負担
+            %td 送料込み(出品者負担)
+
+          %tr
+            %th 配送の方法
+            %td らくらくメルカリ便
+
+          %tr
+            %th 配送元地域
+            %td 
+              = link_to "#", class: "area-name" do
+                兵庫県
+
+          %tr
+            %th 発送日の目安
+            %td 1~2日で発送
+
+    .price-box
+      %span.price-box__price
+      %span.price-box__tax
+      %span.price-box__
+
+    .buy-btn
+    
   = render 'shared/aside'
 
   = render 'shared/footer'
-
-  .footer-sell-btn
-    = link_to "#" do
-      %div 出品
-      = fa_icon 'camera',class: 'icon-camera'
