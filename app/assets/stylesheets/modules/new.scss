@@ -1,11 +1,11 @@
-.main{
-  background-color: #EEEEEE;
-  overflow: auto;
-  height: 100%;
+.item-main{
+  background-color: #F5F5F5;
+  width: 100vw;
+  height: 2016px;
   .item-contents{
     width: 700px;
-    height: 2348px;
-    background-color: white;
+    height: 2016px;
+    background-color: #fff;
     margin: 0 auto;
     display: block;
     font-family: "Source Sans Pro", Helvetica, Arial, 游ゴシック体, YuGothic, メイリオ, Meiryo, sans-serif;
@@ -56,7 +56,7 @@
       }
       
     &__image{
-      width: 540px;
+      width: 620px;
       height: 223px;
       padding: 40px;
       border-top: 1px solid #eee;
@@ -65,11 +65,15 @@
         margin: 8px;
         width: 524px;
         height: 28px;
+        h5{
+          margin: 8px 0;
+        }
       }
       .image__box{
         width: 538px;
         height: 80px;
         padding: 40px;
+        margin: 16px 0 0;
         font-family: monospace;
         border: dashed 1px #DDDDDD;
         background-color: #F5F5F5;
@@ -129,7 +133,7 @@
             .select-default{
               width: 100%;
               position: relative;
-              z-index: 2;
+              // z-index: 2;
               height: 48px;
               padding: 0 16px;
               border-radius: 4px;
@@ -152,7 +156,7 @@
               position: absolute;
               right: 16px;
               top: 50%;
-              z-index: 2;
+              // z-index: 2;
               color: #888;
               font-size: 16px;
               transform: translate(0, -50%);
@@ -172,7 +176,7 @@
             .select-default{
               width: 100%;
               position: relative;
-              z-index: 2;
+              // z-index: 2;
               height: 48px;
               padding: 0 16px;
               border-radius: 4px;
@@ -189,7 +193,7 @@
               position: absolute;
               right: 16px;
               top: 50%;
-              z-index: 2;
+              // z-index: 2;
               color: #888;
               font-size: 16px;
               transform: translate(0, -50%);
@@ -232,7 +236,7 @@
             .select-default{
               width: 100%;
               position: relative;
-              z-index: 2;
+              // z-index: 2;
               height: 48px;
               padding: 0 16px;
               border-radius: 4px;
@@ -249,7 +253,7 @@
               position: absolute;
               right: 16px;
               top: 50%;
-              z-index: 2;
+              // z-index: 2;
               color: #888;
               font-size: 16px;
               transform: translate(0, -50%);
@@ -264,10 +268,10 @@
             position: relative;
             background: #fff;
             margin: 8px 0 0;
-            .select-default{
+            select{
               width: 100%;
               position: relative;
-              z-index: 2;
+              // z-index: 2;
               height: 48px;
               padding: 0 16px;
               border-radius: 4px;
@@ -285,7 +289,7 @@
               position: absolute;
               right: 16px;
               top: 50%;
-              z-index: 2;
+              // z-index: 2;
               color: #888;
               font-size: 16px;
               transform: translate(0, -50%);
@@ -304,7 +308,7 @@
             .select-default{
               width: 100%;
               position: relative;
-              z-index: 2;
+              // z-index: 2;
               height: 48px;
               padding: 0 16px;
               border-radius: 4px;
@@ -322,7 +326,7 @@
               position: absolute;
               right: 16px;
               top: 50%;
-              z-index: 2;
+              // z-index: 2;
               color: #888;
               font-size: 16px;
               transform: translate(0, -50%);
