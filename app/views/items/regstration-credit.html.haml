@@ -1,0 +1,24 @@
+.body
+  = render 'shared/header'
+  = render 'shared/bread-crumbs'
+  .mypage
+    = render 'shared/side_bar'
+    .main
+      %section.registrationCredit
+        %h2.registrationCredit__head 支払い方法
+        .registrationCredit__body
+          %section
+            .singleContent
+              %h3.chapterSubHead クレジットカード一覧
+            %ul.settingsPaymentList
+          %section.settingsAddCard
+            .singleContent
+              %a(href="https://www.mercari.com/jp/mypage/card/create/" class="btn")
+                %i.fa.fa-credit-card
+                クレジットカードを追加する
+          .settingsNotRegist
+            %a(href="/jp/help_center/category/6/" target="_blank")
+              %span 支払い方法について
+              %i.fa.fa-chevron-right
+  = render 'shared/aside'
+  = render 'shared/footer'

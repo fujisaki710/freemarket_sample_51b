@@ -1,0 +1,79 @@
+.body {
+  .mypage {
+    .main {
+      height: 46vh;
+      .registrationCredit {
+        &__head {
+          line-height: 33px;
+          height: 33px;
+          font-size: 24px;
+          padding: 8px 24px;
+          font-weight: bold;
+          border-bottom: 1px solid #f5f5f5;
+          text-align: center;
+        }
+
+        &__body {
+          padding: 64px;
+          section {
+            max-width: 320px;
+            margin: 0 auto;
+            .singleContent {
+              font-size: 16px;
+              .chapterSubHead {
+                font-weight: bold;
+              }
+            }
+          }
+
+          .settingsAddCard {
+            padding: 24px 0;
+            border-bottom: 1px solid #eee;
+            .singleContent {
+              max-width: 320px;
+              margin: 0 auto;
+              .btn {
+                background: #ea352d;
+                border: 1px solid #ea352d;
+                color: #fff;
+                display: block;
+                width: 100%;
+                line-height: 48px;
+                font-size: 14px;
+                cursor: pointer;
+                text-align: center;
+                i {
+                  margin-right: 16px;
+                  font-size: 16px;
+                }
+              }
+
+              a {
+                text-decoration: none;
+              }
+            }
+          }
+
+          .settingsNotRegist {
+            a {
+              display: block;
+              margin: 40px 0 0;
+              text-align: right;
+              text-decoration: none;
+              color: #0099e8;
+              span {
+                vertical-align: middle;
+              }
+
+              i {
+                position: static;
+                margin: 0 0 0 8px;
+                vertical-align: middle;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
