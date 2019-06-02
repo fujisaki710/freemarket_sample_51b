@@ -1,0 +1,23 @@
+.body {
+  .mypage {
+    .main {
+      height: 179px;
+      .logout {
+        padding: 64px;
+        &__content {
+          margin: 0 126px;
+          .btn {
+            background: #ea352d;
+            border: 1px solid #ea352d;
+            color: #fff;
+            width: 100%;
+            line-height: 45px;
+            font-size: 13.5px;
+            cursor: pointer;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}
