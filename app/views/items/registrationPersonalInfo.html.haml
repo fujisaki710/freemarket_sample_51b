@@ -10,7 +10,7 @@
           %div
             %p お客さまの本人情報をご登録ください。<br>登録されたお名前・生年月日を変更する場合、本人確認書類の提出が必要になります。
             %p.textRight
-              %a(href="/jp/help_center/article/495/" target="_blank") 本人確認書類のアップロードについて
+              = link_to('本人確認書類のアップロードについて', '/jp/help_center/article/495/')
               %i.fa.fa-chevron-right
           .formGroup
             %label お名前
@@ -47,7 +47,7 @@
           %button(type="submit" class="btn")登録する
           .formGroup.textRight
             %p
-              %a(href="/jp/help_center/article/423/" target="_blank")本人情報の登録について
+              = link_to('本人情報の登録について', '/jp/help_center/article/423/')
               %i.fa.fa-chevron-right
           %input(type="hidden" name="__csrf_value")
   = render 'shared/aside'
