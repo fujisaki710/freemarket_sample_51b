@@ -10,7 +10,8 @@
       %a.link_right
       = link_to "特定商取引に関する表記", "https://www.mercari.com/jp/tokutei/"
 
-    .single-footer-logo{:href => "https://www.mercari.com/jp/"}
-      = image_tag('//www-mercari-jp.akamaized.net/assets/img/common/common/logo-gray.svg?3856598694', alt: "mercari", height: "65", src: "", width: "80")
+    .single-footer-logo
+      = link_to "https://www.mercari.com/jp/" do
+        = image_tag('//www-mercari-jp.akamaized.net/assets/img/common/common/logo-gray.svg?3856598694', alt: "mercari", src: "")
       %p
         %small © 2019 Mercari
