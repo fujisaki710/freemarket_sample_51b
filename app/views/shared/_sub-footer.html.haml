@@ -1,0 +1,17 @@
+.sub-footer
+  .box
+    %ul.clearfix
+      %a.link_left 
+      = link_to "プライバシーポリシー", "https://www.mercari.com/jp/privacy/"
+
+      %a.link_center
+      = link_to "メルカリ利用規約", "https://www.mercari.com/jp/tos/" 
+      
+      %a.link_right
+      = link_to "特定商取引に関する表記", "https://www.mercari.com/jp/tokutei/"
+
+    .single-footer-logo
+      = link_to "https://www.mercari.com/jp/" do
+        = image_tag('//www-mercari-jp.akamaized.net/assets/img/common/common/logo-gray.svg?3856598694', alt: "mercari", src: "")
+      %p
+        %small © 2019 Mercari
