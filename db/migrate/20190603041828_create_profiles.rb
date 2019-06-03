@@ -8,7 +8,7 @@ class CreateProfiles < ActiveRecord::Migration[5.2]
       t.string     :address
       t.string     :building
       t.text       :comment
-      t.references :user,        null:false, foreign_key: true
+      t.bigint :user,        null:false, foreign_key: true
 
       t.timestamps
     end
