@@ -1,0 +1,194 @@
+.single-container{
+  width: 100%;
+  background-color: #f5f5f5;
+
+  .single-main{
+    width: 1440px;
+    height: 885px;
+    font-family: "Source Sans Pro", Helvetica, Arial, 游ゴシック体, YuGothic, メイリオ, Meiryo, sans-serif;
+
+    .main-contents{
+      width: 700px;
+      height: 885px;
+      margin: auto;
+      background-color: white;
+
+      &__header{
+        width: 668px;
+        height: 33px;
+        padding: 32px 16px;
+        text-align: center;
+        font-weight: bold;
+        border-bottom: 1px solid #f5f5f5;
+
+        p{
+          font-size: 22px;
+        }
+      }
+
+      &__buy{
+        width: 525px;
+        height: 383px;
+        padding: 24px 0;
+        margin: auto;
+
+        .buy-content{
+          width: 320px;
+          height: 383px;
+          margin: auto;
+          text-align: center;
+
+          .item-image{
+            width: 320px;
+            height: 111px;
+            margin: auto;
+            img{
+              width: 130px;
+              height: 111px;
+            }
+          }
+          .item-name{
+            width: 320px;
+            height: 24px;
+            margin-top: 8px;
+            font-weight: 600;
+          }
+          .buy-form{
+            width: 320px;
+            height: 232px;
+            .price{
+              width: 320px;
+              height: 42px;
+              line-height: 42px;
+              font-size: 14px;
+              text-align: center;
+              span{
+                font-size: 28px;
+              }
+            }
+
+            .point{
+              width: 320px;
+              height: 48px;
+              margin-top: 16px;
+              background-color: #BBBBBB;
+              list-style: none;
+              line-height: 48px;
+            }
+
+            .price-table{
+              width: 320px;
+              height: 60px;
+              display: flex;
+              .pay{
+                font-size: 28px;
+                font-weight: bold;
+                width: 219px;
+                padding: 16px 0;
+                text-align: left;
+              }
+              span{
+                float: right;
+                font-size: 28px;
+                color: #333333;
+                font-weight: bold;
+                padding: 16px 0;
+                margin: 0 0 0 auto;
+              }
+            }
+
+            .submit button{
+              width: 318px;
+              height: 48px;
+              margin-top: 16px;
+              outline: 0;
+              border: 0;
+              background-color: #EA352D;
+              p{
+                color: white;
+                font-weight: bold;
+                font-size: 14px;
+              }
+            }
+          }
+        }
+      }
+
+      .user-info{
+        width: 525px;
+        height: 102px;
+        padding: 24px 87.5px;
+        border-top: 1px solid #f5f5f5;
+        &__inner{
+          width: 320px;
+          height: 102px;
+          margin: auto;
+          h3{
+            font-weight: bold;
+          }
+          .user-info-text{
+            width: 352px;
+            height: 57px;
+            margin-top: 8px;
+          }
+          .user-info-fix{
+            width: 320px;
+            height: 15px;
+            margin-top: 8px;
+            text-align: right;
+            a {
+              text-decoration: none;
+              color:#0099E8;
+            }
+            i{
+              color:#0099E8;
+            }
+          }
+        }
+      }
+
+      .pay-method{
+        width: 525px;
+        height: 92px;
+        padding: 40px 87.5px;
+        border-top: 1px solid #f5f5f5;
+        &__inner{
+          width: 320px;
+          height: 92px;
+          margin: auto;
+          h3{
+            font-weight: bold;
+          }
+          .inner-text{
+            width: 320px;
+            height: 38px;
+            margin-top: 8px;
+          }
+          .figure{
+            width: 320px;
+            height: 16px;
+            display: block;
+            position: relative;
+            img{
+              width: 49px;
+              height: 15px;
+            }
+          }
+          .user-info-fix{
+            width: 320px;
+            height: 15px;
+            margin-top: 8px;
+            text-align: right;
+            a {
+              text-decoration: none;
+              color:#0099E8;
+            }
+            i{
+              color:#0099E8;
+            }
+          }
+        }
+      }
+    }
+  }
+}
