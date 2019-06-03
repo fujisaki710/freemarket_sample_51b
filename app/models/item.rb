@@ -8,5 +8,4 @@ class Item < ApplicationRecord
   has_many :categories, through: :items_categories
   belongs_to :brand
   belongs_to :user
-
 end
