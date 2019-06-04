@@ -33,5 +33,5 @@ Style/SymbolArray:
 
 # 'Metrics/BlockLength: true'をspecファイルのみ除外
 Metrics/BlockLength:
-Exclude:
-  - 'spec/**/*'
+  Exclude:
+    - 'spec/**/*'
