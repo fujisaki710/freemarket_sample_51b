@@ -1,23 +1,46 @@
 class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable, :omniauthable
+        :recoverable, :rememberable, :validatable, :omniauthable, omniauth_providers: [:facebook, :google_oauth2]
   has_many :likes, dependent: :destroy
   has_many :items, dependent: :destroy
   has_one :profile
-  validates :password, presence: true, length: { minimum: 6 }
+  validates :nickname, presence: true
+  has_many :sns_credentials, dependent: :destroy
 
-  def self.find_for_oauth(auth)
-    user = User.where(uid: auth.uid, provider: auth.provider).first
+  def self.find_oauth(auth)
+    uid = auth.uid
+    provider = auth.provider
+    snscredential = SnsCredential.where(uid: uid, provider: provider).first
 
-    unless user
-      user = User.create(
-        uid:      auth.uid,
-        provider: auth.provider,
-        email:    auth.info.email,
-        password: Devise.friendly_token[0, 20]
-      )
+    if snscredential.present?
+      user = User.where(id: snscredential.user_id).first
+      unless user.present?
+        user = User.new(
+          nickname: auth.info.name,
+          email: auth.info.email
+        )
+      end
+      sns = snscredential
+
+    else
+      user = User.where(email: auth.info.email).first
+      if user.present?
+        sns = SnsCredential.new(
+          uid: uid,
+          provider: provider,
+          user_id: user.id
+        )
+      else
+        user = User.new(
+          nickname: auth.info.name,
+          email: auth.info.email
+        )
+        sns = SnsCredential.create(
+          uid: uid,
+          provider: provider
+        )
+      end
     end
-
-    user
+    return { user: user , sns_id: sns.id }
   end
 end
