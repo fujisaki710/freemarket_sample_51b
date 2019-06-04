@@ -31,6 +31,10 @@ Style/FrozenStringLiteralComment:
 Style/SymbolArray:
   Enabled: false
 
+#'Style/ClassAndModuleChildren: true'を無効
+Style/ClassAndModuleChildren:
+  Enabled: false
+
 # 'Metrics/BlockLength: true'をspecファイルのみ除外
 Metrics/BlockLength:
   Exclude:
