@@ -26,3 +26,12 @@ Metrics/LineLength:
 #'frozen_string_literal: true'を無効
 Style/FrozenStringLiteralComment:
   Enabled: false
+
+#'Style/SybolArray: true'を無効
+Style/SymbolArray:
+  Enabled: false
+
+# 'Metrics/BlockLength: true'をspecファイルのみ除外
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*'
