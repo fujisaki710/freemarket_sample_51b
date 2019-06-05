@@ -16,11 +16,11 @@
               = image_tag(@image[0].url,class: "photo__img")
             .item
               .item__name
-                = @items[1].name
+                = @items[0].name
               .item__num
                 .item__price
                   ¥
-                  = @items[1].price
+                  = @items[0].price
               .item__tax (税込)
 
         .item-box
@@ -30,11 +30,11 @@
 
             .item
               .item__name
-                = @items[0].name
+                = @items[1].name
               .item__num
                 .item__price
                   ¥ 
-                  = @items[0].price
+                  = @items[1].price
               .item__tax (税込)
 
         .item-box
@@ -44,11 +44,11 @@
 
             .item
               .item__name
-                = @items[3].name
+                = @items[2].name
               .item__num
                 .item__price 
                   ¥ 
-                  = @items[3].price
+                  = @items[2].price
               .item__tax (税込)
 
         .item-box
@@ -58,11 +58,11 @@
 
             .item
               .item__name
-                = @items[2].name
+                = @items[3].name
               .item__num
                 .item__price
                   ¥ 
-                  = @items[2].price
+                  = @items[3].price
               .item__tax (税込)
 
       .view-all
@@ -79,7 +79,7 @@
         .item-box
           = link_to "#" do
             .photo
-              = image_tag(@image[1].images,class: "photo__img")
+              = image_tag(@image[0].url,class: "photo__img")
             .item
               .item__name
                 = @items[0].name
@@ -92,7 +92,7 @@
         .item-box
           = link_to "#" do
             .photo
-              = image_tag(@image[0].images,class: "photo__img")
+              = image_tag(@image[1].url,class: "photo__img")
             .item
               .item__name
 
@@ -106,29 +106,29 @@
         .item-box
           = link_to "#" do
             .photo
-              = image_tag(@image[2].images,class: "photo__img")
-
-            .item
-              .item__name
-                = @items[3].name
-              .item__num
-                .item__price 
-                  ¥ 
-                  = @items[3].price
-              .item__tax (税込)
-
-        .item-box
-          = link_to "#" do
-            .photo
-              = image_tag(@image[3].images,class: "photo__img")
+              = image_tag(@image[2].url,class: "photo__img")
 
             .item
               .item__name
                 = @items[2].name
               .item__num
-                .item__price
+                .item__price 
                   ¥ 
                   = @items[2].price
+              .item__tax (税込)
+
+        .item-box
+          = link_to "#" do
+            .photo
+              = image_tag(@image[3].url,class: "photo__img")
+
+            .item
+              .item__name
+                = @items[3].name
+              .item__num
+                .item__price
+                  ¥ 
+                  = @items[3].price
               .item__tax (税込)
 
       .view-all
