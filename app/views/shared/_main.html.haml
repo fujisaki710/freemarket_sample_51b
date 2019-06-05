@@ -13,45 +13,59 @@
         .item-box
           = link_to "#" do
             .photo
-              %img{src: "https://static.mercdn.net/thumb/photos/m33132342381_1.jpg?1559204933",class: "photo__img"}
+              = image_tag(@image[0].images,class: "photo__img")
 
             .item
-              .item__name LOEWE ロエベ ハンドバッグ レザー
+              .item__name
+                -# - @items.each do |item|
+                = @items[1].name
               .item__num
-                .item__price ¥ 14,000
+                .item__price
+                  -# - @items.each do |item|
+                  ¥
+                  = @items[1].price
               .item__tax (税込)
 
         .item-box
           = link_to "#" do
             .photo
-              %img{src: "https://static.mercdn.net/thumb/photos/m33132342381_1.jpg?1559204933",class: "photo__img"}
+              = image_tag(@image[1].images,class: "photo__img")
 
             .item
-              .item__name LOEWE ロエベ ハンドバッグ レザー
+              .item__name
+                = @items[0].name
               .item__num
-                .item__price ¥ 14,000
+                .item__price
+                  ¥ 
+                  = @items[0].price
               .item__tax (税込)
 
         .item-box
           = link_to "#" do
             .photo
-              %img{src: "https://static.mercdn.net/thumb/photos/m33132342381_1.jpg?1559204933",class: "photo__img"}
+              = image_tag(@image[2].images,class: "photo__img")
 
             .item
-              .item__name LOEWE ロエベ ハンドバッグ レザー
+              .item__name
+                = @items[3].name
               .item__num
-                .item__price ¥ 14,000
+                .item__price 
+                  ¥ 
+                  = @items[3].price
               .item__tax (税込)
 
         .item-box
           = link_to "#" do
             .photo
-              %img{src: "https://static.mercdn.net/thumb/photos/m33132342381_1.jpg?1559204933",class: "photo__img"}
+              = image_tag(@image[3].images,class: "photo__img")
 
             .item
-              .item__name LOEWE ロエベ ハンドバッグ レザー
+              .item__name
+                = @items[2].name
               .item__num
-                .item__price ¥ 14,000
+                .item__price
+                  ¥ 
+                  = @items[2].price
               .item__tax (税込)
 
       .view-all
@@ -68,45 +82,56 @@
         .item-box
           = link_to "#" do
             .photo
-              %img{src: "https://static.mercdn.net/thumb/photos/m87746425855_1.jpg?1559110856",class: "photo__img"}
-
+              = image_tag(@image[1].images,class: "photo__img")
             .item
-              .item__name AIR JORDAN 3 RETRO OG BG
+              .item__name
+                = @items[0].name
               .item__num
-                .item__price ¥ 10,000
+                .item__price
+                  ¥ 
+                  = @items[0].price
               .item__tax (税込)
 
         .item-box
           = link_to "#" do
             .photo
-              %img{src: "https://static.mercdn.net/thumb/photos/m87746425855_1.jpg?1559110856",class: "photo__img"}
-
+              = image_tag(@image[0].images,class: "photo__img")
             .item
-              .item__name AIR JORDAN 3 RETRO OG BG
+              .item__name
+
+                = @items[1].name
               .item__num
-                .item__price ¥ 10,000
+                .item__price
+                  ¥
+                  = @items[1].price
               .item__tax (税込)
 
         .item-box
           = link_to "#" do
             .photo
-              %img{src: "https://static.mercdn.net/thumb/photos/m87746425855_1.jpg?1559110856",class: "photo__img"}
+              = image_tag(@image[2].images,class: "photo__img")
 
             .item
-              .item__name AIR JORDAN 3 RETRO OG BG
+              .item__name
+                = @items[3].name
               .item__num
-                .item__price ¥ 10,000
+                .item__price 
+                  ¥ 
+                  = @items[3].price
               .item__tax (税込)
 
         .item-box
           = link_to "#" do
             .photo
-              %img{src: "https://static.mercdn.net/thumb/photos/m87746425855_1.jpg?1559110856",class: "photo__img"}
+              = image_tag(@image[3].images,class: "photo__img")
 
             .item
-              .item__name AIR JORDAN 3 RETRO OG BG
+              .item__name
+                = @items[2].name
               .item__num
-                .item__price ¥ 10,000
+                .item__price
+                  ¥ 
+                  = @items[2].price
               .item__tax (税込)
 
       .view-all
