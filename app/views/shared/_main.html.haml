@@ -17,11 +17,9 @@
 
             .item
               .item__name
-                -# - @items.each do |item|
                 = @items[1].name
               .item__num
                 .item__price
-                  -# - @items.each do |item|
                   ¥
                   = @items[1].price
               .item__tax (税込)
