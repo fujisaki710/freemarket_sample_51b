@@ -6,6 +6,7 @@ class User < ApplicationRecord
   has_one :profile
   validates :nickname, presence: true
   has_many :sns_credentials, dependent: :destroy
+  has_one :card
 
   def self.find_oauth(auth)
     uid = auth.uid
