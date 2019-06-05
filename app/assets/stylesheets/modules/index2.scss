@@ -1,0 +1,238 @@
+body {
+    position: relative;
+    min-height: 100%;
+    background: #f5f5f5;
+    font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
+    font-size: 14px;
+    color: #333;
+    line-height: 1;
+    .single-infomation {
+        width: 70%;
+        margin: 0 auto;
+        .single-header {
+            text-align: center;
+            display: flex;
+            height: 128px;
+            h1 {
+                display: inline-block;
+                margin: 40px 0 0;   
+                a {
+                    display: inline-block;
+                    margin: 0 8px 0 0;
+                }
+            }
+            img {
+                vertical-align: middle;
+                width: 185px;
+                height: 49px;
+            }
+            .progress-bar.signup-bar {
+                padding: 40px 0 0 44px;
+                border: 0;
+                    .clearfix {
+                        width:508px;
+                        .active {
+                            font-weight: 600;
+                            color: #ea352d;
+                        }
+                        li {
+                            display: flex;
+                            position: relative;
+                            z-index: 1;
+                            display: inline-block;
+                            min-width: 40px;
+                            margin: 0 5% 0 0;
+                            font-size: 12px;
+                            color: #888;
+                                .active__dot_red-1 {
+                                    width: 12px;
+                                    height: 12px;
+                                    margin: 8px auto 0;
+                                    background: #ccc;
+                                    border-radius: 50%;
+                                    background-color: #ea352d;
+                                    position: absolute;
+                                }
+                                .active__dot_gray {
+                                    width: 12px;
+                                    height: 12px;
+                                    margin: 8px auto 0;
+                                    background: #ccc;
+                                    border-radius: 50%;
+                                }
+                                .active__line_1 {
+                                    position: absolute;
+                                    bottom: -15px;
+                                    z-index: -1;
+                                    display: block;
+                                    content: '';
+                                    width: 220%;
+                                    height: 2px;
+                                    background: #ccc;
+                                }
+                                .active__line_2 {
+                                    position: absolute;
+                                    bottom: 5px;
+                                    left:30px;
+                                    z-index: -1;
+                                    display: block;
+                                    content: '';
+                                    width: 100%;
+                                    height: 2px;
+                                    background: #ccc;
+                                }
+                                .active__line_3 {
+                                    position: absolute;
+                                    bottom: 5px;
+                                    left:50px;
+                                    z-index: -1;
+                                    display: block;
+                                    content: '';
+                                    width: 105%;
+                                    height: 2px;
+                                    background: #ccc;
+                                }
+                                .active__line_4 {
+                                    position: absolute;
+                                    bottom: 5px;
+                                    left:30px;
+                                    z-index: -1;
+                                    display: block;
+                                    content: '';
+                                    width: 120%;
+                                    height: 2px;
+                                    background: #ccc;
+                                }
+                            }
+                        }
+                    }
+                }
+        .single-main {
+            width: 700px;
+            .l-single-container {
+                margin: 0 auto;
+                background: #fff;
+                .l-single-head {
+                    padding: 24px 8px;
+                    font-size: 18px;
+                    line-height: 1.5;
+                    text-align: center;
+                    font-weight: bolder;
+                }
+                .l-single-inner.registration-form {
+                    padding: 40px 16px;
+                    .l-single-content {
+                        max-width: 320px;
+                        margin: 0 auto;
+                        .form-group {
+                            margin: 40px 0 0;
+                            .form-group select {
+                                width: 100%;
+                            }
+                            .birthday-select-wrap {
+                                display: flex;
+                                height: 50px;
+                                .select-wrap {
+                                    width: 100px;
+                                    margin-top: 8px;
+                                    .select-default {
+                                        position: relative;
+                                        height: 48px;
+                                        padding: 0 16px;
+                                        border-radius: 4px;
+                                        border: 1px solid #ccc;
+                                        background: 0;
+                                        font-size: 16px;
+                                        line-height: 1.5;
+                                        cursor: pointer;
+                                        width: 100%;
+                                        -webkit-appearance: none;
+                                    }
+                                    i {
+                                        position: relative;
+                                        left: 60px;
+                                        top: -50%;
+                                        // z-index: 2;
+                                        color: #888;
+                                        font-size: 20px;
+                                        -webkit-transform: translate(0, -50%);
+                                        transform: translate(0, -50%);
+                                    }
+                                }
+                                span {
+                                    margin:20px 2px;
+                                }
+                            }
+                        }
+                        .form-info-text {
+                            position:relative;
+                            top: 20px;
+                        }
+                        .btn-default.btn-red {
+                            width: 300px;
+                            line-height: 48px;
+                            margin: 30px 0;
+                            background-color:rgb(234, 53, 45);
+                            color: #fff;
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+.progress-bar {
+    font-size: 0;
+    text-align: center;
+}
+nav ol, nav ul {
+    list-style: none;
+}
+ul, ol {
+    list-style: none;
+}
+
+main {
+    .l-single-inner {
+        border-top: 1px solid #f5f5f5;
+        padding: 40px;
+    }
+    .form-group:first-child {
+        margin: 0;
+    }
+    .form-group {
+        margin: 40px 0 0;
+    }
+    .form-require {
+        background: #ea352d;
+    }
+    .form-require, .form-arbitrary, .message-is-seller, .news-private {
+        margin: 0 0 0 8px;
+        padding: 2px 4px;
+        border-radius: 2px;
+        color: #fff;
+        font-size: 12px;
+        vertical-align: top;
+    }
+    .form-group .input-default {
+        width: 100%;
+        margin: 12px 0 0;
+    }
+    .form-group label {
+        font-weight: 600;
+    }
+    label {
+        display: inline-block;
+    }
+    .input-default {
+        height: 28px;
+        padding: 10px 16px 8px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        background: #fff;
+        line-height: 1.5;
+        font-size: 16px;
+        }
+    }
+}
