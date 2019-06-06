@@ -1,35 +1,39 @@
 .wrapper
 
-  = render 'shared/header'
+  = render 'shared/header'                                                                                                                                                                                                                                                                                                                                                                   
 
   .item-box-container
-    .item-name 正規品！COACH【コーチ】★★大きめ ミニシグネチャー ショルダーバッグ
+    .item-name
+      = @item.name
     .item-main-content.clearfix
       .photo
         -# スライダー機能は後で実装します
         .photo__slider
           .slider__inner
-            = image_tag("https://static.mercdn.net/item/detail/orig/photos/m70068440240_4.jpg?1539045823")
+            = image_tag(@image.url,class: "inner_img")
         .photo__soldout-budge
           .budge-text SOLD  
           .budge-layout
 
-      %table{border: "5",rules: "all",class: "detail-table"}
+      %table{border: "5"                                                                                                          ,rules: "all",class: "detail-table"}
         %tbody
           %tr
             %th 出品者
             %td
               = link_to "#", class: "buyer-name" do
-                BOON90sリバイバル@フォロー割
+                = @item.user.nickname
               .user-ratings__good
                 = fa_icon 'laugh',class: 'icon-good'
-                %span 927
+                %span
+                  = @good.count
               .user-ratings__normal
                 = fa_icon 'meh',class: 'icon-normal'
-                %span 27
+                %span
+                  = @normal.count
               .user-ratings__bad
                 = fa_icon 'frown',class: 'icon-bad'
-                %span 4
+                %span 
+                  = @bad.count
           %tr
             %th カテゴリー
             %td
@@ -45,27 +49,33 @@
             %th ブランド
             %td
               = link_to "#", class: "brand-name" do
-                コーチ
+                = @item.brand_id
           %tr
             %th 商品の状態
-            %td やや傷や汚れあり
+            %td
+              = @item.item_condition
           %tr
             %th 配送料の負担
-            %td 送料込み(出品者負担)
+            %td
+              = @item.delivery_fee
           %tr
             %th 配送の方法
-            %td らくらくメルカリ便
+            %td
+              = @item.shipping_rule
           %tr
             %th 配送元地域
             %td 
               = link_to "#", class: "area-name" do
-                兵庫県
+                = @item.prefecture.name
           %tr
             %th 発送日の目安
-            %td 1~2日で発送
+            %td
+              = @item.shipping_date
 
     .price-box
-      %span.price-box__price ¥ 3,380
+      %span.price-box__price
+        ¥
+        = @item.price
       %span.price-box__tax  (税込)
       %span.price-box__shipping-fee 送料込み
 
@@ -74,22 +84,7 @@
     .description
       %p.description__inner
         ■商品ご覧頂き、誠にありがとうございます。
-        ※今だけ、フォロワーになって下さった方に、300円のお値引きサービス中！！
-        
-        私の商品検索は、
-        \#Boon・バッグ　
-        検索してください。
-        
-        質問がありましたらコメントでよろしくお願いします！
-        ■ 商品説明 ■
-        まずはプロフを確認してください☆
-
-        ■ 商品詳細 ■
-        シンプルな落ち着いたお色味でどんな場面にも合い、
-        どんな服にも合わせやすいお鞄です。使用感有！角擦れはございませんが
-        多少の汚れはあります。内側はとても綺麗です☆
-        使わなくなったのでどなたか使っていただける方お願いします。
-        製造番号　H2K-9294
+        = @item.discription
 
     .btns.clearfix
       .btns__left

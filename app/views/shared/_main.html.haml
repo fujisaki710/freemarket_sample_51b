@@ -79,7 +79,7 @@
         .item-box
           = link_to "#" do
             .photo
-              = image_tag(@image[1].images,class: "photo__img")
+              = image_tag(@image[1].url,class: "photo__img")
             .item
               .item__name
                 = @items[0].name
@@ -92,7 +92,7 @@
         .item-box
           = link_to "#" do
             .photo
-              = image_tag(@image[0].images,class: "photo__img")
+              = image_tag(@image[0].url,class: "photo__img")
             .item
               .item__name
 
@@ -106,7 +106,7 @@
         .item-box
           = link_to "#" do
             .photo
-              = image_tag(@image[2].images,class: "photo__img")
+              = image_tag(@image[2].url,class: "photo__img")
 
             .item
               .item__name
@@ -120,7 +120,7 @@
         .item-box
           = link_to "#" do
             .photo
-              = image_tag(@image[3].images,class: "photo__img")
+              = image_tag(@image[3].url,class: "photo__img")
 
             .item
               .item__name
