@@ -9,22 +9,26 @@
           %li
             会員情報
             .active__dot_red
-            .active__line_1
+            .line-right-red
           %li.active
             電話番号認証
             .active__dot_red
-            .active__line_2
+            .line-left-red
+            .line-right
           %li
             お届け先住所入力
             .active__dot_gray
-            .active__line_3
+            .line-left
+            .line-right
           %li
             支払い方法
             .active__dot_gray
-            .active__line_4
+            .line-left
+            .line-right
           %li
             完了
             .active__dot_gray
+            .line-left
     %main.single-main
   %section.l-single-container
     %h2.l-chapter-head 電話番号の確認
@@ -33,9 +37,9 @@
       .l-single-content
         .form-group
           %label{:for => "phone_number"} 携帯電話の番号
-          %input.input-default{:name => "phone_number", :placeholder => "携帯電話の番号を入力", :type => "tel", :value => ""}/
+          %input.phone-form{:name => "phone_number", :placeholder => "携帯電話の番号を入力", :type => "tel", :value => ""}/
         %p 本人確認のため、携帯電話のSMS(ショートメッセージサービス)を利用して認証を行います。
-        %button.btn-default.btn-red{:type => "submit"} SMSを送信する
+        %button.sms-send.btn-red{:type => "submit"} SMSを送信する
         %p ※電話番号は本人確認や不正利用防止のために利用します。他のユーザーに公開されることはありません。
         .form-group.text-right
           %a{:href => "/jp/help_center/article/244/", :target => "_blank"}

@@ -3,7 +3,7 @@ class ItemsController < ApplicationController
   def index
   end
 
-  def index2
+  def form
   end
 
   def phone
