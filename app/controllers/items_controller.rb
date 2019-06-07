@@ -7,14 +7,10 @@ class ItemsController < ApplicationController
   
   def new
     @item = Item.new
-    # @item.user << current_user
-    # binding.pry
   end
 
   def create
     @item = Item.new(item_params)
-    # Item.create(item_params)
-    # binding.pry
   end
 
   def show
