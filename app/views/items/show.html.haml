@@ -4,7 +4,7 @@
 
   .item-box-container
     .item-name
-      = @items.name
+      = @item.name
     .item-main-content.clearfix
       .photo
         -# スライダー機能は後で実装します
@@ -22,19 +22,19 @@
             %th 出品者
             %td
               = link_to "#", class: "buyer-name" do
-                = @items.user.nickname
+                = @item.user.nickname
               .user-ratings__good
                 = fa_icon 'laugh',class: 'icon-good'
                 %span
-                  = @good.count
+                  = @goods.count
               .user-ratings__normal
                 = fa_icon 'meh',class: 'icon-normal'
                 %span
-                  = @normal.count
+                  = @normals.count
               .user-ratings__bad
                 = fa_icon 'frown',class: 'icon-bad'
                 %span 
-                  = @bad.count
+                  = @bads.count
           %tr
             %th カテゴリー
             %td
@@ -50,33 +50,33 @@
             %th ブランド
             %td
               = link_to "#", class: "brand-name" do
-                = @items.brand_id
+                = @item.brand_id
           %tr
             %th 商品の状態
             %td
-              = @items.item_condition
+              = @item.item_condition
           %tr
             %th 配送料の負担
             %td
-              = @items.delivery_fee
+              = @item.delivery_fee
           %tr
             %th 配送の方法
             %td
-              = @items.shipping_rule
+              = @item.shipping_rule
           %tr
             %th 配送元地域
             %td 
               = link_to "#", class: "area-name" do
-                = @items.prefecture.name
+                = @item.prefecture.name
           %tr
             %th 発送日の目安
             %td
-              = @items.shipping_date
+              = @item.shipping_date
 
     .price-box
       %span.price-box__price
         ¥
-        = @items.price
+        = @item.price
       %span.price-box__tax  (税込)
       %span.price-box__shipping-fee 送料込み
 
@@ -85,7 +85,7 @@
     .description
       %p.description__inner
         ■商品ご覧頂き、誠にありがとうございます。
-        = @items.discription
+        = @item.discription
 
     .btns.clearfix
       .btns__left
