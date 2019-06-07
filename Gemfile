@@ -82,3 +82,5 @@ gem 'omniauth-google-oauth2'
 gem 'active_hash'
 
 gem 'activerecord-import'
+
+gem "aws-sdk-s3", require: false
