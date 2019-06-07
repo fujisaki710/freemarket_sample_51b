@@ -14,8 +14,8 @@ class ItemsController < ApplicationController
   end
 
   def show
-    @item = Item.find(params[:id])
-    @images = @item.images
+    @items = Item.find(params[:id])
+    @images = @items.images
     @good = Like.where(status: "良い")
     @normal = Like.where(status: "普通")
     @bad = Like.where(status: "悪い")
