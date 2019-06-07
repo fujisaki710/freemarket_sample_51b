@@ -206,17 +206,20 @@
       h4{
         color: #888888;
       }
-      a{
+      .form-question{
         display: inline-block;
         width: 14px;
         height: 14px;
         border-radius: 50%;
         background: #0099e8;
-        color: #fff;
         line-height: 14px;
         font-size: 12px;
         text-align: center;
-        text-decoration: none;
+        
+        a{
+          color: #fff;
+          text-decoration: none;
+        }
       }
       .shipping__box{
         float: right;
@@ -334,17 +337,20 @@
       h4{
         color: #888888;
       }
-      a{
+      .form-question{
         display: inline-block;
         width: 14px;
         height: 14px;
         border-radius: 50%;
         background: #0099e8;
-        color: #fff;
         line-height: 14px;
         font-size: 12px;
         text-align: center;
         text-decoration: none;
+        a{
+          text-decoration: none;
+          color: #fff;
+        }
     }
       
         .price__box{

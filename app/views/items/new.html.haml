@@ -46,7 +46,8 @@
                 %i.fa.fa-chevron-down
         .item-contents__shipping
           %h4 配送について
-          %a.form-question{href: "/jp/help_center/article/68/", target: "_blank"} ?
+          .form-question
+            = link_to "？", "/jp/help_center/article/68/", target: "_blank"
           .shipping__box
             .box__fee
               %h3 配送料の負担
@@ -76,7 +77,8 @@
                 %i.fa.fa-chevron-down
         .item-contents__price
           %h4 販売価格(300〜9,999,999)
-          %a.form-question{href: "/jp/help_center/article/68/", target: "_blank"} ?
+          .form-question
+            = link_to "？", "/jp/help_center/article/68/", target: "_blank"
           .price__box
             .list__top
               .top__left
