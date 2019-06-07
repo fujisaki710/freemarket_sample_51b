@@ -1,104 +1,104 @@
 body {
-    position: relative;
-    min-height: 100%;
-    background: #f5f5f5;
-    font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
-    font-size: 14px;
-    color: #333;
-    line-height: 1;
+  position: relative;
+  min-height: 100%;
+  background: #f5f5f5;
+  font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
+  font-size: 14px;
+  color: #333;
+  line-height: 1;
     .registaration {
         .single-header {
-            text-align: center;
-            height: 128px;
+          text-align: center;
+          height: 128px;
             h1 {
-                display: inline-block;
-                margin: 40px 0 0;   
+              display: inline-block;
+              margin: 40px 0 0;   
                 a {
-                    display: inline-block;
-                    margin: 0 8px 0 0;
+                  display: inline-block;
+                  margin: 0 8px 0 0;
                 }
             }
             img {
-                vertical-align: middle;
-                width: 185px;
-                height: 49px;
+              vertical-align: middle;
+              width: 185px;
+              height: 49px;
             }
             .progress-bar.signup-bar {
-                padding: 40px 0 0 44px;
-                border: 0;
-                display: inline-block;
-                vertical-align: top;
+              padding: 40px 0 0 44px;
+              border: 0;
+              display: inline-block;
+              vertical-align: top;
                     .clearfix {
                         .active {
-                            font-weight: 600;
-                            color: #ea352d;
+                          font-weight: 600;
+                          color: #ea352d;
                         }
                         li {
-                            position: relative;
-                            z-index: 1;
-                            display: inline-block;
-                            min-width: 60px;
-                            margin: 0 40px 0 0;
-                            font-size: 12px;
-                            color: #888;
+                          position: relative;
+                          z-index: 1;
+                          display: inline-block;
+                          min-width: 60px;
+                          margin: 0 40px 0 0;
+                          font-size: 12px;
+                          color: #888;
                                 .active__dot_red {
-                                    width: 12px;
-                                    height: 12px;
-                                    margin: 8px auto 0;
-                                    background: #ccc;
-                                    border-radius: 50%;
-                                    background-color: #ea352d;
+                                  width: 12px;
+                                  height: 12px;
+                                  margin: 8px auto 0;
+                                  background: #ccc;
+                                  border-radius: 50%;
+                                  background-color: #ea352d;
                                 }
                                 .active__dot_gray {
-                                    width: 12px;
-                                    height: 12px;
-                                    margin: 8px auto 0;
-                                    background: #ccc;
-                                    border-radius: 50%;
+                                  width: 12px;
+                                  height: 12px;
+                                  margin: 8px auto 0;
+                                  background: #ccc;
+                                  border-radius: 50%;
                                 }
                                 .line-right {
-                                    left: 50%;
-                                    position: absolute;
-                                    bottom: 5px;
-                                    z-index: -1;
-                                    display: block;
-                                    content: '';
-                                    width: 100%;
-                                    height: 2px;
-                                    background: #ccc;
+                                  left: 50%;
+                                  position: absolute;
+                                  bottom: 5px;
+                                  z-index: -1;
+                                  display: block;
+                                  content: '';
+                                  width: 100%;
+                                  height: 2px;
+                                  background: #ccc;
                                 }
                                 .line-left {
-                                    right: 50%;
-                                    position: absolute;
-                                    bottom: 5px;
-                                    z-index: -1;
-                                    display: block;
-                                    content: '';
-                                    width: 100%;
-                                    height: 2px;
-                                    background: #ccc;
+                                  right: 50%;
+                                  position: absolute;
+                                  bottom: 5px;
+                                  z-index: -1;
+                                  display: block;
+                                  content: '';
+                                  width: 100%;
+                                  height: 2px;
+                                  background: #ccc;
                                 }
                                 .line-right-red {
-                                    left: 50%;
-                                    position: absolute;
-                                    bottom: 5px;
-                                    z-index: -1;
-                                    display: block;
-                                    content: '';
-                                    width: 100%;
-                                    height: 2px;
-                                    background: #ea352d;
+                                  left: 50%;
+                                  position: absolute;
+                                  bottom: 5px;
+                                  z-index: -1;
+                                  display: block;
+                                  content: '';
+                                  width: 100%;
+                                  height: 2px;
+                                  background: #ea352d;
                                 }
                                 .line-left-red {
-                                    right: 50%;
-                                    position: absolute;
-                                    bottom: 5px;
-                                    z-index: -1;
-                                    display: block;
-                                    content: '';
-                                    width: 100%;
-                                    height: 2px;
-                                    background: #ea352d;
+                                  right: 50%;
+                                  position: absolute;
+                                  bottom: 5px;
+                                  z-index: -1;
+                                  display: block;
+                                  content: '';
+                                  width: 100%;
+                                  height: 2px;
+                                  background: #ea352d;
                                 }
                             }
                         }
@@ -106,68 +106,67 @@ body {
                 }
     .single-main {
       .l-field {
-          margin: 0 auto;
-          background: #fff;
-          width: 700px;
+        margin: 0 auto;
+        background: #fff;
+        width: 700px;
                 h2.l-single-head {
-                    padding: 32px 16px;
-                    font-size: 22px;
-                    line-height: 1.5;
-                    text-align: center;
-                    font-weight: bolder;
+                  padding: 32px 16px;
+                  font-size: 22px;
+                  line-height: 1.5;
+                  text-align: center;
+                  font-weight: bolder;
                 }
                 .l-single-inner.registration-form {
                     .l-single-content {
-                        max-width: 320px;
-                        margin: 0 auto;
+                      max-width: 320px;
+                      margin: 0 auto;
                         .form-group {
-                            margin: 40px 0 0;
+                          margin: 40px 0 0;
                             .birthday-select-wrap {
-                                display: flex;
-                                height: 50px;
+                              display: flex;
+                              height: 50px;
                                 .select-wrap {
-                                    width: 100px;
-                                    margin-top: 8px;
+                                  width: 100px;
+                                  margin-top: 8px;
                                     .select-default {
-                                        position: relative;
-                                        height: 48px;
-                                        padding: 0 16px;
-                                        border-radius: 4px;
-                                        border: 1px solid #ccc;
-                                        background: 0;
-                                        font-size: 16px;
-                                        line-height: 1.5;
-                                        cursor: pointer;
-                                        width: 100%;
-                                        -webkit-appearance: none;
+                                      position: relative;
+                                      height: 48px;
+                                      padding: 0 16px;
+                                      border-radius: 4px;
+                                      border: 1px solid #ccc;
+                                      background: 0;
+                                      font-size: 16px;
+                                      line-height: 1.5;
+                                      cursor: pointer;
+                                      width: 100%;
+                                      -webkit-appearance: none;
                                     }
                                     i {
-                                        position: relative;
-                                        left: 60px;
-                                        top: -50%;
-                                        // z-index: 2;
-                                        color: #888;
-                                        font-size: 20px;
-                                        -webkit-transform: translate(0, -50%);
-                                        transform: translate(0, -50%);
+                                      position: relative;
+                                      left: 60px;
+                                      top: -50%;
+                                      color: #888;
+                                      font-size: 20px;
+                                      -webkit-transform: translate(0, -50%);
+                                      transform: translate(0, -50%);
                                     }
                                 }
                                 span {
-                                    margin:20px 2px;
+                                  margin:20px 2px;
                                 }
                             }
                         }
                         .form-info-text {
-                            position:relative;
-                            top: 20px;
+                          position:relative;
+                          top: 20px;
                         }
                         .btn-default.btn-red {
-                            width: 300px;
-                            line-height: 48px;
-                            margin: 30px 0;
-                            background-color:rgb(234, 53, 45);
-                            color: #fff;
-                            font-size: 14px;
+                          width: 300px;
+                          line-height: 48px;
+                          margin: 30px 0;
+                          background-color:rgb(234, 53, 45);
+                          color: #fff;
+                          font-size: 14px;
                         }
                     }
                 }
@@ -176,56 +175,80 @@ body {
     }
 
 .progress-bar {
-    font-size: 0;
-    text-align: center;
+  font-size: 0;
+  text-align: center;
 }
 nav ol, nav ul {
-    list-style: none;
+  list-style: none;
 }
 ul, ol {
-    list-style: none;
+  list-style: none;
 }
 
 main {
     .l-single-inner {
-        border-top: 1px solid #f5f5f5;
-        padding: 40px;
+      border-top: 1px solid #f5f5f5;
+      padding: 40px;
     }
     .form-group:first-child {
-        margin: 0;
+      margin: 0;
     }
     .form-group {
-        margin: 40px 0 0;
+      margin: 40px 0 0;
     }
     .form-require {
-        background: #ea352d;
+      background: #ea352d;
     }
     .form-require, .form-arbitrary, .message-is-seller, .news-private {
-        margin: 0 0 0 8px;
-        padding: 2px 4px;
-        border-radius: 2px;
-        color: #fff;
-        font-size: 12px;
-        vertical-align: top;
+      margin: 0 0 0 8px;
+      padding: 2px 4px;
+      border-radius: 2px;
+      color: #fff;
+      font-size: 12px;
+      vertical-align: top;
     }
     .form-group .input-default {
-        width: 100%;
-        margin: 12px 0 0;
+      width: 100%;
+      margin: 12px 0 0;
     }
     .form-group label {
-        font-weight: 600;
+      font-weight: 600;
     }
     label {
-        display: inline-block;
+      display: inline-block;
     }
     .input-default {
-        height: 28px;
-        padding: 10px 16px 8px;
-        border-radius: 4px;
-        border: 1px solid #ccc;
-        background: #fff;
-        line-height: 1.5;
-        font-size: 16px;
+      height: 28px;
+      padding: 10px 16px 8px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      background: #fff;
+      line-height: 1.5;
+      font-size: 16px;
         }
+    }
+}
+
+.single-footer {
+  width: 456px;
+  height: 220px;
+  margin: 0 auto;
+  padding: 40px 0;
+    a {
+      display: block;
+      color: #333;
+    }
+    .single-footer-logo {
+      width: 80px;
+      height: 65px;
+      margin: 40px auto 0;
+    }
+    p {
+      margin: 8px 180px 0;
+    }
+    li {
+      margin: 16px 0 0 16px;
+      font-size: 12px;
+      display: inline-block;
     }
 }
