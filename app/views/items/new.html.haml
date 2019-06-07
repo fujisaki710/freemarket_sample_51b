@@ -15,8 +15,14 @@
             = f.label :images do
               %p ドラッグアンドドロップ
               %p またはクリックしてファイルをダウンロード
-              = f.file_field :images, multiple: true, class: 'hidden'
-              .imageSelect
+              -# = f.file_field :images, multiple: true, class: 'hidden'
+              -# .imageSelect
+              = f.file_field :images, multiple: true
+              
+              = f.file_field :images, multiple: true
+              
+              = f.file_field :images, multiple: true
+              = f.file_field :images, multiple: true
               
         .item-contents__info
           .info__name
@@ -52,7 +58,6 @@
           %h4 配送について
           .form-question
             = link_to "？", "/jp/help_center/article/68/", target: "_blank"
-
           .shipping__box
             .box__fee
               %h3 配送料の負担
@@ -60,7 +65,14 @@
               .select__box
                 = f.select :delivery_fee, [["---","---"],["送料込み(出品者負担)","送料込み(出品者負担)"],["着払い(購入者負担)","着払い(購入者負担)"]], class:"select-default"
                 %i.fa.fa-chevron-down
-            
+            -# 配送料の負担を選択後、配送の方法のボックスを追加する
+            .box__rule
+              %h3 配送方法
+              %span 必須  
+              .select__box
+                = f.select :shipping_rule, [["---","---"],["未定","未定"],["らくらくメルカリ便","らくらくメルカリ便"],["ゆうメール","ゆうメール"],["レターパック","レターパック"],["普通郵便(定型、定型外)","普通郵便(定型、定型外)"],["クロネコヤマト","クロネコヤマト"],["ゆうパック","ゆうパック"],["クリックポスト","クリックポスト"],["ゆうパケット","ゆうパケット"]], class:"select-default"
+                %i.fa.fa-chevron-down
+                
             .box__area
               %h3 発送元の地域
               %span 必須
@@ -77,7 +89,6 @@
           %h4 販売価格(300〜9,999,999)
           .form-question
             = link_to "？", "/jp/help_center/article/68/", target: "_blank"
-
           .price__box
             .list__top
               .top__left

@@ -211,7 +211,8 @@
     }
     &__shipping{
       width: 620px;
-      height: 290px;
+      height: 400px;
+      // 元の高さheight: 290px;
       padding: 40px;
       border-top: 1px solid #eee;
       h4{
@@ -232,7 +233,6 @@
           text-decoration: none;
         }
       }
-
       .shipping__box{
         float: right;
         width: 400px;
@@ -395,7 +395,6 @@
           text-decoration: none;
         }
       }
-
       
         .price__box{
           width: 400px;
