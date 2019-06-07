@@ -1,6 +1,6 @@
 .wrapper
 
-  = render 'shared/header'                                                                                                                                                                                                                                                                                                                                                                   
+  = render 'shared/header'
 
   .item-box-container
     .item-name
@@ -10,12 +10,13 @@
         -# スライダー機能は後で実装します
         .photo__slider
           .slider__inner
-            = image_tag(@image.url,class: "inner_img")
+            - @images.each do |image|
+              = image_tag(image.url,class: "inner_img")
         .photo__soldout-budge
-          .budge-text SOLD  
+          .budge-text SOLD
           .budge-layout
 
-      %table{border: "5"                                                                                                          ,rules: "all",class: "detail-table"}
+      %table{border: "5",rules: "all",class: "detail-table"}
         %tbody
           %tr
             %th 出品者
