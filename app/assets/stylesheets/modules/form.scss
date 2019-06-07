@@ -6,8 +6,8 @@ body {
   font-size: 14px;
   color: #333;
   line-height: 1;
-    .registaration {
-        .single-header {
+  .registaration {
+    .single-header {
           text-align: center;
           height: 128px;
             h1 {
@@ -213,6 +213,9 @@ main {
     }
     .form-group label {
       font-weight: 600;
+    }
+    .text-left.l-chapter-sub-head {
+      font-weight:bold;
     }
     label {
       display: inline-block;
