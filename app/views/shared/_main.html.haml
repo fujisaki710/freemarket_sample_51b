@@ -1,7 +1,16 @@
 .main
-  -# スライダー機能("owl-carousel")は後で作成
-  .slider
-    .slider__box
+  .swiper
+    .swiper-container
+      .swiper-wrapper
+        .swiper-slide
+          %img{:src => "https://www.mercari.com/jp/assets/img/common/jp/top/banner-camp.jpg", style: "width: 1088px; height: 392px;"}/
+        .swiper-slide
+          %img{:src => "https://www.mercari.com/jp/assets/img/common/jp/top/banner-natsukashi.jpg", style: "width: 1088px; height: 392px;"}/
+        .swiper-slide
+          %img{:src => "https://www.mercari.com/jp/assets/img/common/jp/top/main_bg_pc.jpg", style: "width: 1088px; height: 392px;"}/
+      .swiper-pagination
+      .swiper-button-prev
+      .swiper-button-next
 
   .pickup-box
     .head ピックアップカテゴリー
