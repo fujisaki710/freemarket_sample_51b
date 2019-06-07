@@ -15,12 +15,14 @@
             = f.label :images do
               %p ドラッグアンドドロップ
               %p またはクリックしてファイルをダウンロード
+              
+              -# 以下のコメントアウトは、後に利用するため残しております。
               -# = f.file_field :images, multiple: true, class: 'hidden'
               -# .imageSelect
+
+              -# 現状は、複数画像の投稿確認を行うため、便宜的に以下の記述をしております。
               = f.file_field :images, multiple: true
-              
               = f.file_field :images, multiple: true
-              
               = f.file_field :images, multiple: true
               = f.file_field :images, multiple: true
               
