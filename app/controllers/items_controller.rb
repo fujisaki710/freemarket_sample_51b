@@ -20,9 +20,9 @@ class ItemsController < ApplicationController
   def show
     @item = Item.find(params[:id])
     @images = @item.images
-    @good = Like.where(status:"良い")
-    @normal = Like.where(status:"普通")
-    @bad = Like.where(status:"悪い")
+    @good = Like.where(status: "良い")
+    @normal = Like.where(status: "普通")
+    @bad = Like.where(status: "悪い")
   end
 
   private
@@ -30,5 +30,4 @@ class ItemsController < ApplicationController
   def item_params
     params.require(:item).permit(:name, :discription, :item_condition, :delivery_fee, :shipping_rule, :shipping_area, :shipping_date, :price).merge(user_id: current_user.id)
   end
-  
 end
