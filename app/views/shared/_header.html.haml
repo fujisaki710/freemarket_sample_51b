@@ -1,7 +1,8 @@
 .header
   .box 
     .box__top
-      %img{src:"//www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?1107552019", alt:"merukari", class:"title"}
+      = link_to root_path do
+        = image_tag("//www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?1107552019", class:"title") 
       -# 一時的にform_tagで記述し、トップページに遷移するように設定
       %form{action: root_path, class:"search-bar"}
         %input{type:"search",name:"keyword",placeholder:"何かお探しですか？",class:"search-bar__box"}
