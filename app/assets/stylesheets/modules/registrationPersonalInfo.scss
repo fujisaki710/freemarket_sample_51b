@@ -1,114 +1,112 @@
-.body {
-  height: 181vh;
-  .mypage {
-    .main {
-      height: 151vh;
-      .registrationPersonalInfo{
-        &__head {
-          height: 33px;
-          line-height: 33px;
-          font-size: 24px;
-          font-weight: bold;
-          padding: 8px 24px;
-          text-align: center;
-          border-bottom: 1px solid #f5f5f5;
-        }
-        &__body {
-          padding: 64px;
-          div {
-            p {
-              margin: 8px 0 0;
-              line-height: 1.5;
+.mypage {
+  .main {
+    height: 1300px;
+    .registrationPersonalInfo{
+      background-color: white;
+      &__head {
+        height: 33px;
+        line-height: 33px;
+        font-size: 24px;
+        font-weight: bold;
+        padding: 8px 24px;
+        text-align: center;
+        border-bottom: 1px solid #f5f5f5;
+      }
+      &__body {
+        padding: 64px;
+        div {
+          p {
+            margin: 8px 0 0;
+            line-height: 1.5;
+          }
+          .textRight {
+            text-align: right;
+            a {
+              color: #0099e8;
+              text-decoration: none;
             }
-            .textRight {
-              text-align: right;
-              a {
-                color: #0099e8;
-                text-decoration: none;
-              }
-              i {
-                position: static;
-                color: #0099e8;
-              }
+            i {
+              position: static;
+              color: #0099e8;
             }
           }
-          .formGroup {
-            margin-top: 40px;
-            label {
-              font-weight: bold;
-            }
-            .form-arbitrary {
-              background: #ccc;
-              margin: 0 0 0 8px;
-              padding: 2px 4px;
-              border-radius: 2px;
-              color: #fff;
-              font-size: 12px;
-              vertical-align: top;
-            }
-            .input-default {
-              width: 100%;
-              margin: 8px 0 0;
-              height: 20px;
-              padding: 10px 16px 8px;
+        }
+        .formGroup {
+          margin-top: 40px;
+          label {
+            font-weight: bold;
+          }
+          .form-arbitrary {
+            background: #ccc;
+            margin: 0 0 0 8px;
+            padding: 2px 4px;
+            border-radius: 2px;
+            color: #fff;
+            font-size: 12px;
+            vertical-align: top;
+          }
+          .input-default {
+            width: 100%;
+            margin: 8px 0 0;
+            height: 20px;
+            padding: 10px 16px 8px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            background: #fff;
+            line-height: 1.5;
+            font-size: 16px;
+          }
+          .select-wrap {
+            margin: 8px 0 0;
+            position: relative;
+            select {
+              width: 106%;
+              position: relative;
+              z-index: 2;
+              height: 48px;
+              padding: 0 16px;
               border-radius: 4px;
               border: 1px solid #ccc;
-              background: #fff;
-              line-height: 1.5;
+              background: 0;
               font-size: 16px;
+              line-height: 1.5;
+              cursor: pointer;
+              -webkit-appearance: none;
             }
-            .select-wrap {
-              margin: 8px 0 0;
-              position: relative;
-              select {
-                width: 106%;
-                position: relative;
-                z-index: 2;
-                height: 48px;
-                padding: 0 16px;
-                border-radius: 4px;
-                border: 1px solid #ccc;
-                background: 0;
-                font-size: 16px;
-                line-height: 1.5;
-                cursor: pointer;
-                -webkit-appearance: none;
-              }
-              i {
-                position: absolute;
-                right: -20px;
-                top: 50%;
-                z-index: 2;
-                color: #888;
-                font-size: 17px;
-                -webkit-transform: translate(0, -50%);
-                transform: translate(0, -50%);
-              }
+            i {
+              position: absolute;
+              right: -20px;
+              top: 50%;
+              z-index: 2;
+              color: #888;
+              font-size: 17px;
+              -webkit-transform: translate(0, -50%);
+              transform: translate(0, -50%);
             }
           }
-          .btn {
-            margin-top: 40px;
-            background: #ea352d;
-            border: 1px solid #ea352d;
-            color: #fff;
-            display: block;
-            width: 100%;
-            line-height: 48px;
-            font-size: 14px;
-            cursor: pointer;
-            text-align: center;
-          }
-          .formGroup.textRight {
-            p {
-              text-align: right;
-              a {
-                color: #0099e8;
-                text-decoration: none;
-              }
-              i {
-                position: static;
-                color: #0099e8;
-              }
+        }
+        .btn {
+          margin-top: 40px;
+          background: #ea352d;
+          border: 1px solid #ea352d;
+          color: #fff;
+          display: block;
+          width: 100%;
+          line-height: 48px;
+          font-size: 14px;
+          cursor: pointer;
+          text-align: center;
+        }
+        .formGroup.textRight {
+          p {
+            text-align: right;
+            a {
+              color: #0099e8;
+              text-decoration: none;
+            }
+            i {
+              position: static;
+              color: #0099e8;
             }
           }
         }

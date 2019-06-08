@@ -2,98 +2,102 @@
   %nav.mypageNav
     %ul.mypageNavList
       %li
-        %a.mypageNavList__item.active{href: "/jp/mypage/"}
+        %a.mypageNavList__item.active{href: "#"}
           マイページ
           %i.fa.fa-chevron-right
       %li
-        %a.mypageNavList__item.active{href: "/jp/mypage/"}
+        %a.mypageNavList__item.active{href: "#"}
           お知らせ
           %i.fa.fa-chevron-right
       %li
-        %a.mypageNavList__item.active{href: "/jp/mypage/"}
+        %a.mypageNavList__item.active{href: "#"}
           やることリスト
           %i.fa.fa-chevron-right
       %li
-        %a.mypageNavList__item.active{href: "/jp/mypage/"}
+        %a.mypageNavList__item.active{href: "#"}
           いいね！一覧
           %i.fa.fa-chevron-right
       %li
-        %a.mypageNavList__item.active{href: "/jp/mypage/"}
+        %a.mypageNavList__item.active{href: "#"}
           出品する
           %i.fa.fa-chevron-right
       %li
-        %a.mypageNavList__item.active{href: "/jp/mypage/"}
+        %a.mypageNavList__item.active{href: "#"}
           出品した商品-出品中
           %i.fa.fa-chevron-right
       %li
-        %a.mypageNavList__item.active{href: "/jp/mypage/"}
+        %a.mypageNavList__item.active{href: "#"}
           出品した商品-取引中
           %i.fa.fa-chevron-right
       %li
-        %a.mypageNavList__item.active{href: "/jp/mypage/"}
+        %a.mypageNavList__item.active{href: "#"}
           出品した商品-売却済み
           %i.fa.fa-chevron-right
       %li
-        %a.mypageNavList__item.active{href: "/jp/mypage/"}
+        %a.mypageNavList__item.active{href: "#"}
           購入した商品-取引中
           %i.fa.fa-chevron-right
       %li
-        %a.mypageNavList__item.active{href: "/jp/mypage/"}
+        %a.mypageNavList__item.active{href: "#"}
           購入した商品-過去の取引
           %i.fa.fa-chevron-right
       %li
-        %a.mypageNavList__item.active{href: "/jp/mypage/"}
+        %a.mypageNavList__item.active{href: "#"}
           ニュース一覧
           %i.fa.fa-chevron-right
       %li
-        %a.mypageNavList__item.active{href: "/jp/mypage/"}
+        %a.mypageNavList__item.active{href: "#"}
           評価一覧
           %i.fa.fa-chevron-right
       %li
-        %a.mypageNavList__item.active{href: "/jp/mypage/"}
+        %a.mypageNavList__item.active{href: "#"}
           ガイド
           %i.fa.fa-chevron-right
       %li
-        %a.mypageNavList__item.active{href: "/jp/mypage/"}
+        %a.mypageNavList__item.active{href: "#"}
           お問い合わせ
           %i.fa.fa-chevron-right
     %h3.mypageNavHead メルペイ
     %ul.mypageNavList
       %li
-        %a.mypageNavList__item.active{href: "/jp/mypage/"}
+        %a.mypageNavList__item.active{href: "#"}
           売上・振込申請
           %i.fa.fa-chevron-right
       %li
-        %a.mypageNavList__item.active{href: "/jp/mypage/"}
+        %a.mypageNavList__item.active{href: "#"}
           ポイント
           %i.fa.fa-chevron-right
     %h3.mypageNavHead 設定
     %ul.mypageNavList
       %li
-        %a.mypageNavList__item.active{href: "/jp/mypage/"}
-          プロフィール
-          %i.fa.fa-chevron-right
+        .mypageNavList__item.active
+          = link_to profile_user_path(current_user) do
+            %span プロフィール
+            %i.fa.fa-chevron-right
       %li
-        %a.mypageNavList__item.active{href: "/jp/mypage/"}
+        %a.mypageNavList__item.active{href: "#"}
           発送元・お届け先住所変更
           %i.fa.fa-chevron-right
       %li
-        %a.mypageNavList__item.active{href: "/jp/mypage/"}
-          支払い方法
-          %i.fa.fa-chevron-right
+        .mypageNavList__item.active
+          = link_to credit_user_path(current_user) do
+            %span 支払い方法
+            %i.fa.fa-chevron-right
       %li
-        %a.mypageNavList__item.active{href: "/jp/mypage/"}
+        %a.mypageNavList__item.active{href: "#"}
           メール/パスワード
           %i.fa.fa-chevron-right
       %li
-        %a.mypageNavList__item.active{href: "/jp/mypage/"}
-          本人情報
-          %i.fa.fa-chevron-right
+        .mypageNavList__item.active
+          = link_to edit_user_path(current_user) do
+            %span 本人情報
+            %i.fa.fa-chevron-right
       %li
-        %a.mypageNavList__item.active{href: "/jp/mypage/"}
+        %a.mypageNavList__item.active{href: "#"}
           電話番号の確認
           %i.fa.fa-chevron-right
       %li
-        %a.mypageNavList__item.active{href: "/jp/mypage/"}
-          ログアウト
-          %i.fa.fa-chevron-right
+        .mypageNavList__item.active
+          = link_to logout_user_path(current_user) do
+            %span ログアウト
+            %i.fa.fa-chevron-right
