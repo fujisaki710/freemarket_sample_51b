@@ -86,4 +86,3 @@ gem 'activerecord-import'
 gem 'payjp'
 
 gem 'ancestry'
-
