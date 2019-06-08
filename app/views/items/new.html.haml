@@ -15,12 +15,13 @@
             = f.label :images do
               %p ドラッグアンドドロップ
               %p またはクリックしてファイルをダウンロード
+              -# こちらは後に利用するため、コメントアウトしています。
               -# = f.file_field :images, multiple: true, class: 'hidden'
               -# .imageSelect
+
+              -# こちら、画像のアップロード状態を確認するため、便宜的にこの様に記載しております
               = f.file_field :images, multiple: true
-              
               = f.file_field :images, multiple: true
-              
               = f.file_field :images, multiple: true
               = f.file_field :images, multiple: true
               
