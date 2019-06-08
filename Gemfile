@@ -88,3 +88,4 @@ gem 'payjp'
 gem 'ancestry'
 
 gem "aws-sdk-s3", require: false
+gem 'gretel'
