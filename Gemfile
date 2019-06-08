@@ -84,3 +84,5 @@ gem 'active_hash'
 gem 'activerecord-import'
 
 gem 'payjp'
+
+gem 'gretel'
