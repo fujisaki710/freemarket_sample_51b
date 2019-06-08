@@ -1,5 +1,5 @@
 class ItemsController < ApplicationController
-  before_action :set_item, only: [:show]
+  before_action :set_item, only: [:show, :edit, :update]
 
   def index
     @items = Item.all.order("id DESC").limit(4)
@@ -21,6 +21,18 @@ class ItemsController < ApplicationController
     @normals = Like.where(status: "普通")
     @bads = Like.where(status: "悪い")
   end
+
+  def edit
+  end
+
+  def update
+    if @item.update(item_params)
+      redirect_to item_path(@item)
+    else
+      render :edit
+    end
+  end
+
 
   private
 
