@@ -1,10 +1,13 @@
 class UsersController < ApplicationController
-  def index
+  before_action :set_user
+
+  def show
+    @user = User.find(params[:id])
   end
 
-  def edit
-  end
+  private
 
-  def update
+  def set_user
+    @user = current_user
   end
 end
