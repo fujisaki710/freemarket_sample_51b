@@ -47,16 +47,4 @@
               %i.icon-arrow-right
           %input{name: "__csrf_value", type: "hidden", value: "6e96973f6b27a207edf3292b08d8fd656e32ae534791cd3dc241ee87dd8df1be1acfe54eeff9d13745f774fde996dd8f53317f28432f8170a3f3043d49f78242e"}/
           %input{name: "id", type: "hidden", value: "745713821"}/
-    %footer.single-footer
-      %nav
-        %ul.clearfix
-          %li
-            %a{href: "https://www.mercari.com/jp/privacy/"} プライバシーポリシー
-          %li
-            %a{href: "https://www.mercari.com/jp/tos/"} メルカリ利用規約
-          %li
-            %a{href: "https://www.mercari.com/jp/tokutei/"} 特定商取引に関する表記
-      %a.single-footer-logo{href: "https://www.mercari.com/jp/"}
-        %img{alt: "mercari", height: "65", src: "//www-mercari-jp.akamaized.net/assets/img/common/common/logo-gray.svg?3856598694", width: "80"}/
-      %p
-        %small © 2019 Mercari
+= render 'shared/sub-footer'
