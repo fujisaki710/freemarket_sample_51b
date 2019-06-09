@@ -3,9 +3,9 @@ class ItemsController < ApplicationController
 
   def index
     @items = Item.all.order("id DESC").limit(4)
-    # @images = Item.images.all.order("id DESC").limit(4)
+    @images = @items[0].images
   end
-  
+
   def new
     @item = Item.new
   end
