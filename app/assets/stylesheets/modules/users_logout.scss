@@ -1,7 +1,14 @@
-.mypage {
-  .main {
+.logout {
+  height: 1300px;
+  width: 1020px;
+  margin: 0 auto 0;
+  padding-top: 40px;
+  .logout-main {
     height: 179px;
-    .logout {
+    width: 700px;
+    float: right;
+    background-color: white;
+    .logout-box {
       padding: 64px;
       &__content {
         margin: 0 126px;
