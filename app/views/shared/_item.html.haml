@@ -21,9 +21,6 @@
 
               -# こちら、画像のアップロード状態を確認するため、便宜的にこの様に記載しております
               = f.file_field :images, multiple: true
-              = f.file_field :images, multiple: true
-              = f.file_field :images, multiple: true
-              = f.file_field :images, multiple: true
               
         .item-contents__info
           .info__name
@@ -122,6 +119,7 @@
           .submit__buttom
             = f.submit '出品する', class: 'btn-default'
           .submit__last
-            %button{type:"submit", class:"btn-default"}
-              もどる
+            = link_to root_path do
+              %button{type:"submit", class:"btn-default"}
+                もどる
 = render 'shared/sub-footer'
