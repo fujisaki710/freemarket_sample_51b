@@ -85,7 +85,6 @@ gem 'activerecord-import'
 
 gem 'payjp'
 
-
 gem 'ancestry'
 
 gem "aws-sdk-s3", require: false
