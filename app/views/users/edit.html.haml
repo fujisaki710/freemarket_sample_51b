@@ -1,5 +1,9 @@
 = render 'shared/header'
-= render 'shared/bread-crumbs'
+.bread-crumbs
+  %ul
+    %li
+    - breadcrumb :user
+    = breadcrumbs separator: " #{content_tag(:i, '', class:'fa fa-chevron-right')} "
 .user-edit
   = render 'shared/side_bar'
   .user-edit-main
