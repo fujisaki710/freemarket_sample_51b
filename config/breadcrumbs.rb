@@ -11,13 +11,12 @@ crumb :item do |item|
 end
 
 crumb :mypage do
-    link "マイページ"
-    parent :root
+  link "マイページ"
+  parent :root
 end
 
 crumb :user do
-    link "本人情報の登録"
-    parent :mypage
+  link "本人情報の登録"
 end
 
 crumb :brand do
@@ -26,15 +25,19 @@ crumb :brand do
 end
 
 crumb :profile do
-  link "プロフィール"
+  link "プロフィール", profile_user_path
   parent :mypage
 end
 
-crumb :signout do
+crumb :logout do
   link "ログアウト"
   parent :mypage
 end
 
+crumb :credit do
+  link "支払い方法"
+  parent :mypage
+end
 
 
 # crumb :projects do
