@@ -17,6 +17,7 @@ end
 
 crumb :user do
   link "本人情報の登録"
+  parent :mypage
 end
 
 crumb :brand do
