@@ -37,7 +37,7 @@ namespace :deploy do
   after :finishing, 'deploy:cleanup'
 end
 
-append :linked_files, ‘config/database.yml’, ‘config/master.key’
+# append :linked_files, ‘config/database.yml’, ‘config/master.key’
 
 set :default_env, {
     rbenv_root: "/usr/local/rbenv",
