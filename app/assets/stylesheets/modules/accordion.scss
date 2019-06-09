@@ -1,0 +1,15 @@
+.accordion-wrapper {
+  position: absolute;
+  top: 100px;
+  z-index: 1000;
+  background: #fff;
+  box-shadow: 0 1px 1px 0 rgba(0,0,0,0.24);
+  .accordion-parent {
+    display: block;
+    width: 224px;
+    &__category {
+      padding: 0 16px;
+      line-height: 44px;
+    }
+  }
+}
