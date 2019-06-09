@@ -17,3 +17,15 @@ mens_tops = mens.children.create(name: "トップス")
 mens_pants = mens.children.create(name: "パンツ")
 mens_tops.children.create([{name: "シャツ"}, {name: "ポロシャツ"}])
 mens_pants.children.create([{name: "スラックス"}, {name: "チノパン"}])
+
+Item.create(name: "ラルフローレン ポロシャツ レディース",
+            price: "1500",
+            item_condition: "目立った傷や汚れなし",
+            delivery_fee: "送料込み(出品者負担)",
+            shipping_date: "2~3日で発送",
+            discription: "ラルフローレンのポロシャツです。",
+            shipping_rule: "未定",
+            prefecture_id: "1",
+            status: "出品中",
+            user_id: "1"
+            )

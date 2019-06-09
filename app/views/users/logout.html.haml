@@ -1,17 +1,17 @@
-.body
-  = render 'shared/header'
-  .bread-crumbs
-    %ul
-      %li
-      - breadcrumb :logout
-      = breadcrumbs separator: " #{content_tag(:i, '', class:'fa fa-chevron-right')} "
-  .mypage
-    = render 'shared/side_bar'
-    .main
-      .logout
-        .logout__content
-          .btn 
-            = link_to destroy_user_session_path, method: :delete do
-              ログアウト 
-  = render 'shared/aside'
-  = render 'shared/footer'
+= render 'shared/header'
+.bread-crumbs
+  %ul
+    %li
+    - breadcrumb :logout
+    = breadcrumbs separator: " #{content_tag(:i, '', class:'fa fa-chevron-right')} "
+.logout
+  = render 'shared/side_bar'
+  .logout-main
+    .logout-box
+      .logout__content
+        .btn 
+          = link_to destroy_user_session_path, method: :delete do
+            ログアウト 
+= render 'shared/aside'
+= render 'shared/footer'
+= render 'shared/footer-btn'

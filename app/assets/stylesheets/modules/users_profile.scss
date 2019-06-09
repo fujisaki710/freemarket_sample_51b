@@ -1,6 +1,13 @@
-.mypage {
-  .main {
-    height:73vh;
+.profile {
+  height: 1300px;
+  width: 1020px;
+  margin: 0 auto 0;
+  padding-top: 40px;
+  .profile-main {
+    height: 572px;
+    width: 700px;
+    float: right;
+    background-color: white;
     .editProfile {
       &__head {
         height: 35px;
