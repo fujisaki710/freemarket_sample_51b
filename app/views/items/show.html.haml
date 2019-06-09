@@ -6,7 +6,7 @@
     %ul
       %li
       - breadcrumb :item, @item
-      = breadcrumbs separator: " #{content_tag(:i, '', :class=>'fa fa-chevron-right')} "
+      = breadcrumbs separator: " #{content_tag(:i, '', class:'fa fa-chevron-right')} "
   .item-box-container
     .item-name
       = @item.name
