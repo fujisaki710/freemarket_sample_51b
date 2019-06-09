@@ -1,6 +1,12 @@
-.mypage {
-  .main {
-    height: 46vh;
+.credit {
+  height: 1300px;
+  width: 1020px;
+  margin: 0 auto 0;
+  padding-top: 40px;
+  .credit-main {
+    width: 700px;
+    float: right;
+    background-color: white;
     .registrationCredit {
       &__head {
         line-height: 33px;

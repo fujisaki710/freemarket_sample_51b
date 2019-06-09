@@ -1,13 +1,12 @@
-.body
-  = render 'shared/header'
-  = render 'shared/bread-crumbs'
-  .mypage
-    = render 'shared/side_bar'
-    .main
-      .logout
-        .logout__content
-          .btn 
-            = link_to destroy_user_session_path, method: :delete do
-              ログアウト 
-  = render 'shared/aside'
-  = render 'shared/footer'
+= render 'shared/header'
+= render 'shared/bread-crumbs'
+.logout
+  = render 'shared/side_bar'
+  .logout-main
+    .logout-box
+      .logout-box__content
+        .btn 
+          = link_to destroy_user_session_path, method: :delete do
+            ログアウト 
+= render 'shared/aside'
+= render 'shared/footer'

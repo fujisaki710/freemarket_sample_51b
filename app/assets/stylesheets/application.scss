@@ -18,15 +18,14 @@
 @import "mixins/mixin";
 @import "mixins/vendor_prefix";
 @import "font-awesome";
-@import "modules/application";
-@import "modules/index";
-@import "modules/header";
-@import "modules/main";
-@import "modules/aside";
-@import "modules/footer";
-@import "modules/side-bar";
-@import "modules/sub-header";
-@import "modules/sub-footer";
-
+@import "modules/shared/application";
+@import "modules/shared/header";
+@import "modules/shared/main";
+@import "modules/shared/aside";
+@import "modules/shared/footer";
+@import "modules/shared/side-bar";
+@import "modules/shared/sub-header";
+@import "modules/shared/sub-footer";
+@import "modules/shared/footer-btn";
 
 
