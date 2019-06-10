@@ -1,19 +1,15 @@
-.address-header {
+.progress {
   text-align: center;
   height: 128px;
   border-top: 1px solid #eee;
-  .progress-bar.signup-bar {
+  .progress-bar {
     padding: 40px 0 0 44px;
     border: 0;
     display: inline-block;
     vertical-align: top;
     text-align: center;
-    .clearfix {
-      .active {
-        font-weight: 600;
-        color: #ea352d;
-      }
-      li {
+    ul {
+      .progressContents {
         position: relative;
         z-index: 1;
         display: inline-block;
@@ -21,7 +17,7 @@
         margin: 0 40px 0 0;
         font-size: 12px;
         color: #888;
-        .active__dot_red {
+        &__dotRed {
           width: 12px;
           height: 12px;
           margin: 8px auto 0;
@@ -29,25 +25,14 @@
           border-radius: 50%;
           background-color: #ea352d;
         }
-        .active__dot_gray {
+        &__dotGray {
           width: 12px;
           height: 12px;
           margin: 8px auto 0;
           background: #ccc;
           border-radius: 50%;
         }
-        .line-right {
-          left: 50%;
-          position: absolute;
-          bottom: 5px;
-          z-index: -1;
-          display: block;
-          content: '';
-          width: 100%;
-          height: 2px;
-          background: #ccc;
-        }
-        .line-left {
+        &__lineLeft {
           right: 50%;
           position: absolute;
           bottom: 5px;
@@ -58,7 +43,7 @@
           height: 2px;
           background: #ccc;
         }
-        .line-right-red {
+        &__lineRight {
           left: 50%;
           position: absolute;
           bottom: 5px;
@@ -67,10 +52,21 @@
           content: '';
           width: 100%;
           height: 2px;
-          background: #ea352d;
+          background: #ccc;
         }
-        .line-left-red {
-          right: 50%;
+        &__lineLeft_red {
+            right: 50%;
+            position: absolute;
+            bottom: 5px;
+            z-index: -1;
+            display: block;
+            content: '';
+            width: 100%;
+            height: 2px;
+            background: #ea352d;
+        }
+        &__lineRight_red {
+          left: 50%;
           position: absolute;
           bottom: 5px;
           z-index: -1;
@@ -84,6 +80,7 @@
     }
   }
 }
+
 .address-main {
   background-color: white;
   padding-bottom:20px;
