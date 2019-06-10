@@ -12,17 +12,17 @@
       %button#google-login.line.btn-sns-google
         %i.fab.fa-google
         Googleでログイン
-    %form{:action => "https://www.mercari.com/jp/login/", :method => "POST", :novalidate => "novalidate"}
+    %form{action: "https://www.mercari.com/jp/login/", method: "POST", novalidate: "novalidate"}
       .login-form-inner
         .form-group
           %input.login-input-text.line{name: "email", placeholder: "メールアドレス", type: "email", value: ""}/
         .form-group
           %input.login-input-text.line{name: "password", placeholder: "パスワード", type: "password"}/
         .form-group
-          .g-recaptcha.login-captcha{"data-sitekey" => "6LfZGCYTAAAAAHoK-s7Lg5OdYg5Fq4susvALmZoc"}
+          .g-recaptcha.login-captcha{data-sitekey: "6LfZGCYTAAAAAHoK-s7Lg5OdYg5Fq4susvALmZoc"}
             %div
-              %iframe{frameborder: "0", height: "78", name: "a-wce50ehjf5if", role: "presentation", sandbox: "allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox", scrolling: "no", src: "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LfZGCYTAAAAAHoK-s7Lg5OdYg5Fq4susvALmZoc&co=aHR0cHM6Ly93d3cubWVyY2FyaS5jb206NDQz&hl=ja&v=v1559543665173&size=normal&cb=vdf9cu1xnyjk", :width => "304"}
-        %button.login-submit.line.btn-red{:type => "submit"} ログイン
-        %input{:name => "login_callback", :type => "hidden", :value => "https://www.mercari.com/jp/"}/
-        %a{:href => "https://www.mercari.com/jp/password/reset/start/"} パスワードをお忘れの方
+              %iframe{frameborder: "0", height: "78", name: "a-wce50ehjf5if", role: "presentation", sandbox: "allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox", scrolling: "no", src: "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LfZGCYTAAAAAHoK-s7Lg5OdYg5Fq4susvALmZoc&co=aHR0cHM6Ly93d3cubWVyY2FyaS5jb206NDQz&hl=ja&v=v1559543665173&size=normal&cb=vdf9cu1xnyjk", width: "304"}
+        %button.login-submit.line.btn-red{type: "submit"} ログイン
+        %input{name: "login_callback", type: "hidden", value: "https://www.mercari.com/jp/"}/
+        %a{href: "https://www.mercari.com/jp/password/reset/start/"} パスワードをお忘れの方
 = render 'shared/sub-footer'
