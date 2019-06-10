@@ -1,0 +1,71 @@
+= render 'shared/sub-header'
+.progress
+  .progress-bar
+    %ul
+      %li.progressContents
+        会員情報
+        .progressContents__dotRed
+        .progressContents__lineRight_red
+      %li.progressContents
+        電話番号認証
+        .progressContents__dotRed
+        .progressContents__lineLeft_red
+        .progressContents__lineRight_red
+      %li.progressContents
+        お届け先住所入力
+        .progressContents__dotRed
+        .progressContents__lineLeft_red
+        .progressContents__lineRight
+      %li.progressContents
+        支払い方法
+        .progressContents__dotGray
+        .progressContents__lineLeft
+        .progressContents__lineRight
+      %li.progressContents
+        完了
+        .progressContents__dotGray
+        .progressContents__lineLeft
+
+.address-main
+  .address-title
+    %a.form-title 住所入力
+  .formGroup
+    %label(for="zip_code") お名前
+    %span.form-arbitrary-required 必須
+    %input(type="text" value="" name="zip_code" placeholder="例）山田" class="input-default")
+    %input(type="text" value="" name="zip_code" placeholder="例）彩" class="input-default")
+  .formGroup
+    %label(for="zip_code") お名前カナ
+    %span.form-arbitrary-required 必須
+    %input(type="text" value="" name="zip_code" placeholder="例）ヤマダ" class="input-default")
+    %input(type="text" value="" name="zip_code" placeholder="例）アヤ" class="input-default")
+  .formGroup
+    %label(for="zip_code") 郵便番号
+    %span.form-arbitrary-required 必須
+    %input(type="text" value="" name="zip_code" placeholder="例）1234567" class="input-default")
+  .formGroup
+    %label(for="prefecture") 都道府県
+    %span.form-arbitrary-required 必須
+    .select-wrap
+      = form_with(url: '#') do |f|
+        = f.collection_select :prefecture_id, Prefecture.all, :id, :name
+        %i.fa.fa-chevron-down
+  .formGroup
+    %label(for="city") 市区町村
+    %span.form-arbitrary-required 必須
+    %input(type="text" value="" name="city" placeholder="例) 横浜市緑区" class="input-default")
+  .formGroup
+    %label(for="address1_label") 番地
+    %span.form-arbitrary-required 必須
+    %input(type="text" value="" name="address1" placeholder="例) 青山1−1−1" class="input-default")
+  .formGroup
+    %label(for="address2_label") 建物名
+    %span.form-arbitrary-any 任意
+    %input(type="text" value="" name="address2" placeholder="例) 柳ビル103" class="input-default")
+  .formGroup
+    %label(for="address2_label") 電話
+    %span.form-arbitrary-any 任意
+    %input(type="text" value="" name="address2" placeholder="例) 0901234567" class="input-default")
+  .formGroup
+    %button(type="submit" class="btn")次へ進む
+= render 'shared/sub-footer'

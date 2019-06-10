@@ -1,0 +1,225 @@
+.address-header {
+  text-align: center;
+  height: 128px;
+  border-top: 1px solid #eee;
+  .progress-bar.signup-bar {
+    padding: 40px 0 0 44px;
+    border: 0;
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    .clearfix {
+      .active {
+        font-weight: 600;
+        color: #ea352d;
+      }
+      li {
+        position: relative;
+        z-index: 1;
+        display: inline-block;
+        min-width: 60px;
+        margin: 0 40px 0 0;
+        font-size: 12px;
+        color: #888;
+        .active__dot_red {
+          width: 12px;
+          height: 12px;
+          margin: 8px auto 0;
+          background: #ccc;
+          border-radius: 50%;
+          background-color: #ea352d;
+        }
+        .active__dot_gray {
+          width: 12px;
+          height: 12px;
+          margin: 8px auto 0;
+          background: #ccc;
+          border-radius: 50%;
+        }
+        .line-right {
+          left: 50%;
+          position: absolute;
+          bottom: 5px;
+          z-index: -1;
+          display: block;
+          content: '';
+          width: 100%;
+          height: 2px;
+          background: #ccc;
+        }
+        .line-left {
+          right: 50%;
+          position: absolute;
+          bottom: 5px;
+          z-index: -1;
+          display: block;
+          content: '';
+          width: 100%;
+          height: 2px;
+          background: #ccc;
+        }
+        .line-right-red {
+          left: 50%;
+          position: absolute;
+          bottom: 5px;
+          z-index: -1;
+          display: block;
+          content: '';
+          width: 100%;
+          height: 2px;
+          background: #ea352d;
+        }
+        .line-left-red {
+          right: 50%;
+          position: absolute;
+          bottom: 5px;
+          z-index: -1;
+          display: block;
+          content: '';
+          width: 100%;
+          height: 2px;
+          background: #ea352d;
+        }
+      }
+    }
+  }
+}
+.pay-main {
+  background-color: white;
+  padding-bottom:20px;
+  .address-title {
+    text-align: center;
+    padding: 40px 0;
+    border-bottom: 1px solid #eee;
+    a {
+      font-weight: bold;
+      font-size: 30px;
+    }
+  }
+
+  .formGroup {
+    width:450px;
+    margin: 60px auto;
+    label {
+      font-weight: bold;
+    }
+    .form-arbitrary-any {
+      background: #ccc;
+      margin: 0 0 0 8px;
+      padding: 2px 4px;
+      border-radius: 2px;
+      color: #fff;
+      font-size: 12px;
+      vertical-align: top;
+    }
+    .form-arbitrary-required {
+      background: red;
+      margin: 0 0 0 8px;
+      padding: 2px 4px;
+      border-radius: 2px;
+      color: #fff;
+      font-size: 12px;
+      vertical-align: top;
+    }
+    .input-default {
+      width: 100%;
+      margin: 8px 0 0;
+      height: 20px;
+      padding: 10px 16px 8px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      background: #fff;
+      line-height: 1.5;
+      font-size: 16px;
+    }
+    .signup-card-list {
+      display: flex;
+      margin-top: 10px;
+      margin-bottom: 40px;
+      .card-decoration, img {
+        margin-right:7px;
+        height: 35px;
+        width: 35px;
+      }
+    }
+    .formGroup-select {
+      width:250px;
+      display: flex;
+      position: relative;
+      select {
+        width: 106%;
+        position: relative;
+        z-index: 2;
+        height: 48px;
+        padding: 0 16px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        background: 0;
+        font-size: 16px;
+        line-height: 1.5;
+        cursor: pointer;
+        -webkit-appearance: none;
+        margin-top: 10px;
+        margin: 10px 10px 0  0;
+      }
+      .credit-selectbox {
+        line-height: 65px;
+      }
+      i, .credit {
+        position: absolute;
+        right: 30px;
+        top: 50%;
+        z-index: 2;
+        color: #888;
+        font-size: 17px;
+        -webkit-transform: translate(0, -50%);
+        transform: translate(0, -50%);
+      }
+    }
+    .card-text {
+      text-align: right;
+      margin-top: 10px;
+      a {
+        color: #0099e8;
+        text-decoration: none;
+      }
+      .questionForm {
+        display: inline-block;
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        background: #0099e8;
+        color: #fff;
+        line-height: 14px;
+        font-size: 12px;
+        text-align: center;
+      }
+    }
+  }
+  .btn {
+    margin-top: 40px;
+    background: #ea352d;
+    border: 1px solid #ea352d;
+    color: #fff;
+    display: block;
+    width: 481px;
+    line-height: 48px;
+    font-size: 14px;
+    cursor: pointer;
+    text-align: center;
+    margin: 40px auto;
+  }
+  .formGroup.textRight {
+    p {
+      text-align: right;
+      a {
+        color: #0099e8;
+        text-decoration: none;
+      }
+      i {
+        position: static;
+        color: #0099e8;
+      }
+    }
+  }
+}

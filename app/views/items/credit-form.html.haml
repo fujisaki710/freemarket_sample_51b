@@ -1,0 +1,30 @@
+= render 'shared/sub-header'
+%header.address-header
+  %nav.progress-bar.signup-bar
+    .clearfix
+      %li
+        会員情報
+        .active__dot_red
+        .line-right-red
+      %li
+        電話番号認証
+        .active__dot_red
+        .line-left-red
+        .line-right-red
+      %li
+        お届け先住所入力
+        .active__dot_red
+        .line-left-red
+        .line-right-red
+      %li.active
+        支払い方法
+        .active__dot_red
+        .line-left-red
+        .line-right
+      %li
+        完了
+        .active__dot_gray
+        .line-left
+
+= render 'shared/credit_form'
+= render 'shared/sub-footer'
