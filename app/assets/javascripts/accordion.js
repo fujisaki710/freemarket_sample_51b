@@ -1,12 +1,9 @@
-$(function (){
-  
-
-  $('.accordion p').click(function(){
-		$(this).next('ul').slideToggle();
+$(function() {
+  $(".left-btn--category").on("mouseout", function() {
+    $(".accordion-wrapper").();
 	});
+	
+	$(".left-btn--category").on("mouseenter", function() {
+    $(".accordion-wrapper").css('display', 'block');
+  });
 });
-
-// $(document).on('turbolinks:load', function(){
-//   $(".left-btn").on('mouseenter', function(){
-//     $(this).children('ul.accordion').css('display', 'block');
-//   });
