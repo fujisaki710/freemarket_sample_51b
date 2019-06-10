@@ -11,5 +11,43 @@
       padding: 0 16px;
       line-height: 44px;
     }
+    .child-wrapper {
+      position: absolute;
+      top: 0;
+      left: 224px;
+      bottom: 0;
+      background: #fff;
+      box-shadow: 1px 0 0 0 #eee inset, 0 1px 1px 0 rgba(0,0,0,0.24);
+      .accordion-child {
+        display: block;
+        width: 224px;
+        &__category {
+          padding: 8px 16px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          font-size: 14px;
+        }
+        .grandchild-wrapper {
+          position: absolute;
+          top: 0;
+          left: 224px;
+          bottom: 0;
+          background: #fff;
+          box-shadow: 1px 0 0 0 #eee inset, 0 1px 1px 0 rgba(0,0,0,0.24);
+          .accordion-grandchild {
+            display: block;
+            width: 320px;
+            &__category {
+              padding: 8px 16px;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
   }
 }
