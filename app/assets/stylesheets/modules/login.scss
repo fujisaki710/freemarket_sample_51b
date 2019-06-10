@@ -1,0 +1,101 @@
+.single-main {
+  .login-panel {
+    max-width: none;
+    width: 456px;
+    margin: 0 auto;
+    background: #fff;
+    .login-no-account {
+      padding: 40px 64px;
+      text-align: center;
+      border-bottom: 1px solid #eee;
+      a {
+        display: block;
+        margin: 8px 0 0;
+        border: 1px solid #0099e8;
+        background: #0099e8;
+        color: #fff;
+        line-height: 40px;
+        text-decoration:none;
+      }
+    }
+    .login-form-inner {
+      padding: 12px 64px 32px;
+      .form-group {
+        margin: 24px 0 0;
+        
+      } 
+      .line {
+        display: block;
+        width: 100%;
+        line-height: 48px;
+        font-size: 14px;
+        border: 1px solid transparent;
+        -webkit-transition: all ease-out .3s;
+        transition: all ease-out .3s;
+        cursor: pointer;
+        margin-top: 24px;
+      }
+
+      .login-input-text{
+        padding: 10px 16px 8px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        background: #fff;
+        line-height: 1.5;
+        font-size: 16px;
+        width: 90%;
+      }
+      
+      .btn-default {
+        display: block;
+        width: 100%; 
+        line-height: 48px;
+        font-size: 14px;
+        border: 1px solid transparent;
+        -webkit-transition: all ease-out .3s;
+        transition: all ease-out .3s;
+        cursor: pointer;
+        text-align: center;
+        text-decoration:none;
+      }
+      .btn-sns-facebook {
+        margin: 16px 0 0;
+        background: #385185;
+        color: #fff;
+        height: 50px;
+      }
+      .btn-sns-google {
+        margin: 16px 0 0;
+        background: #fff url() no-repeat 3px top;
+        border: #979797 solid 1px;
+        color: #333;
+        height: 50px;
+      }
+      .icon-facebook, .fa-facebook-square {
+        float: left;
+        line-height: 53px;
+        font-size: 28px;
+        position: relative;
+        left: 10px;
+      }
+      .fa-google {
+        float: left;
+        line-height: 53px;
+        font-size: 18px;
+        position: relative;
+        left: 10px;
+      }
+      a {
+        display: block;
+        margin: 40px 0 0;
+        color: #0099e8;
+        text-decoration: none;
+      }
+    }
+    .btn-red {
+      background: #ea352d;
+      border: 1px solid #ea352d;
+      color: #fff;
+    }
+  }
+}
