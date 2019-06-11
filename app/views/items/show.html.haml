@@ -158,17 +158,14 @@
         楽天パンダ ノート&マスキングテープセット
 
   .item-social-media-box
-    .text-center
-    %ul.social-media-box
-      %li.share-btn
-        = link_to '#' do
-          %i.fab.fa-facebook-square
-      %li.share-btn
-        = link_to '#' do
-          %i.fab.fa-twitter
-      %li.share-btn
-        = link_to '#' do
-          %i.fab.fa-pinterest
+    .item-delete-edit
+    - if user_signed_in? && current_user.id == @item.user_id
+      = link_to item_path(@item.id), method: :delete do
+        削除する
+        
+    - if user_signed_in? && current_user.id == @item.user_id 
+      = link_to edit_item_path(@item.id) do
+        編集する
 
   .items-in-user-profile
     .item-box-container.clearfix
