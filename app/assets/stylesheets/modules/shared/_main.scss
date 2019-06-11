@@ -6,15 +6,26 @@
     margin-left: auto;
     margin-right: auto;
     width: 100%;
-
-    .swiper-slide {
+    swiper-slide {
       background-size: auto 360px;
       background-position: center;
       width: 100vw;
       height: 360px;
     }
+    @media screen and (max-width:768px){
+      .swiper-slide {
+        background-image: image-url("https://www.mercari.com/jp/assets/img/common/jp/top/banner-natsukashi.jpg");
+        height:200px;
+        width: auto;
+        display: block;
+        // background-attachment: fixed;
+        background-size: auto 100px;
+      }
+    }
+
   }
 
+  
   .pickup-box {
     padding: 40px 0;
     background: #f5f5f5;
@@ -42,6 +53,22 @@
           font-weight: bold;
         }
       }
+      @media screen and (max-width:768px){
+        .text-center{
+          font-size: 22px;
+          margin: 26px 11px;
+          text-align: center;
+          a{
+            display: inline-block;
+          }
+        }
+    }
+      @media screen and (max-width:690px){
+        .text-center{
+          font-size: 18px;
+          margin: 26px 11px;
+        }
+      }
 
       .item-box__content {
         width: auto;
@@ -49,6 +76,86 @@
         margin: 0 auto;
 
         .item-box {
+          margin: 0 0 0 20px;
+          width: 213px;
+          height: 323px;
+          position: relative;
+          float: left;
+          background: #fff;
+
+          a {
+            display: block;
+            color: #333;
+            text-decoration: none;
+
+            .photo {
+              width: 213px;
+              overflow: hidden;
+              position: relative;
+              padding: 0 0 100%;
+
+              &__img {
+                width: 100%;
+                height: auto;
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                z-index: 1;
+                object-fit: cover;
+                vertical-align: middle;
+                max-height: 213px;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+              }
+            }
+
+            .item {
+              height: 78px;
+              padding: 16px;
+              
+              &__name {
+                overflow: hidden;
+                position: relative;
+                font-weight: 400;
+                line-height: 1.5;
+                word-break: break-word;
+                white-space: normal;
+                font-size: 16px;
+              }
+
+              &__num {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin: 8px 0 0;
+
+                .item__price {
+                  font-size: 17px;
+                  font-weight: 500;
+                  color: #333;
+                }
+              }
+
+              &__tax {
+                font-size: 10px;
+              }
+            }
+          }
+        }
+        @media screen and (max-width:1000px){
+          .item-box__content.clearfix{
+            
+          }
+          .item-box{
+            margin: 0 0 0 20px;
+            width: 213px;
+            position: relative;
+            float: left;
+          }
+        }
+
+        .item-box-last {
           margin: 0 0 0 20px;
           width: 213px;
           height: 323px;
@@ -128,6 +235,11 @@
           text-decoration: none;
         }
       }
+    }
+  }
+  @media screen and (max-width:1000px){
+    .item-box-last{
+      display: none;
     }
   }
 }
