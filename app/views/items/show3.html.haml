@@ -147,9 +147,6 @@
             = f.text_area :comment, class: "comment-form__text_area"
             = f.submit "コメントする", class: "comment-form__submit"
 
-          -# - if user_signed_in? && current_user.id == @item.user_id
-          -#   = link_to '削除', "/items/#{@item.id}", method: :delete 
-
   %ul.link-prev-next.clearfix
     %li.prev
       = link_to '#' do
@@ -161,12 +158,17 @@
         楽天パンダ ノート&マスキングテープセット
 
   .item-social-media-box
-    .item-delete-edit
-    - if user_signed_in? && current_user.id == @item.user_id
-      = link_to '削除する', "/items/#{@item.id}", method: :delete
-
-    - if user_signed_in? && current_user.id == @item.user_id
-      = link_to '編集する', "/items/#{@item.id}/edit", method: :get 
+    .text-center
+    %ul.social-media-box
+      %li.share-btn
+        = link_to '#' do
+          %i.fab.fa-facebook-square
+      %li.share-btn
+        = link_to '#' do
+          %i.fab.fa-twitter
+      %li.share-btn
+        = link_to '#' do
+          %i.fab.fa-pinterest
 
   .items-in-user-profile
     .item-box-container.clearfix

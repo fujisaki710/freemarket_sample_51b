@@ -1,5 +1,5 @@
 class ItemsController < ApplicationController
-  before_action :set_item, only: [:show, :edit, :update]
+  before_action :set_item, only: [:show, :edit, :update, :destroy]
 
   def index
     @items = Item.all.order("id DESC").limit(4)
@@ -16,6 +16,13 @@ class ItemsController < ApplicationController
     redirect_to item_path(@item)
   end
 
+  def destroy
+    if @item.user_id == current_user.id
+      @item.destroy
+      redirect_to root_path
+    end
+  end
+
   def show
     @images = @item.images
     @goods = Like.where(status: "良い")
@@ -24,6 +31,7 @@ class ItemsController < ApplicationController
   end
 
   def edit
+    @item = Item.find(params[:id])
   end
 
   def update
