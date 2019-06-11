@@ -147,9 +147,6 @@
             = f.text_area :comment, class: "comment-form__text_area"
             = f.submit "コメントする", class: "comment-form__submit"
 
-          -# - if user_signed_in? && current_user.id == @item.user_id
-          -#   = link_to '削除', "/items/#{@item.id}", method: :delete 
-
   %ul.link-prev-next.clearfix
     %li.prev
       = link_to '#' do
