@@ -160,10 +160,12 @@
   .item-social-media-box
     .item-delete-edit
     - if user_signed_in? && current_user.id == @item.user_id
-      = link_to '削除する', "/items/#{@item.id}", method: :delete
-
-    - if user_signed_in? && current_user.id == @item.user_id
-      = link_to '編集する', "/items/#{@item.id}/edit", method: :get 
+      = link_to item_path(@item.id), method: :delete do
+        削除する
+        
+    - if user_signed_in? && current_user.id == @item.user_id 
+      = link_to edit_item_path(@item.id) do
+        編集する
 
   .items-in-user-profile
     .item-box-container.clearfix
