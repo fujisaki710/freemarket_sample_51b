@@ -76,3 +76,90 @@
     }
   }
 }
+
+@media screen and (max-width:768px){
+  .aside {
+
+    .aside__box {
+      background: url(https://www.mercari.com/jp/assets/img/common/jp/top/download_bg_pc.jpg?72826626);
+      background-position: center;
+      background-size: auto 100px;
+      width: auto;
+      height: 260px;
+      display: block;
+    
+      .inner {
+        overflow: hidden;
+        position: relative;
+        width: auto;
+        height: 260px;
+        margin: 0 auto;
+        color: #fff;
+  
+        &-left {
+          position: absolute;
+          top: 50%;
+          left: 16px;
+          transform: translate(0, -50%);
+  
+          .upper-text {
+            text-shadow: 0 0 5px rgba(0,0,0,0.4);
+            margin: 0;
+            font-size: 16px;
+            line-height: 1.4;
+            font-weight: bold;
+          }
+  
+          .lower-text {
+            text-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+            margin: 10px 0 0;
+            font-size: 24px;
+          }
+  
+          .icons {
+            margin: 20px 0 0;
+  
+            &__icon {
+              float: left;
+            }
+  
+            .btn {
+              float: left;
+              margin: 0 0 0 24px;
+              line-height: 68px;
+  
+              &__apple {
+                float: left;
+                display: block;
+                line-height: 68px;
+                vertical-align: middle;
+              }
+  
+              &__google {
+                margin: 0 0 0 16px;
+                float: left;
+                display: block;
+                line-height: 68px;
+                vertical-align: middle;
+              }
+            }
+          }
+        }
+  
+        &-right {
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          width: 300px;
+          height: 100%;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width:700px){
+  .aside{
+    display: none;
+  } 
+}
