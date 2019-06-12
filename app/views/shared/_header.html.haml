@@ -16,22 +16,9 @@
           = link_to root_path do
             = fa_icon 'list',class: 'left-btn--category__icon'
             %span カテゴリーから探す
-        %ul.accordion-wrapper
-          %li.accordion-parent
-            .accordion-parent__category
-              @category.name
-            %ul.child-wrapper
-              %li.accordion-child
-                .accordion-child__category トップス
-                %ul.grandchild-wrapper
-                  %li.accordion-grandchild
-                    .accordion-grandchild__category ポロシャツ
-                  %li.accordion-grandchild
-                    .accordion-grandchild__category キャミソール
-              %li.accordion-child
-                .accordion-child__category パンツ
-          %li.accordion-parent
-            .accordion-parent__category メンズ
+          .accordion
+            %ul.parent
+              = render partial: "shared/parent", collection: @parents
 
         %li.left-btn--brand
           = link_to root_path do

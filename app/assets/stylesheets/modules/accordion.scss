@@ -1,49 +1,62 @@
-.accordion-wrapper {
+.accordion {
+  z-index: 1010;
+  background-color: #fff;
+  display: none;
+  font-size: 14px;
   position: absolute;
-  top: 100px;
-  z-index: 1000;
-  background: #fff;
+  top: 44px;
   box-shadow: 0 1px 1px 0 rgba(0,0,0,0.24);
-  .accordion-parent {
-    display: block;
+  border-color: #fff #e0e0e0 #e0e0e0 #e0e0e0;
+  height: 200px;
+  font-weight: normal;
+  .parent {
     width: 224px;
-    &__category {
-      padding: 0 16px;
-      line-height: 44px;
-    }
-    .child-wrapper {
-      position: absolute;
-      top: 0;
-      left: 224px;
-      bottom: 0;
-      background: #fff;
-      box-shadow: 1px 0 0 0 #eee inset, 0 1px 1px 0 rgba(0,0,0,0.24);
-      .accordion-child {
+    &__name {
+      .parent_box {
+        width: 100%;
+        height: 40px;
+        line-height: 40px;
+      }
+      .parent-link {
         display: block;
-        width: 224px;
-        &__category {
-          padding: 8px 16px;
-          overflow: hidden;
-          text-overflow: ellipsis;
-          white-space: nowrap;
-          font-size: 14px;
-        }
-        .grandchild-wrapper {
-          position: absolute;
-          top: 0;
-          left: 224px;
-          bottom: 0;
-          background: #fff;
-          box-shadow: 1px 0 0 0 #eee inset, 0 1px 1px 0 rgba(0,0,0,0.24);
-          .accordion-grandchild {
-            display: block;
-            width: 320px;
-            &__category {
-              padding: 8px 16px;
-              overflow: hidden;
-              text-overflow: ellipsis;
-              white-space: nowrap;
-              font-size: 14px;
+        padding-left: 20px;
+      }
+      .child {
+        position: absolute;
+        height: 200px;
+        top: 0px;
+        left: 224px;
+        width: 200px;
+        z-index: 1010;
+        background-color: #fff;
+        box-shadow: 0 1px 1px 0 rgba(0,0,0,0.24);
+        &__name {
+          height: 30px;
+          line-height: 30px;
+          .child_box {
+            width: 100%;
+            height: 100%;
+            .child-link {
+              width: 100%;
+              height: 100%;
+              padding-left: 15px;
+              display: block;
+            }
+            .grandchild {
+              height: 100%;
+              width: 200px;
+              top: 0px;
+              left: 200px;
+              position: absolute;
+              z-index: 1010;
+              background-color: #fff;
+              display: none;
+              border-color: #fff #e0e0e0 #e0e0e0 #e0e0e0;
+              box-shadow: 0 1px 1px 0 rgba(0,0,0,0.24);
+              .grandchild-link {
+                padding-left: 15px;
+                display: block;
+              }
             }
           }
         }
