@@ -25,3 +25,62 @@
     }
   }
 }
+@media screen and (max-width:800px){
+  .footer-sell-btn {
+    bottom: 24px;
+    right: 24px;
+    width: 100px;
+    height: 100px;
+    font-size: 18px;
+    position: fixed;
+    border-radius: 50%;
+    background: #ea352d;
+    color: #fff;
+    text-align: center;
+    z-index: 1010;
+  
+    a {
+      text-decoration: none;
+      color: #fff;
+  
+      div {
+        margin: 18px 0 0;
+      }
+      .icon-camera {
+        margin: 8px 0 0;
+        font-size: 34px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width:600px){
+  .footer-sell-btn {
+    bottom: 20px;
+    right: 20px;
+    width: 80px;
+    height: 80px;
+    font-size: 14px;
+    position: fixed;
+    border-radius: 50%;
+    background: #ea352d;
+    color: #fff;
+    text-align: center;
+    z-index: 1000;
+  
+    a {
+      text-decoration: none;
+      color: #fff;
+
+      div {
+        margin: 16px 0 0;
+        padding: 0 0 5px;
+      }
+      
+      .icon-camera {
+        margin: 0;
+        font-size: 26px;
+      }
+    }
+  }
+}
