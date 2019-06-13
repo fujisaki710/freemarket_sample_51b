@@ -7,22 +7,16 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 ladies = Category.create(name: "レディース")
-mens = Category.create(name: "メンズ")
-interiors = Category.create(name: "インテリア・住まい・小物")
-
 ladies_tops = ladies.children.create(name: "トップス")
 ladies_pants = ladies.children.create(name: "パンツ")
-mens_tops = mens.children.create(name: "トップス")
-mens_pants = mens.children.create(name: "パンツ")
-interiors_kitchen = interiors.children.create(name: "キッチン/食器")
-interiors_bed = interiors.children.create(name: "ベッド/マットレス")
-
 ladies_tops.children.create([{name: "ポロシャツ"}, {name: "キャミソール"}])
 ladies_pants.children.create([{name: "デニム/ジーンズ"}, {name: "ショートパンツ"}])
+
+mens = Category.create(name: "メンズ")
+mens_tops = mens.children.create(name: "トップス")
+mens_pants = mens.children.create(name: "パンツ")
 mens_tops.children.create([{name: "シャツ"}, {name: "ポロシャツ"}])
 mens_pants.children.create([{name: "スラックス"}, {name: "チノパン"}])
-interiors_kitchen.children.create([{name: "食器"}, {name: "調理器具"}])
-interiors_bed.children.create([{name: "シングルベッド"}, {name: "マットレス"}])
 
 Item.create!([{name: "ラルフローレン ポロシャツ レディース",
             price: "1500",

@@ -59,27 +59,7 @@
         float: left;
         display: flex;
         
-        .left-btn--category {
-          font-weight: bold;
-          color: #333;
-          font-size: 14px;
-          position: relative;
-          height: 44px;
-          line-height: 32px;
-          padding: 0 11px;
-
-          a {
-            text-decoration: none;
-            color: #333;
-          }
-
-          &__icon {
-            color: #ea352d;
-            font-size: 12px;
-            margin-right: 4px;
-          }
-        }
-        .left-btn--brand {
+        .left-btn {
           font-weight: bold;
           color: #333;
           font-size: 14px;
