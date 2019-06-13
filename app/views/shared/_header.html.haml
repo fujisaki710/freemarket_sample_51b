@@ -12,14 +12,17 @@
     -# 各ボタンは一時的にトップページに遷移するように設定
     .box__bottom
       %ul.left
-        %li.left-btn
+        %li.left-btn--category
           = link_to root_path do
-            = fa_icon 'list',class: 'left-btn__icon'
+            = fa_icon 'list',class: 'left-btn--category__icon'
             %span カテゴリーから探す
-          
-        %li.left-btn
+          .accordion
+            %ul.parent
+              = render partial: "shared/parent", collection: @parents
+
+        %li.left-btn--brand
           = link_to root_path do
-            = fa_icon 'tag',class: 'left-btn__icon'
+            = fa_icon 'tag',class: 'left-btn--brand__icon'
             %span ブランドから探す
 
       %ul.right

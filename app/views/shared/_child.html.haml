@@ -1,0 +1,6 @@
+%li.child__name
+  .child_box
+    = link_to "#{child.name}", '#', class: "child-link"
+    %ul.grandchild
+      - child.children.each do |grandchild|
+        %li= link_to grandchild.name, '#', class: "grandchild-link"
