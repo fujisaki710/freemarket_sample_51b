@@ -40,12 +40,12 @@ $(function() {
       $(this).children('.accordion').css('display', 'none');
     });
 
-    $('.parent-link').on('mouseover', function() {
+    $('.parent_box').on('mouseover', function() {
       $(this).css('background-color', '#ea352d');
-      $(this).css('color', '#fff');
+      $(this).children('.parent-link').css('color', '#fff');
     }).on('mouseout', function(){
       $(this).css('background-color', '#fff');
-      $(this).css('color', '#000');
+      $(this).children('.parent-link').css('color', '#000');
     });
 
     $('.child_box').on('mouseover', function() {
