@@ -41,16 +41,79 @@
               %label
                 %h3 カテゴリー
                 %span 必須
+              
               #categoryAppend.select__box
-                = f.select :category, [["---","---"],["レディース","レディース"],["メンズ","メンズ"],["ベビー・キッズ","ベビー・キッズ"],["インテリア・住まい・小物","インテリア・住まい・小物"],["本・音楽・ゲーム","本・音楽・ゲーム"],["おもちゃ・ホビー・グッズ","おもちゃ・ホビー・グッズ"],["コスメ・香水・美容","コスメ・香水・美容"],["家電・スマホ・カメラ","家電・スマホ・カメラ"],["スポーツ・レジャー","スポーツ・レジャー"],["ハンドメイド","ハンドメイド"],["チケット","チケット"],["自動車・オートバイ","自動車・オートバイ"],["その他","その他"]], class:"select-default"
+                -# = f.select :category,[["---","---"],["レディース","レディース"],["メンズ","メンズ"],["その他","その他"]], class:"parent"
+                %select.parent{name: "カテゴリー１"}
+                  %option.msg{value: ""} ---
+                  - i = 0
+                  - while i < @parentName.length
+                    %option{value: @parentName[i]} 
+                      = @parentName[i]
+                      - i += 1
                 %i.fa.fa-chevron-down
               #categoryAppend-1.select__box.hidden
-                = f.select :category, [["---","---"],["トップス","トップス"],["ジャケット","ジャケット"],["パンツ","パンツ"]], class:"select-default"
+                -# = f.select :category,[["---","---"],["ポロシャツ","ポロシャツ"],["キャミソール","キャミソール"],["その他","その他"]], class:"select-default"
+                %select.children1{name: "カテゴリー２"}
+                  %option.msg{selected: "selected"} ---
+                  - i = 0
+                  - while i < @childrenName0.length
+                    %option{"data-val": @parentName[0],value: @childrenName0[i]} 
+                      = @childrenName0[i]
+                      - i += 1
+                  - i = 0
+                  - while i < @childrenName1.length
+                    %option{"data-val": @parentName[1],value: @childrenName1[i]} 
+                      = @childrenName1[i]
+                      - i += 1
+                  - i = 0
+                  - while i < @childrenName2.length
+                    %option{"data-val": @parentName[2],value: @childrenName2[i]} 
+                      = @childrenName2[i]
+                      - i += 1
                 %i.fa.fa-chevron-down
               #categoryAppend-2.select__box.hidden
-                = f.select :category, [["---","---"],["ポロシャツ","ポロシャツ"],["キャミソール","キャミソール"],["その他","その他"]], class:"select-default"
+                -# = f.select :category, [["---","---"],["ポロシャツ","ポロシャツ"],["キャミソール","キャミソール"],["その他","その他"]], class:"select-default"
+                %select.children2{name: "カテゴリー3"}
+                  %option.msg{selected: "selected"} ---
+                  -# レディース
+                  - i = 0
+                  - while i < @childrenName0_0.length
+                    %option{"data-val": @childrenName0[0],value: @childrenName0_0[i]} 
+                      = @childrenName0_0[i]
+                      - i += 1
+                  - i = 0
+                  - while i < @childrenName0_1.length
+                    %option{"data-val": @childrenName0[1],value: @childrenName0_1[i]} 
+                      = @childrenName0_1[i]
+                      - i += 1
+
+                  -# メンズ
+                  - i = 0
+                  - while i < @childrenName1_0.length
+                    %option{"data-val": @childrenName1[0],value: @childrenName1_0[i]} 
+                      = @childrenName1_0[i]
+                      - i += 1
+                  - i = 0
+                  - while i < @childrenName1_1.length
+                    %option{"data-val": @childrenName1[1],value: @childrenName1_1[i]} 
+                      = @childrenName1_1[i]
+                      - i += 1
+
+                  -# その為
+                  - i = 0
+                  - while i < @childrenName2_0.length
+                    %option{"data-val": @childrenName2[0],value: @childrenName2_0[i]} 
+                      = @childrenName2_0[i]
+                      - i += 1
+                  - i = 0
+                  - while i < @childrenName2_1.length
+                    %option{"data-val": @childrenName2[1],value: @childrenName2_1[i]} 
+                      = @childrenName2_1[i]
+                      - i += 1
+
                 %i.fa.fa-chevron-down
-            #categoryAppend-size.box__group1.hidden
+            #categoryAppend-sizeform.box__group1.hidden
               %label
                 %h3 サイズ
                 %span 必須
