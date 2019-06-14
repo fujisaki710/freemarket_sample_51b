@@ -3,11 +3,11 @@
     .swiper-container
       .swiper-wrapper
         .swiper-slide
-          %img{:src => "https://www.mercari.com/jp/assets/img/common/jp/top/banner-camp.jpg", style: "width: 1425px; height: 392px;"}/
+          %img{:src => "https://www.mercari.com/jp/assets/img/common/jp/top/banner-camp.jpg"}/
         .swiper-slide
-          %img{:src => "https://www.mercari.com/jp/assets/img/common/jp/top/banner-natsukashi.jpg", style: "width: 1425px; height: 392px;"}/
+          %img{:src => "https://www.mercari.com/jp/assets/img/common/jp/top/banner-natsukashi.jpg"}/
         .swiper-slide
-          %img{:src => "https://www.mercari.com/jp/assets/img/common/jp/top/main_bg_pc.jpg", style: "width: 1425px; height: 392px;"}/
+          %img{:src => "https://www.mercari.com/jp/assets/img/common/jp/top/main_bg_pc.jpg"}/
       .swiper-pagination
       .swiper-button-prev
       .swiper-button-next
@@ -60,7 +60,7 @@
                   = @items[2].price
               .item__tax (税込)
 
-        .item-box-last
+        .item-box
           = link_to "#" do
             .photo
               = image_tag(@items[3].images.first, class: "photo__img")
@@ -76,11 +76,10 @@
 
       .view-all
         = link_to "#" do
-          .a
-            全ての商品を見る
+          全ての商品を見る
 
   .pickup-box
-    .head.top ピックアップブランド
+    .head ピックアップブランド
     .item-box__container.clearfix
       .text-center
         = link_to "#" do
@@ -127,7 +126,7 @@
                   = @items[2].price
               .item__tax (税込)
 
-        .item-box-last
+        .item-box
           = link_to "#" do
             .photo
               = image_tag(@items[3].images.first, class: "photo__img")
