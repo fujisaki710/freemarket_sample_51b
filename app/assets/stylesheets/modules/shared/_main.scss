@@ -280,7 +280,8 @@
   .main {
     background-color: #F5F5F5;
     height: 2400px;
-    
+    width: 800px;
+    overflow-x: hidden;
     .swiper-container {
       position: relative;
       margin-left: auto;
@@ -318,7 +319,6 @@
         width: auto;
         height: 440px;
         margin: 0 auto;
-        
         .text-center {
           font-size: 18px;
           margin: 26px 11px;

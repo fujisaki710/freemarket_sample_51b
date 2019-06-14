@@ -200,7 +200,6 @@
   
         .left {
           float: left;
-          // display: flex;
           
           .left-btn--category {
             font-weight: bold;
@@ -245,9 +244,9 @@
         }
   
         .right {
-          // float: right;
-          // display: flex;
-          // justify-content: flex-end;
+          float: right;
+          display: flex;
+          justify-content: flex-end;
   
           .right-btn {
             color: #333;
@@ -385,9 +384,42 @@
         
   
         .right {
-          display: none;
+          float: right;
+          display: flex;
+          justify-content: flex-end;
+          margin-right: 36px;
+          .right-btn {
+            color: #333;
+            font-size: 14px;
+            position: relative;
+            height: 44px;
+            line-height: 32px;
+            padding: 0 11px;
+          
+            span{
+              display: none;
+            }
+  
+            a {
+              text-decoration: none;
+              color: #333;
+            }
+  
+            &__icon {
+              color: #ccc;
+              font-size: 20px;
+            }
+  
+            &__mypage-icon {
+              color: #ccc;
+              font-size: 20px;
+              vertical-align: bottom;
+              border-radius: 50%;
+            }
+          }
         }
       }
     }
   }
 }
+
