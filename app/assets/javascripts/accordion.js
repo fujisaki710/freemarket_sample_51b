@@ -1,4 +1,4 @@
-$(function() {
+$(document).on('turbolinks:load', function() {
 
 	// 「カテゴリーから探す」にカーソル合わせた時の動き
 	$(".left-btn--category").on('mouseenter', function(){
