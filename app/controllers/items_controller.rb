@@ -8,24 +8,23 @@ class ItemsController < ApplicationController
 
   def new
     @item = Item.new
-    @categories = Category.all
+    @item.items_categories.build
 
+    # カテゴリーフォーム１
     @parents = Category.roots
     @parentName = @parents.map{|parent|parent.name}
-    
+    # カテゴリーフォーム２
     @childrenName0 = @parents[0].children.map{|children|children.name}
     @childrenName1 = @parents[1].children.map{|children|children.name}
     @childrenName2 = @parents[2].children.map{|children|children.name}
-    
+    # カテゴリーフォーム３
     @childrenName0_0 = @parents[0].children[0].children.map{|children2|children2.name}
     @childrenName0_1 = @parents[0].children[1].children.map{|children2|children2.name}
     @childrenName1_0 = @parents[1].children[0].children.map{|children2|children2.name}
     @childrenName1_1 = @parents[1].children[1].children.map{|children2|children2.name}
     @childrenName2_0 = @parents[2].children[0].children.map{|children2|children2.name}
     @childrenName2_1 = @parents[2].children[1].children.map{|children2|children2.name}
-
     # binding.pry
-
   end
 
   def create

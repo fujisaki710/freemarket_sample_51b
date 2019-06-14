@@ -1,4 +1,4 @@
-$(function() {
+$(document).on('turbolinks:load',function() {
   var $children1 = $('.children1');
   var $children2 = $('.children2');
   var original1 = $children1.html();
