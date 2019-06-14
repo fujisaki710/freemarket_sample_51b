@@ -26,12 +26,12 @@
   }
 }
 
-@media screen and (max-width:800px){
+@media screen and (max-width:900px){
   .footer-sell-btn {
     bottom: 20px;
     right: 20px;
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
     font-size: 14px;
     position: fixed;
     border-radius: 50%;
@@ -39,7 +39,7 @@
     color: #fff;
     text-align: center;
     z-index: 1000;
-  
+    
     a {
       text-decoration: none;
       color: #fff;
@@ -51,7 +51,7 @@
       
       .icon-camera {
         margin: 0;
-        font-size: 26px;
+        font-size: 40px;
       }
     }
   }
