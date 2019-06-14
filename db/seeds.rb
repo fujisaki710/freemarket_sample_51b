@@ -12,17 +12,20 @@ interiors = Category.create(name: "インテリア・住まい・小物")
 
 ladies_tops = ladies.children.create(name: "トップス")
 ladies_pants = ladies.children.create(name: "パンツ")
-mens_tops = mens.children.create(name: "トップス")
-mens_pants = mens.children.create(name: "パンツ")
+mens_bags = mens.children.create(name: "バッグ")
+mens_suits = mens.children.create(name: "スーツ")
 interiors_kitchen = interiors.children.create(name: "キッチン/食器")
 interiors_bed = interiors.children.create(name: "ベッド/マットレス")
 
 ladies_tops.children.create([{name: "ポロシャツ"}, {name: "キャミソール"}])
 ladies_pants.children.create([{name: "デニム/ジーンズ"}, {name: "ショートパンツ"}])
-mens_tops.children.create([{name: "シャツ"}, {name: "ポロシャツ"}])
-mens_pants.children.create([{name: "スラックス"}, {name: "チノパン"}])
+mens_bags.children.create([{name: "ショルダーバッグ"}, {name: "トートバッグ"}])
+mens_suits.children.create([{name: "スーツジャケット"}, {name: "スラックス"}])
 interiors_kitchen.children.create([{name: "食器"}, {name: "調理器具"}])
 interiors_bed.children.create([{name: "シングルベッド"}, {name: "マットレス"}])
+
+User.create!(nickname: "テストユーザー", email: "hogehoge@gmail.com", password: "hogehoge")
+user1 = User.find(1)
 
 Item.create!([{
   name: "新品ワイドパンツ",
@@ -78,11 +81,11 @@ Item.create!([{
 item1 = Item.find(1)
 item1.images.attach(io: File.open('public/images/test_image1.jpg'), filename: 'test_image1.jpg')
 
-item1 = Item.find(2)
-item1.images.attach(io: File.open('public/images/test_image2.jpg'), filename: 'test_image1.jpg')
+item2 = Item.find(2)
+item2.images.attach(io: File.open('public/images/test_image2.jpg'), filename: 'test_image2.jpg')
 
-item1 = Item.find(3)
-item1.images.attach(io: File.open('public/images/test_image3.jpg'), filename: 'test_image1.jpg')
+item3 = Item.find(3)
+item3.images.attach(io: File.open('public/images/test_image3.jpg'), filename: 'test_image3.jpg')
 
-item1 = Item.find(4)
-item1.images.attach(io: File.open('public/images/test_image4.jpg'), filename: 'test_image1.jpg')
+item4 = Item.find(4)
+item4.images.attach(io: File.open('public/images/test_image4.jpg'), filename: 'test_image4.jpg')
