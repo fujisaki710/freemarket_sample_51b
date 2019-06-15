@@ -4,7 +4,7 @@ $(document).on('turbolinks:load',function() {
   var original1 = $children1.html();
   var original2 = $children2.html();
 
-  $('.parent').change(function() {
+  $('#form1').change(function() {
     var val1 = $(this).val();
     $("#categoryAppend-1").css("display","block");
     $("#categoryAppend-size").css("height","240px");
@@ -31,7 +31,7 @@ $(document).on('turbolinks:load',function() {
   });
 
 
-  $('.children1').change(function() {
+  $('#form2').change(function() {
     var val1 = $(this).val();
     $("#categoryAppend-2").css("display","block")
     $("#categoryAppend-size").css("height","290px")
@@ -51,7 +51,7 @@ $(document).on('turbolinks:load',function() {
     }
   });
 
-  $('.children2').change(function() {
+  $('#form3').change(function() {
     var val1 = $(this).val();
     $("#categoryAppend-sizeform").css("display","block")
     $("#categoryAppend-any").css("display","block")

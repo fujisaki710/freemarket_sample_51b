@@ -42,79 +42,16 @@
                 %h3 カテゴリー
                 %span 必須
               #categoryAppend.select__box
-              = fields_for :items_categories do |items_categories|
-                = items_categories.select :category_id, [[Category.find(1).name,Category.find(1).id],[Category.find(2).name,Category.find(2).id],[Category.find(3).name,Category.find(3).id]]
-                -# %select.parent{name: "category",model:@item, local: true}
-                -#   %option.msg{value: ""} ---
-                  -# parent一覧
-                  -# - i = 0
-                  -# - while i < @parentName.length
-                  -#   %option{value: @parentName[i]} 
-                  -#     = @parentName[i]
-                  -#     - i += 1
+                = fields_for :items_categories do |items_categories|
+                  = items_categories.select :category_id,Category.roots.map {|i| ["#{i.name}", i.id]},{prompt: "---"},{id:"form1"}
                 %i.fa.fa-chevron-down
-              #categoryAppend-1.select__box
-              = fields_for :items_categories do |items_categories|
-                = items_categories.select :category_id, [[Category.find(1).children[0].name,Category.find(1).children[0].id],[Category.find(1).children[1].name,Category.find(1).children[1].id]]
-                -# %select.children1{name: "category"}
-                -#   %option.msg{selected: "selected"} ---
-                  -# children1
-                  -# - i = 0
-                  -# - while i < @childrenName0.length
-                  -#   %option{"data-val": @parentName[0],value: @childrenName0[i]} 
-                  -#     = @childrenName0[i]
-                  -#     - i += 1
-                  -# children2
-                  -# - i = 0
-                  -# - while i < @childrenName1.length
-                  -#   %option{"data-val": @parentName[1],value: @childrenName1[i]} 
-                  -#     = @childrenName1[i]
-                  -#     - i += 1
-                  -# children3
-                  -# - i = 0
-                  -# - while i < @childrenName2.length
-                  -#   %option{"data-val": @parentName[2],value: @childrenName2[i]} 
-                  -#     = @childrenName2[i]
-                  -#     - i += 1
+              #categoryAppend-1.select__box.hidden
+                = fields_for :items_categories do |items_categories|
+                  = items_categories.select :category_id,Category.find(1).children.map {|i| ["#{i.name}", i.id]},{prompt: "---"},{id:"form2"}
                 %i.fa.fa-chevron-down
-              #categoryAppend-2.select__box
-              = f.fields_for :items_categories do |items_categories|
-                = items_categories.select :category_id, [[Category.find(1).children[0].children[0].name,Category.find(1).children[0].children[0].id],[Category.find(1).children[0].children[1].name,Category.find(1).children[0].children[1].id]]
-                -# %select.children2{name: "category"}
-                -#   %option.msg{selected: "selected"} ---
-                  -# children1のchildren
-                  -# - i = 0
-                  -# - while i < @childrenName0_0.length
-                  -#   %option{"data-val": @childrenName0[0],value: @childrenName0_0[i]} 
-                  -#     = @childrenName0_0[i]
-                  -#     - i += 1
-                  -# - i = 0
-                  -# - while i < @childrenName0_1.length
-                  -#   %option{"data-val": @childrenName0[1],value: @childrenName0_1[i]} 
-                  -#     = @childrenName0_1[i]
-                  -#     - i += 1
-                  -# children2のchildren
-                  -# - i = 0
-                  -# - while i < @childrenName1_0.length
-                  -#   %option{"data-val": @childrenName1[0],value: @childrenName1_0[i]} 
-                  -#     = @childrenName1_0[i]
-                  -#     - i += 1
-                  -# - i = 0
-                  -# - while i < @childrenName1_1.length
-                  -#   %option{"data-val": @childrenName1[1],value: @childrenName1_1[i]} 
-                  -#     = @childrenName1_1[i]
-                  -#     - i += 1
-                  -# children3のchildren
-                  -# - i = 0
-                  -# - while i < @childrenName2_0.length
-                  -#   %option{"data-val": @childrenName2[0],value: @childrenName2_0[i]} 
-                  -#     = @childrenName2_0[i]
-                  -#     - i += 1
-                  -# - i = 0
-                  -# - while i < @childrenName2_1.length
-                  -#   %option{"data-val": @childrenName2[1],value: @childrenName2_1[i]} 
-                  -#     = @childrenName2_1[i]
-                  -#     - i += 1
+              #categoryAppend-2.select__box.hidden
+                = f.fields_for :items_categories do |items_categories|
+                  = items_categories.select :category_id, Category.find(1).children[0].children.map {|i| ["#{i.name}", i.id]},{prompt: "---"},{id:"form3"}
                 %i.fa.fa-chevron-down
             #categoryAppend-sizeform.box__group1.hidden
               %label
