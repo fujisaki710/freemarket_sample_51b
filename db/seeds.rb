@@ -89,3 +89,23 @@ item3.images.attach(io: File.open('public/images/test_image3.jpg'), filename: 't
 
 item4 = Item.find(4)
 item4.images.attach(io: File.open('public/images/test_image4.jpg'), filename: 'test_image4.jpg')
+
+ItemsCategory.create!([{
+  item_id:"1",
+  category_id:"13",
+  },
+
+  {
+  item_id:"2",
+  category_id:"10",
+  },
+
+  {
+  item_id:"3",
+  category_id:"10",
+  },
+
+  {
+  item_id:"4",
+  category_id:"11",
+  }])
