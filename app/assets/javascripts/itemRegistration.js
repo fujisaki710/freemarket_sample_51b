@@ -1,4 +1,5 @@
 $(document).on('turbolinks:load',function(){
+  // カテゴリー セレクトボックス部分の実装
   $('#form1').on('change',function(e){
     e.preventDefault();
     $("#categoryAppend-1").css("display","block");
@@ -92,4 +93,32 @@ $(document).on('turbolinks:load',function(){
       $("#categoryAppend-size").css("height","500px")
     })
   });
+
+  // 価格部分（販売手数料・販売利益）の実装
+  $('#price').on('keyup',function(e){
+    e.preventDefault();
+    $(this).html('');
+    var price = $(this).val();
+    // console.log(price);
+
+    var fee = (price * 1.1) - price;
+    var profit = price - fee;
+    console.log(profit)
+    if (price >= 300) {
+      $('#fee-').html('');
+      $('#fee-js').html('');
+      $('#profit-js').html('');
+
+      var response_fee = `<p>¥ ${(Math.round(fee))}</p>`
+      var response_profit = `<p>¥${(Math.round(profit))}</p>`
+      $('#fee-js').append(response_fee);
+      $('#profit-js').append(response_profit);
+      $('.right').css("font-size","34px")
+    } else {
+      $('#fee-js').html('');
+      $('#profit-js').html('');
+      $('#fee-js').append('<p>-</p>');
+      $('#profit-js').append('<p>-</p>');
+    }
+  })
 });
