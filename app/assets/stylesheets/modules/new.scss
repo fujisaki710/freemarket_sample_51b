@@ -1,3 +1,16 @@
+.flash_message {
+  height: 50px;
+  width: 100vh;
+  padding-top:10px;
+  position: absolute;
+  left:42%;
+  font-size: 20px;
+  font-weight: bold;
+  color: #EA352D;
+  #text {
+    color: #EA352D;
+  }
+}
 .item-main{
   .hidden {
     display: none;

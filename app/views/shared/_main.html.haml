@@ -20,7 +20,7 @@
           レディース 新着アイテム
       .item-box__content.clearfix
         .item-box
-          = link_to "#" do
+          = link_to edit_item_path(Item.last.id) do
             .photo
               = image_tag(@items[0].images.first, class: "photo__img")
             .item
@@ -33,7 +33,7 @@
               .item__tax (税込)
 
         .item-box
-          = link_to "#" do
+          = link_to edit_item_path(Item.last(2).first.id) do
             .photo
               = image_tag(@items[1].images.first, class: "photo__img")
 
@@ -47,7 +47,7 @@
               .item__tax (税込)
 
         .item-box
-          = link_to "#" do
+          = link_to edit_item_path(Item.last(3).first.id) do
             .photo
               = image_tag(@items[2].images.first, class: "photo__img")
 
@@ -61,7 +61,7 @@
               .item__tax (税込)
 
         .item-box
-          = link_to "#" do
+          = link_to edit_item_path(Item.last(4).first.id) do
             .photo
               = image_tag(@items[3].images.first, class: "photo__img")
 
@@ -86,7 +86,7 @@
           ナイキ 新着アイテム
       .item-box__content.clearfix
         .item-box
-          = link_to "#" do
+          = link_to edit_item_path(Item.last.id) do
             .photo
               = image_tag(@items[0].images.first, class: "photo__img")
             .item
@@ -99,7 +99,7 @@
               .item__tax (税込)
 
         .item-box
-          = link_to "#" do
+          = link_to edit_item_path(Item.last(2).first.id) do
             .photo
               = image_tag(@items[1].images.first, class: "photo__img")
             .item
@@ -113,7 +113,7 @@
               .item__tax (税込)
 
         .item-box
-          = link_to "#" do
+          = link_to edit_item_path(Item.last(3).first.id) do
             .photo
               = image_tag(@items[2].images.first, class: "photo__img")
 
@@ -127,7 +127,7 @@
               .item__tax (税込)
 
         .item-box
-          = link_to "#" do
+          = link_to edit_item_path(Item.last(4).first.id) do
             .photo
               = image_tag(@items[3].images.first, class: "photo__img")
 

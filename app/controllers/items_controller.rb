@@ -11,9 +11,13 @@ class ItemsController < ApplicationController
   end
 
   def create
+    @item = Item.new(item_params)
     @status = '出品中'
-    @item = Item.create(item_params)
-    redirect_to item_path(@item)
+    if @item.save
+      redirect_to item_path(@item)
+    else
+      redirect_to new_item_path,notice: '入力されていない項目があります'
+    end
   end
 
   def destroy
@@ -28,6 +32,7 @@ class ItemsController < ApplicationController
     @goods = Like.where(status: "良い")
     @normals = Like.where(status: "普通")
     @bads = Like.where(status: "悪い")
+    @category = @item.categories.first
   end
 
   def edit
@@ -38,8 +43,6 @@ class ItemsController < ApplicationController
   def update
     if @item.update(item_params)
       redirect_to item_path(@item)
-    else
-      render :edit
     end
   end
 
