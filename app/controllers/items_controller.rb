@@ -32,6 +32,7 @@ class ItemsController < ApplicationController
 
   def edit
     @item = Item.find(params[:id])
+    @serect_category = @item.categories.first
   end
 
   def update
