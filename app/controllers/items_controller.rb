@@ -38,6 +38,8 @@ class ItemsController < ApplicationController
   def edit
     @item = Item.find(params[:id])
     @serect_category = @item.categories.first
+    @price = @item.price
+    @fee = ((@price * 1.1) - @item.price).round
   end
 
   def update

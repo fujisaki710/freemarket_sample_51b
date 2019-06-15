@@ -496,6 +496,8 @@
             border-bottom: 1px solid #eee;
             p{
               float: right;
+              position: relative;
+              bottom: 15px;
             }
           }
           .list__bottom{
@@ -508,7 +510,7 @@
               font-size: 16px;
               float: left;
             }
-            .right{
+            p, .right{
               font-weight: bold;
               font-size: 34px;
               float: right;
