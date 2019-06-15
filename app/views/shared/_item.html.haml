@@ -47,11 +47,11 @@
                 %i.fa.fa-chevron-down
               #categoryAppend-1.select__box.hidden
                 = fields_for :items_categories do |items_categories|
-                  = items_categories.select :category_id,Category.find(1).children.map {|i| ["#{i.name}", i.id]},{prompt: "---"},{id:"form2"}
+                  = items_categories.select :category_id,{},{prompt: "---"},{id:"form2"}
                 %i.fa.fa-chevron-down
               #categoryAppend-2.select__box.hidden
                 = f.fields_for :items_categories do |items_categories|
-                  = items_categories.select :category_id, Category.find(1).children[0].children.map {|i| ["#{i.name}", i.id]},{prompt: "---"},{id:"form3"}
+                  = items_categories.select :category_id,{},{prompt: "---"},{id:"form3"}
                 %i.fa.fa-chevron-down
             #categoryAppend-sizeform.box__group1.hidden
               %label
