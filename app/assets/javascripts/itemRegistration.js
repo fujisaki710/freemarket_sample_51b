@@ -3,6 +3,9 @@ $(document).on('turbolinks:load',function(){
     e.preventDefault();
     $("#categoryAppend-1").css("display","block");
     $("#categoryAppend-size").css("height","240px");
+    $("#categoryAppend-2").css("display","none");
+    $("#categoryAppend-sizeform").css("display","none")
+    $("#categoryAppend-any").css("display","none")
     $('#form2').html('');
     $('#form3').html('');
     var val = $('#form1').val();
@@ -37,6 +40,8 @@ $(document).on('turbolinks:load',function(){
       $('#form3').html('');
       $("#categoryAppend-2").css("display","block")
       $("#categoryAppend-size").css("height","290px")
+      $("#categoryAppend-sizeform").css("display","none")
+      $("#categoryAppend-any").css("display","none")
       var val = $('#form2').val();
       // レディース/トップス
       if (val == 4) {
