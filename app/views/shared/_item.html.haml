@@ -1,6 +1,7 @@
+- if @item.errors.any?
+  .flash_message
+    = flash[:alert]
 = render 'shared/sub-header'
-.flash_message
-  = flash[:notice]
 .item-main
   .form
     = form_with(model:@item, local: true) do |f|

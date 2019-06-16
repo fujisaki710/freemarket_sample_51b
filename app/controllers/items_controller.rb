@@ -16,7 +16,8 @@ class ItemsController < ApplicationController
     if @item.save
       redirect_to item_path(@item)
     else
-      redirect_to new_item_path,notice: '入力されていない項目があります'
+      flash.now[:alert] = "入力されていない項目があります"
+      render action: :new
     end
   end
 
