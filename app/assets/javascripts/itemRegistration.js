@@ -94,6 +94,11 @@ $(document).on('turbolinks:load',function(){
     })
   });
 
+  $('#delivery-fee').on('change',function(){
+    $('#appendBox-rule').css("display","block");
+    $('.item-contents__shipping').css("height","400px")
+  })
+
   // 価格部分（販売手数料・販売利益）の実装
   $('#price').on('keyup',function(e){
     e.preventDefault();
