@@ -16,7 +16,7 @@
           %ul.settingsPaymentList
         %section.settingsAddCard
           .singleContent
-            %a(href="https://www.mercari.com/jp/mypage/card/create/" class="btn")
+            = link_to '/card/new', class: "btn" do
               %i.fa.fa-credit-card
               クレジットカードを追加する
         .settingsNotRegist
