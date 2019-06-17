@@ -4,8 +4,6 @@
       = link_to root_path do
         = image_tag("//www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?1107552019", class:"title") 
       = render 'shared/search_form'
-    - @search_items.each do |search_item|
-      = search_item.name
 
     -# 各ボタンは一時的にトップページに遷移するように設定
     .box__bottom
@@ -38,3 +36,4 @@
           = link_to user_path(current_user) do
             %img{src:"//static.mercdn.net/images/member_photo_noimage_thumb.png", width: 32, class:"right-btn__mypage-icon"}
             %span マイページ
+            

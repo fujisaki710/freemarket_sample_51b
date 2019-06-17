@@ -75,6 +75,78 @@ Item.create!([{
   prefecture_id: "8",
   status: "出品中",
   user_id: "1"
+  },
+
+  {name: "５点まとめお得セット！",
+  price: "2600",
+  item_condition: "新品、未使用",
+  delivery_fee: "送料込み(出品者負担)",
+  shipping_date: "1~2日で発送",
+  discription: "全品も状況が良いです",
+  shipping_rule: "らくらくメルカリ便",
+  prefecture_id: "14",
+  status: "出品中",
+  user_id: "1"
+  },
+
+  {name: "新品 未使用 フルーツカッター 便利",
+  price: "1800",
+  item_condition: "新品、未使用",
+  delivery_fee: "送料込み(出品者負担)",
+  shipping_date: "1~2日で発送",
+  discription: "おまけに小さなピーラーをお付けします。",
+  shipping_rule: "らくらくメルカリ便",
+  prefecture_id: "30",
+  status: "出品中",
+  user_id: "1"
+  },
+
+  {name: "新品 ベッドマットレス Ｄ ブラック",
+  price: "13000",
+  item_condition: "新品、未使用",
+  delivery_fee: "送料込み(出品者負担)",
+  shipping_date: "1~2日で発送",
+  discription: "値下げ不可",
+  shipping_rule: "未定",
+  prefecture_id: "4",
+  status: "出品中",
+  user_id: "1"
+  },
+
+  {name: "シングルベッド ダークブラウン",
+  price: "19000",
+  item_condition: "新品、未使用",
+  delivery_fee: "送料込み(出品者負担)",
+  shipping_date: "1~2日で発送",
+  discription: "コンセント＆引き出し付きシングルベッドです",
+  shipping_rule: "未定",
+  prefecture_id: "3",
+  status: "出品中",
+  user_id: "1"
+  },
+
+  {name: "Eric’ｓdenimu デニム 36",
+  price: "9800",
+  item_condition: "新品、未使用",
+  delivery_fee: "送料込み(出品者負担)",
+  shipping_date: "1~2日で発送",
+  discription: "代官山店で購入しました♡",
+  shipping_rule: "未定",
+  prefecture_id: "24",
+  status: "出品中",
+  user_id: "1"
+  },
+
+  {name: "平日セール 美品 ショルダーバッグ",
+  price: "11011",
+  item_condition: "目立った傷や汚れなし",
+  delivery_fee: "送料込み(出品者負担)",
+  shipping_date: "2~3日で発送",
+  discription: "素人検品のためご理解頂ける方にお譲り致します。",
+  shipping_rule: "らくらくメルカリ便",
+  prefecture_id: "24",
+  status: "出品中",
+  user_id: "1"
   }])
 
 
@@ -89,6 +161,24 @@ item3.images.attach(io: File.open('public/images/test_image3.jpg'), filename: 't
 
 item4 = Item.find(4)
 item4.images.attach(io: File.open('public/images/test_image4.jpg'), filename: 'test_image4.jpg')
+
+item5 = Item.find(5)
+item5.images.attach(io: File.open('public/images/test_image5.jpg'), filename: 'test_image5.jpg')
+
+item6 = Item.find(6)
+item6.images.attach(io: File.open('public/images/test_image6.jpg'), filename: 'test_image6.jpg')
+
+item7 = Item.find(7)
+item7.images.attach(io: File.open('public/images/test_image7.jpg'), filename: 'test_image7.jpg')
+
+item8 = Item.find(8)
+item8.images.attach(io: File.open('public/images/test_image8.jpg'), filename: 'test_image8.jpg')
+ 
+item9 = Item.find(9)
+item9.images.attach(io: File.open('public/images/test_image9.jpg'), filename: 'test_image9.jpg')
+
+item10 = Item.find(10)
+item10.images.attach(io: File.open('public/images/test_image10.jpg'), filename: 'test_image10.jpg')
 
 ItemsCategory.create!([{
   item_id:"1",
@@ -108,4 +198,34 @@ ItemsCategory.create!([{
   {
   item_id:"4",
   category_id:"11",
+  },
+
+  {
+  item_id:"5",
+  category_id:"18",
+  },
+
+  {
+  item_id:"6",
+  category_id:"19",
+  },
+
+  {
+  item_id:"7",
+  category_id:"21",
+  },
+
+  {
+  item_id:"8",
+  category_id:"20",
+  },
+
+  {
+  item_id:"9",
+  category_id:"12",
+  },
+
+  {
+  item_id:"10",
+  category_id:"15",
   }])

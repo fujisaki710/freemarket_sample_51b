@@ -1,8 +1,65 @@
 .wrapper {
+  .itemScope a{
+        margin-left: 5px;
+      }
+  a {
+    text-decoration: none;
+    color: black;
+  }
   .searchMain {
     padding: 40px 210px;
-    position: relative;
+    display: flex;
+    .addSearch {
+      box-sizing: border-box;
+      background-color: white;
+      width:280px;
+      position: relative;
+      padding: 16px;
+      .item_search {
+        display: flex;
+        flex-direction: column;
+        padding:10px;
+        .priceTitle {
+          font-weight: bold;
+          margin-bottom: 8px;
+        }
+        .priceForm {
+          display: flex;
+          input {
+            height: 25px;
+            width: 80px;
+            padding: 10px 16px 8px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            background: #fff;
+            line-height: 1.5;
+            font-size: 16px;
+          }
+          p:nth-of-type(1) {
+            line-height: 60px;
+            margin:0  3px;
+          }
+        }
+      }
+      input {
+        display: block;
+        width: 106%;
+        line-height: 48px;
+        font-size: 14px;
+        border: 1px solid transparent;
+        -webkit-transition: all ease-out .3s;
+        transition: all ease-out .3s;
+        cursor: pointer;
+        text-align: center;
+        background: #ea352d;
+        border: 1px solid #ea352d;
+        color: #fff;
+        margin-top: 10px;
+      }
+    }
     .searchMain-content {
+      width: 74%;
+      margin-left: 30px;
       display: flex;
       .mainBox {
         position: relative;
@@ -18,21 +75,23 @@
         &__content {
           display: flex;
           flex-wrap: wrap;
+          a {
+            margin: 20px 10px 20px 0;
+          }
           .itemsBox {
-            margin-right: 20px;
             &__photo {
               background-color: white;
               .photo__img {
-                width: 200px;
-                height: 180px;
+                width: 160px;
+                height: 160px;
               }
             }
             &__body {
               box-sizing: border-box;
               background-color: white;
-              height:140x;
-              width:200px;
-              padding:16px;
+              height:110x;
+              width:160px;
+              padding:14px;
               position: relative;
               &-name {
                 font-size: 16px;
@@ -40,6 +99,7 @@
                 height: 3em;
                 line-height: 1.5;
                 margin-bottom: 10px;
+                overflow: hidden;
               }
               &-num {
                 .itemsBox-price {

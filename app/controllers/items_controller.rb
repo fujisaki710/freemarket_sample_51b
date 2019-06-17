@@ -3,6 +3,7 @@ class ItemsController < ApplicationController
 
   def index
     @items = Item.all.order("id DESC").limit(4)
+    @items2 = Item.all.order("id ASC").limit(4)
 
     @q = Item.ransack(params[:q])
     @search_items = @q.result(distinct: true)
@@ -43,6 +44,9 @@ class ItemsController < ApplicationController
     @normals = Like.where(status: "普通")
     @bads = Like.where(status: "悪い")
     @category = @item.categories.first
+
+    @q = Item.ransack(params[:q])
+    @search_items = @q.result(distinct: true)
   end
 
   def edit
@@ -70,6 +74,6 @@ class ItemsController < ApplicationController
   end
 
   def search_params
-    params.require(:q).permit(:name_cont)
+    params.require(:q).permit(:name_cont,:price_gteq,:price_lteq,:item_condition_eq)
   end
 end
