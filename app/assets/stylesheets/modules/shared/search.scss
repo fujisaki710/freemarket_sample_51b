@@ -1,0 +1,57 @@
+.wrapper {
+  .searchMain {
+    padding: 40px 210px;
+    position: relative;
+    .searchMain-content {
+      display: flex;
+      .mainBox {
+        position: relative;
+        width: 100%;
+        &__head {
+          font-size: 22px;
+          margin: 0 0 30px;
+          display: flex;
+          &-searchName {
+            font-weight: bold;
+          }
+        }
+        &__content {
+          display: flex;
+          flex-wrap: wrap;
+          .itemsBox {
+            margin-right: 20px;
+            &__photo {
+              background-color: white;
+              .photo__img {
+                width: 200px;
+                height: 180px;
+              }
+            }
+            &__body {
+              box-sizing: border-box;
+              background-color: white;
+              height:140x;
+              width:200px;
+              padding:16px;
+              position: relative;
+              &-name {
+                font-size: 16px;
+                position: relative;
+                height: 3em;
+                line-height: 1.5;
+                margin-bottom: 10px;
+              }
+              &-num {
+                .itemsBox-price {
+                  font-size: 20px;
+                  font-weight: bold;
+                  position: relative;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

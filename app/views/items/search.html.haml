@@ -1,0 +1,39 @@
+.wrapper
+
+  = render 'shared/header'
+
+  %nav.bread-crumbs
+    %ul
+      %li.itemScope
+        =link_to('メルカリ','#')
+        %i.fa.fa-chevron-right.fa-x
+      %li.itemScope
+        =link_to '#' do
+          = @search_name
+
+  .searchMain
+    .searchMain-content
+      %section.mainBox
+        %h2.mainBox__head
+          .mainBox__head-searchName
+            = @search_name
+          %span.mainBox__head-text の検索結果
+        .mainBox__content
+          - i = 0
+          - while i < @search_items.length
+            %section.itemsBox
+              %a
+              .itemsBox__photo
+                = image_tag(@search_items[i].images.first, class: "photo__img")
+              .itemsBox__body
+                %h3.itemsBox__body-name
+                  = @search_items[i].name
+                .itemsBox__body-num
+                  .itemsBox-price 
+                    ¥
+                    = @search_items[i].price
+                  %pager.item-box-tax (税込)
+                  -i += 1
+
+  = render 'shared/aside'
+  = render 'shared/footer'

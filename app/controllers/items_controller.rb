@@ -3,6 +3,15 @@ class ItemsController < ApplicationController
 
   def index
     @items = Item.all.order("id DESC").limit(4)
+
+    @q = Item.ransack(params[:q])
+    @search_items = @q.result(distinct: true)
+  end
+
+  def search
+    @q = Item.search(search_params)
+    @search_items = @q.result(distinct: true)
+    @search_name = params[:q]['name_cont']
   end
 
   def new
@@ -58,5 +67,9 @@ class ItemsController < ApplicationController
 
   def set_item
     @item = Item.find(params[:id])
+  end
+
+  def search_params
+    params.require(:q).permit(:name_cont)
   end
 end
