@@ -34,12 +34,19 @@
         transition: all ease-out .3s;
         cursor: pointer;
         text-align: center;
-        text-decoration:none;
+        a {
+          text-decoration:none;
+          color:black;
+        }
       }
       .btn-sns-facebook {
         margin: 16px 0 0;
         background: #385185;
         color: #fff;
+        a {
+          text-decoration:none;
+          color:white;
+        }
       }
       .btn-sns-google {
         margin: 16px 0 0;
