@@ -4,17 +4,17 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # before_action :configure_sign_up_params, only: [:create]
   # before_action :configure_account_update_params, only: [:update]
   def create
-    if params[:user][:password] == ""
-      params[:user][:password] = "Devise.friendly_token.first(6)"
+    if params[:user][:password] == "" #sns登録なら
+      params[:user][:password] = "Devise.friendly_token.first(6)" #deviseのパスワード自動生成機能を使用
       params[:user][:password_confirmation] = "Devise.friendly_token.first(6)"
       super
-      sns = SnsCredential.update(user_id:  @user.id)
-    else
+      sns = SnsCredential.update(user_id: @user.id)
+    else #email登録なら
       super
     end
   end
 
-  def form
+  def index
   end
   # GET /resource/sign_up
   # def new
