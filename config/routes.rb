@@ -1,11 +1,6 @@
 Rails.application.routes.draw do
-  devise_scope :user do
-    get '/form', to: 'devise/registrations#form'
-  end
   devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks', registrations: 'users/registrations' } 
   
-    # get 'form', to: 'users/registrations#form'
-    # end
   root 'items#index'
   resources :items
   resources :users do
