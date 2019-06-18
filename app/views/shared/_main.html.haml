@@ -17,7 +17,7 @@
     .item-box__container.clearfix
       .text-center
         = link_to "#" do
-          レディース 新着アイテム
+          新着アイテム
       .item-box__content.clearfix
         .item-box
           = link_to item_path(Item.last.id) do
@@ -75,7 +75,7 @@
               .item__tax (税込)
 
       .view-all
-        = link_to "#" do
+        = link_to "/items/search?utf8=✓&q%5Bname_cont%5D=&button=" do
           全ての商品を見る
 
   .pickup-box
@@ -83,63 +83,64 @@
     .item-box__container.clearfix
       .text-center
         = link_to "#" do
-          ナイキ 新着アイテム
+          新着アイテム
       .item-box__content.clearfix
         .item-box
-          = link_to item_path(Item.last.id) do
+          = link_to item_path(@items2[0].id) do
             .photo
-              = image_tag(@items[0].images.first, class: "photo__img")
+              = image_tag(@items2[0].images.first, class: "photo__img")
             .item
               .item__name
-                = @items[0].name
+                = @items2[0].name
               .item__num
                 .item__price
                   ¥ 
-                  = @items[0].price
+                  = @items2[0].price
               .item__tax (税込)
 
         .item-box
-          = link_to item_path(Item.last(2).first.id) do
+          = link_to item_path(@items2[1].id) do
             .photo
-              = image_tag(@items[1].images.first, class: "photo__img")
+              = image_tag(@items2[1].images.first, class: "photo__img")
             .item
               .item__name
 
-                = @items[1].name
+                = @items2[1].name
               .item__num
                 .item__price
                   ¥
-                  = @items[1].price
+                  = @items2[1].price
               .item__tax (税込)
 
         .item-box
-          = link_to item_path(Item.last(3).first.id) do
+          = link_to item_path(@items2[2].id) do
             .photo
-              = image_tag(@items[2].images.first, class: "photo__img")
+              = image_tag(@items2[2].images.first, class: "photo__img")
 
             .item
               .item__name
-                = @items[2].name
+                = @items2[2].name
               .item__num
                 .item__price 
                   ¥ 
-                  = @items[2].price
+                  = @items2[2].price
               .item__tax (税込)
 
         .item-box
-          = link_to item_path(Item.last(4).first.id) do
+          = link_to item_path(@items2[3].id) do
             .photo
               = image_tag(@items[3].images.first, class: "photo__img")
 
             .item
               .item__name
-                = @items[3].name
+                = @items2[3].name
               .item__num
                 .item__price
                   ¥ 
-                  = @items[3].price
+                  = @items2[3].price
               .item__tax (税込)
 
       .view-all
-        = link_to "#" do
+        = link_to "/items/search?utf8=✓&q%5Bname_cont%5D=&button=" do
           全ての商品を見る
+          

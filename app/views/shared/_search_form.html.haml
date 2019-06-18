@@ -1,0 +1,7 @@
+- if @q != nil
+    = search_form_for(@q, url:search_items_path) do |s|
+        = s.search_field :name_cont, placeholder:"何かお探しですか？", class:"search-bar__box"
+        = button_tag type:"submit", class:"search-bar__icon" do
+            =fa_icon 'search lg'
+- else
+    redirect_to root_path

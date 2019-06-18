@@ -1,0 +1,57 @@
+.wrapper
+
+  = render 'shared/header'
+
+  %nav.bread-crumbs
+    %ul
+      %li.itemScope
+        =link_to('メルカリ','#')
+        %i.fa.fa-chevron-right.fa-x
+      %li.itemScope
+        =link_to '#' do
+          = @search_name
+  .searchMain
+    .addSearch
+      %p 詳細検索
+      = search_form_for(@q, url:search_items_path) do |s|
+        .priceTitle
+          %i.fa.fa-coins
+          = s.label :価格
+        .priceForm
+          = s.text_field :price_gteq,placeholder:"¥ Min"
+          %p ~
+          = s.text_field :price_lteq,placeholder:"¥ Max"
+        = s.submit
+    .searchMain-content
+      %section.mainBox
+        %h2.mainBox__head
+          - if @search_name == ""
+            .mainBox__head-searchName
+              新着商品
+          - else
+            .mainBox__head-searchName
+              = @search_name
+            %span.mainBox__head-text の検索結果
+        .search-result-number
+          1 - 
+          = @search_items.length
+          件表示
+        .mainBox__content
+          - i = 0
+          - while i < @search_items.length
+            %section.itemsBox
+            = link_to item_path(@search_items[i].id) do
+              .itemsBox__photo
+                = image_tag(@search_items[i].images.first, class: "photo__img")
+              .itemsBox__body
+                %h3.itemsBox__body-name
+                  = @search_items[i].name
+                .itemsBox__body-num
+                  .itemsBox-price 
+                    ¥
+                    = @search_items[i].price
+                  %pager.item-box-tax (税込)
+                  -i += 1
+  = render 'shared/aside'
+  = render 'shared/footer'
+  
