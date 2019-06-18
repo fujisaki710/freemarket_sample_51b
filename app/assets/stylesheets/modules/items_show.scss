@@ -159,17 +159,37 @@
   }
 
   .buy-btn {
-    background: #888;
-    cursor: not-allowed;
-    border-radius: 4px;
-    height: 60px;
-    line-height: 60px;
-    display: block;
-    margin: 16px 0 0;
-    color: #fff;
-    text-align: center;
-    font-weight: 600;
-    font-size: 24px;
+    .purchase-btn {
+      background: #ea352d;
+      cursor: pointer;
+      border-radius: 4px;
+      height: 60px;
+      line-height: 60px;
+      display: block;
+      margin: 16px 0 0;
+      color: #fff;
+      text-align: center;
+      font-weight: 600;
+      font-size: 24px;
+      text-decoration: none;
+      color: white;
+    }
+    .sold-btn {
+      background: #aaa;
+      width: 100%;
+      cursor: not-allowed;
+      border-radius: 4px;
+      height: 60px;
+      line-height: 60px;
+      display: block;
+      margin: 16px 0 0;
+      color: #fff;
+      text-align: center;
+      font-weight: 600;
+      font-size: 18px;
+      text-decoration: none;
+      color: white;
+    }
   }
 
   .description {

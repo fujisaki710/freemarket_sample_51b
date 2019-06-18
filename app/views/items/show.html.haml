@@ -17,8 +17,9 @@
           .slider__inner
             = image_tag @item.images.first, class: "inner_img"
         .photo__soldout-budge
-          .budge-text SOLD
-          .budge-layout
+          - if @item.status == '交渉中'
+            .budge-text SOLD
+            .budge-layout
 
       %table{border: "5",rules: "all",class: "detail-table"}
         %tbody
@@ -84,7 +85,13 @@
       %span.price-box__tax  (税込)
       %span.price-box__shipping-fee 送料込み
 
-    .buy-btn 売り切れました
+    .buy-btn
+      - if @item.status == '出品中'
+        = link_to purchase_item_path, class: 'purchase-btn' do
+          購入する
+      - else @item.status == '交渉中'
+        %button{type:"submit", class:"sold-btn"}
+          %p 売り切れました
 
     .description
       %p.description__inner
