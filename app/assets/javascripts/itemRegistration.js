@@ -127,3 +127,29 @@ $(document).on('turbolinks:load',function(){
     }
   })
 });
+function previewFiles() {
+
+  var preview = document.querySelector('#preview');
+  var files   = document.querySelector('input[type=file]').files;
+
+  function readAndPreview(file) {
+    if ( /\.(jpe?g|png|gif)$/i.test(file.name) ) {
+      var reader = new FileReader();
+      reader.addEventListener("load", function () {
+        var image = new Image();
+        image.title = file.name;
+        image.src = this.result;
+        preview.appendChild( image );
+        $('#itemtext').html("");
+        $('#itemtextP1').css("display","none");
+        $('#itemtextP2').css("display","none");
+        $('#preview').css("height","100px")
+        $('#preview').css("width","560px")
+      }, false);
+      reader.readAsDataURL(file);
+    }
+  }
+  if (files) {
+    [].forEach.call(files, readAndPreview);
+  }
+}

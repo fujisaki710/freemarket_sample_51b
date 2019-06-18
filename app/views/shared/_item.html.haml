@@ -16,15 +16,12 @@
             %h5 最大１０枚までアップロードできます
           .image__box
             = f.label :images do
-              %p ドラッグアンドドロップ
-              %p またはクリックしてファイルをダウンロード
-              -# こちらは後に利用するため、コメントアウトしています。
-              = f.file_field :images, multiple: true, class: 'hidden'
+              #itemtext
+                %p#itemtextP1 ドラッグアンドドロップ
+                %p#itemtextP2 またはクリックしてファイルをダウンロード
+              = f.file_field :images, multiple: true, class: 'hidden',onchange:"previewFiles()"
               .imageSelect
-              #item_images
-
-              -# こちら、画像のアップロード状態を確認するため、便宜的にこの様に記載しております
-              -# = f.file_field :images, multiple: true
+              #preview
         .item-contents__info
           .info__name
             %h4 商品名
