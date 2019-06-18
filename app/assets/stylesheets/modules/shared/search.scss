@@ -7,16 +7,14 @@
     color: black;
   }
   .searchMain {
-    box-sizing: border-box;
-    width: 1400px;
-    padding: 40px 200px;
+    padding: 40px 210px;
     display: flex;
     .addSearch {
       box-sizing: border-box;
       background-color: white;
       width:280px;
       position: relative;
-      padding: 16px 16px 16px 0;
+      padding: 16px;
       .item_search {
         display: flex;
         flex-direction: column;
@@ -42,6 +40,9 @@
             margin:0  3px;
           }
         }
+        .submit-btn {
+          color: white;
+        }
       }
       input {
         display: block;
@@ -49,18 +50,16 @@
         line-height: 48px;
         font-size: 14px;
         border: 1px solid transparent;
-        -webkit-transition: all ease-out .3s;
-        transition: all ease-out .3s;
         cursor: pointer;
         text-align: center;
         background: #ea352d;
         border: 1px solid #ea352d;
-        color: #fff;
+        color: black;
         margin-top: 10px;
       }
     }
     .searchMain-content {
-      width: 100%;
+      width: 74%;
       margin-left: 30px;
       display: flex;
       .mainBox {

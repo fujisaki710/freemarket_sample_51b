@@ -21,7 +21,7 @@
           = s.text_field :price_gteq,placeholder:"¥ Min"
           %p ~
           = s.text_field :price_lteq,placeholder:"¥ Max"
-        = s.submit
+        = s.submit "",value: "完了", class:"submit-btn"
     .searchMain-content
       %section.mainBox
         %h2.mainBox__head
@@ -54,4 +54,3 @@
                   -i += 1
   = render 'shared/aside'
   = render 'shared/footer'
-  
