@@ -7,14 +7,16 @@
     color: black;
   }
   .searchMain {
-    padding: 40px 210px;
+    box-sizing: border-box;
+    width: 1400px;
+    padding: 40px 200px;
     display: flex;
     .addSearch {
       box-sizing: border-box;
       background-color: white;
       width:280px;
       position: relative;
-      padding: 16px;
+      padding: 16px 16px 16px 0;
       .item_search {
         display: flex;
         flex-direction: column;
@@ -58,7 +60,7 @@
       }
     }
     .searchMain-content {
-      width: 74%;
+      width: 100%;
       margin-left: 30px;
       display: flex;
       .mainBox {
