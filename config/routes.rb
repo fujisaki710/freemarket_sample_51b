@@ -28,7 +28,4 @@ Rails.application.routes.draw do
       post 'delete', to: 'card#delete'
     end
   end
-  devise_scope :user do
-    get '/form', to: 'devise/registrations#form'
-  end
 end
