@@ -34,7 +34,7 @@ class User < ApplicationRecord
       else
         user = User.new(
           nickname: auth.info.name,
-          email: auth.info.email
+          email: auth.info.email,
         )
         sns = SnsCredential.create(
           uid: uid,
