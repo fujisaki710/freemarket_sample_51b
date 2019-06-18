@@ -106,7 +106,7 @@
           position: relative;
           top: 80px;
         }
-        .imageSelect {
+        #preview {
           width: 530px;
           height: 80px;
           padding: 40px;
@@ -117,6 +117,20 @@
           cursor: pointer;
           position: absolute;
           top:315px;
+          img {
+            position: relative;
+            bottom: 40px;
+            right: 40px;
+            margin-right: 10px;
+            height: 90px;
+            width: 90px;
+          }
+          img:nth-of-type(1) {
+            margin-left: 20px;
+          }
+          img:nth-of-type(6) {
+            margin-left: 20px;
+          }
         }
       }
     }
