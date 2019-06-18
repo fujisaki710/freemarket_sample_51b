@@ -3,7 +3,6 @@
 class Users::RegistrationsController < Devise::RegistrationsController
   # before_action :configure_sign_up_params, only: [:create]
   # before_action :configure_account_update_params, only: [:update]
-
   def create
     if params[:user][:password] == ""
       params[:user][:password] = "Devise.friendly_token.first(6)"
@@ -15,6 +14,8 @@ class Users::RegistrationsController < Devise::RegistrationsController
     end
   end
 
+  def form
+  end
   # GET /resource/sign_up
   # def new
   #   super
