@@ -1,0 +1,54 @@
+.single-container
+  = render 'shared/sub-header'
+  .single-main
+    .main-contents
+      .main-contents__header
+        %p 購入内容の確認
+      .main-contents__buy
+        .buy-content
+          %h3.item-image
+            = image_tag @item.images.first
+          %p.item-name
+            = @item.name
+          .buy-form
+            %p.price
+              %span
+                = "¥#{@item.price}"
+              送料込み
+            %li.point ポイントはありません
+            .price-table
+              %p.pay 支払金額
+              %span
+                = "¥#{@item.price}"
+            .submit
+              = form_tag(action: :pay, method: :post) do
+                %button{type:"submit", class:"btn-default"}
+                  %p 購入する
+      .user-info
+        .user-info__inner
+          %h3 配送先
+          .user-info-text
+            %br 〒570-0016
+            大阪府 枚方市 香里ヶ丘193789-1-8
+            %br ふじた さき
+          .user-info-fix
+            = link_to "変更する", "#"
+            %i.fa.fa-chevron-right
+      .pay-method
+        .pay-method__inner
+          %h3 お支払い方法
+          - if @default_card_information.blank?
+            %br /
+          - else
+            .inner-text
+              = "**** **** **** " + @default_card_information.last4
+              - exp_month = @default_card_information.exp_month.to_s
+              - exp_year = @default_card_information.exp_year.to_s.slice(2,3)
+              %br
+              = exp_month + " / " + exp_year
+          .figure
+            = image_tag('//www-mercari-jp.akamaized.net/assets/img/card/visa.svg?2399382397', alt:"VISA")
+          .user-info-fix
+            = link_to "変更する", "#"
+            %i.fa.fa-chevron-right
+= render 'shared/sub-footer'
