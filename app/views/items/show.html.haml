@@ -91,13 +91,13 @@
       %span.price-box__shipping-fee 送料込み
 
     .buy-btn
-      - if @item.status == '出品中'
+      - if @item.status == '出品中' && @item.user_id != current_user.id
         = link_to purchase_item_path, class: 'purchase-btn' do
           購入する
+      - elsif @item.status == '出品中' && @item.user_id == current_user.id
       - else @item.status == '交渉中'
         %button{type:"submit", class:"sold-btn"}
           %p 売り切れました
-
     .description
       %p.description__inner
         ■商品ご覧頂き、誠にありがとうございます。
