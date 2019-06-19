@@ -24,7 +24,7 @@ mens_suits.children.create([{name: "スーツジャケット"}, {name: "スラ�
 interiors_kitchen.children.create([{name: "食器"}, {name: "調理器具"}])
 interiors_bed.children.create([{name: "シングルベッド"}, {name: "マットレス"}])
 
-User.create!(nickname: "テストユーザー", email: "hogehoge@gmail.com", password: "hogehoge")
+User.create!(nickname: "テストユーザー", email: "hogehoge@gmail.com", password: "hogehoge",first_name: "ユーザー",family_name:"テスト",family_name_kana:"テスト",first_name_kana:"ユーザー",birth_year:"2019",birth_month:"01",birth_day:"01")
 user1 = User.find(1)
 
 Item.create!([{
