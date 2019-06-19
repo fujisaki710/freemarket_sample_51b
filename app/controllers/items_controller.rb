@@ -22,8 +22,8 @@ class ItemsController < ApplicationController
   end
 
   def create
-    @item = Item.new(item_params)
     @status = '出品中'
+    @item = Item.new(item_params)
     if @item.save
       redirect_to item_path(@item)
     else
