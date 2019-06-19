@@ -41,19 +41,7 @@ end
 
 set :default_env, {
     rbenv_root: "/usr/local/rbenv",
-    path: "/usr/local/rbenv/shims:/usr/local/rbenv/bin:$PATH",
-    AWS_ACCESS_KEY_ID: ENV["AWS_ACCESS_KEY_ID"],
-    AWS_SECRET_ACCESS_KEY: ENV["AWS_SECRET_ACCESS_KEY"],
-    BASIC_AUTH_USER: ENV["BASIC_AUTH_USER"],
-    BASIC_AUTH_PASSWORD: ENV["BASIC_AUTH_PASSWORD"],
-    GOOGLE_CLIENT_ID: ENV["GOOGLE_CLIENT_ID"],
-    GOOGLE_CLIENT_SECRET: ENV["GOOGLE_CLIENT_SECRET"],
-    FACEBOOK_CLIENT_ID: ENV["FACEBOOK_CLIENT_ID"],
-    FACEBOOK_CLIENT_SECRET: ENV["FACEBOOK_CLIENT_SECRET"],
-    PAYJP_PRIVATE_KEY: ENV["PAYJP_PRIVATE_KEY"],
-    PAYJP_KEY: ENV["PAYJP_KEY"],
-    ACCESS_KEY_ID: ENV["ACCESS_KEY_ID"],
-    SECRET_ACCESS_KEY: ENV["SECRET_ACCESS_KEY"]
+    path: "/usr/local/rbenv/shims:/usr/local/rbenv/bin:$PATH"
   }
 
 # Default branch is :master
