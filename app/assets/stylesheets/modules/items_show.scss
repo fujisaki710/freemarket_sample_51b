@@ -27,12 +27,17 @@
 
       &__slider {
         position: relative;
-
         height: 360px;
-
         .slider__inner {
           width: 300px;
           height: 300px;
+          .itemList {
+            margin-top: 3px;
+            img {
+              height: 60px;
+              width: 60px;
+            }
+          }
           .inner_img{
             width: 300px;
             height: 300px;

@@ -51,7 +51,6 @@ class ItemsController < ApplicationController
   end
 
   def edit
-    @item = Item.find(params[:id])
     @serect_category = @item.categories.first
     @price = @item.price
     @fee = ((@price * 1.1) - @item.price).round
@@ -100,7 +99,7 @@ class ItemsController < ApplicationController
   private
 
   def item_params
-    params.require(:item).permit(:name, :discription, :item_condition, :delivery_fee, :shipping_rule, :prefecture_id, :shipping_date, :price,images:[],brand_attributes: [:id, :name], items_categories_attributes: [:id,:category_id]).merge(user_id: current_user.id, status: @status)
+    params.require(:item).permit(:name, :discription, :item_condition, :delivery_fee, :shipping_rule, :prefecture_id, :shipping_date, :price,images:[],brand_attributes: [:id, :name], items_categories_attributes: [:id,:category_id],remove_images:[]).merge(user_id: current_user.id, status: @status)
   end
 
   def set_item

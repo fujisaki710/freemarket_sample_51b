@@ -2,7 +2,7 @@
   %nav.mypageNav
     %ul.mypageNavList
       %li
-        %a.mypageNavList__item.active{href: "#"}
+        = link_to user_path(current_user),class:"mypageNavList__item" do
           マイページ
           %i.fa.fa-chevron-right
       %li

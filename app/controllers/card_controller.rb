@@ -5,6 +5,9 @@ class CardController < ApplicationController
   def new
     card = Card.where(user_id: current_user.id)
     redirect_to card_index_path if card.exists?
+
+    @q = Item.ransack(params[:q])
+    @search_items = @q.result(distinct: true)
   end
 
   def pay #payjpとCardのデータベース作成を実施します。
@@ -39,6 +42,9 @@ class CardController < ApplicationController
   end
 
   def show #Cardのデータpayjpに送り情報を取り出します
+    @q = Item.ransack(params[:q])
+    @search_items = @q.result(distinct: true)
+
     card = Card.where(user_id: current_user.id).first
     if card.present?
       Payjp.api_key = ENV["PAYJP_PRIVATE_KEY"]

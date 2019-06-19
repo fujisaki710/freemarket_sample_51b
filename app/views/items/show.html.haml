@@ -16,6 +16,11 @@
         .photo__slider
           .slider__inner
             = image_tag @item.images.first, class: "inner_img"
+            .itemList
+              - i = 0
+              - while i < @item.images.length
+                = image_tag @item.images[i]
+                - i += 1
         .photo__soldout-budge
           - if @item.status == '交渉中'
             .budge-text SOLD

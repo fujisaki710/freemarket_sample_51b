@@ -12,6 +12,8 @@ class UsersController < ApplicationController
   end
 
   def profile
+    @q = Item.ransack(params[:q])
+    @search_items = @q.result(distinct: true)
   end
 
   def credit

@@ -14,11 +14,15 @@
           .image__box
             = f.label :images do
               #itemtext
-                %p#itemtextP1 ドラッグアンドドロップ
-                %p#itemtextP2 またはクリックしてファイルをダウンロード
+                %p#itemtextP1 
+                %p#itemtextP2 
               = f.file_field :images, multiple: true, class: 'hidden',onchange:"previewFiles()"
               .imageSelect
               #preview
+                - i = 0
+                - while i < @item.images.length
+                  = image_tag @item.images[i]
+                  - i += 1
         .item-contents__info
           .info__name
             %h4 商品名
