@@ -3,11 +3,11 @@
     .swiper-container
       .swiper-wrapper
         .swiper-slide
-          %img{:src => "https://www.mercari.com/jp/assets/img/common/jp/top/banner-camp.jpg"}/
+          %img{src: "images/slide1.jpg"}/
         .swiper-slide
-          %img{:src => "https://www.mercari.com/jp/assets/img/common/jp/top/banner-6th-thanks.jpg"}/
+          %img{src: "images/slide2.jpg"}/
         .swiper-slide
-          %img{:src => "https://www.mercari.com/jp/assets/img/common/jp/top/main_bg_pc.jpg"}/
+          %img{src: "images/slide5.jpg"}/
       .swiper-pagination
       .swiper-button-prev
       .swiper-button-next
@@ -129,7 +129,7 @@
         .item-box
           = link_to item_path(@items2[3].id) do
             .photo
-              = image_tag(@items[3].images.first, class: "photo__img")
+              = image_tag(@items2[3].images.first, class: "photo__img")
 
             .item
               .item__name
