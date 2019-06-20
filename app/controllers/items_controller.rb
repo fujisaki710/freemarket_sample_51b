@@ -1,6 +1,7 @@
 class ItemsController < ApplicationController
   require 'payjp'
   before_action :set_item, only: [:show, :edit, :update, :destroy]
+  before_action :set_search
 
   def index
     @items = Item.all.order("id DESC").limit(4)
@@ -107,5 +108,10 @@ class ItemsController < ApplicationController
 
   def search_params
     params.require(:q).permit(:name_cont,:price_gteq,:price_lteq,:item_condition_eq)
+  end
+
+  def set_search
+    @q = Item.ransack(params[:q])
+    @search_items = @q.result(distinct: true)
   end
 end
