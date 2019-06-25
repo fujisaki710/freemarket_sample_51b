@@ -21,19 +21,29 @@
             = fa_icon 'tag',class: 'left-btn--brand__icon'
             %span ブランドから探す
 
-      %ul.right
-        %li.right-btn
-          = link_to root_path do
-            = fa_icon 'bell',class: 'right-btn__icon'
-            %span お知らせ
+      - if user_signed_in?
+        %ul.right
+          %li.right-btn
+            = link_to root_path do
+              = fa_icon 'bell',class: 'right-btn__icon'
+              %span お知らせ
+          %li.right-btn
+            = link_to root_path do
+              = fa_icon 'check',class: 'right-btn__icon'
+              %span やることリスト
+          %li.right-btn
+            = link_to user_path(current_user) do
+              %img{src:"//static.mercdn.net/images/member_photo_noimage_thumb.png", width: 32, class:"right-btn__mypage-icon"}
+              %span マイページ
+      - else
+        %ul.logout-right
+          %li
+            = link_to "ログイン", new_user_session_path, class: "login-btn"
+          %li
+            = link_to "新規会員登録", users_index_path, class: "registration-btn"
 
-        %li.right-btn
-          = link_to root_path do
-            = fa_icon 'check',class: 'right-btn__icon'
-            %span やることリスト
 
-        %li.right-btn
-          = link_to user_path(current_user) do
-            %img{src:"//static.mercdn.net/images/member_photo_noimage_thumb.png", width: 32, class:"right-btn__mypage-icon"}
-            %span マイページ
-            
+
+
+
+
