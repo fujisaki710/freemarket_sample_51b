@@ -139,6 +139,35 @@
           }
         }
       }
+      .logout-right {
+        float: right;
+        li {
+          float: right;
+          margin: 0 0 0 12px;
+          .login-btn {
+            background: #fff;
+            border: 1px solid #0099e8;
+            color: #0099e8;
+            float: right;
+            margin: 0 0 0 6px;
+            padding: 0 10px;
+            line-height: 30px;
+            border-radius: 4px;
+            text-align: center;
+          }
+          .registration-btn {
+            background: #ea352d;
+            border: 1px solid #ea352d;
+            color: #fff;
+            float: left;
+            margin: 0 0 0 6px;
+            padding: 0 10px;
+            line-height: 30px;
+            border-radius: 4px;
+            text-align: center;
+          }
+        }
+      }
     }
   }
 }
@@ -342,8 +371,7 @@
   
       &__bottom {
         margin: 8px 0 0;
-  
-        
+
           .left-btn--category {
             font-weight: bold;
             color: #333;
